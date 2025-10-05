@@ -245,8 +245,6 @@
         &none   &none                   &none                       &none                               &none
             >;
         };
-   
-        };
 
         // gaming mac
         gaming_mac {

@@ -92,6 +92,50 @@
 
     };
 
+    behaviors {
+
+        home_mac: home_mac {
+            compatible = "zmk,behavior-mod-morph";
+            label = "HOME_MAC";
+            bindings = <&kp LG(LEFT)>, <&kp LG(UP)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+            keep-mods = <0>;
+        };
+
+        end_mac: end_mac {
+            compatible = "zmk,behavior-mod-morph";
+            label = "END_MAC";
+            bindings = <&kp LG(RIGHT)>, <&kp LG(DOWN)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+            keep-mods = <0>;
+        };
+
+        pgup_mac: pgup_mac {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PGUP_MAC";
+            bindings = <&kp PG_UP>, <&kp LG(LS(LBKT))>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+            keep-mods = <0>;
+        };
+
+        pgdn_mac: pgdn_mac {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PGDN_MAC";
+            bindings = <&kp PG_DN>, <&kp LG(LS(RBKT))>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+            keep-mods = <0>;
+        };
+
+    };
+
     td0 {
         compatible = "zmk,behavior-tap-dance";
         label = "TAPD_LAYER";
@@ -212,9 +256,9 @@
         bindings = < 
         &trans      &kp F1                  &kp F2                  &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9      &kp F10     &kp F11             &kp F12             &trans    
         &trans      &kp F1                  &kp F2                  &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9      &kp F10     &kp F11             &kp F12             &trans      
-        &kp CLCK    &kp LG(Q)               &kp LG(LS(LBKT))        &kp TAB                             &kp LG(LS(RBKT))       &kp LG(SPACE)       &kp INS         &kp LG(LEFT)    &kp UP              &kp LG(RIGHT) &kp DEL   &kp LG(LBKT)        &kp LG(RBKT)        &uc LG(LS(N4))
+        &kp CLCK    &kp LG(Q)               &kp LG(LS(LBKT))        &kp TAB                             &kp LG(LS(RBKT))        &kp LG(SPACE)       &kp INS         &home_mac       &kp UP              &end_mac    &kp DEL     &kp LG(LBKT)        &kp LG(RBKT)        &uc LG(LS(N4))
         &kp BSPC    &kp LCTRL               &kp LGUI                &kp LALT                            &kp LEFT_SHIFT          &kp LS(LG(N4))      &caps_word      &kp LEFT        &kp DOWN            &kp RIGHT   &kp BSPC    &trans                      &trans  
-        &trans      &kp F11                 &kp LC(LEFT)            &kp LC(UP)                          &kp LC(RIGHT)           &kp RET             &kp RET         &kp PG_UP       &kp LS(F10)         &kp PG_DN   &kp BSPC                                &uc LC(LG(SPACE))
+        &trans      &kp F11                 &kp LC(LEFT)            &kp LC(UP)                          &kp LC(RIGHT)           &kp RET             &kp RET         &pgup_mac       &kp LS(F10)         &pgdn_mac   &kp BSPC                                &uc LC(LG(SPACE))
         &trans      &trans                  &trans                         &trans                                                                                                   &kp RCTRL           &trans        &kp HOME   &kp PG_UP   &kp PG_DN    &kp END  
         //
         &none       &none                   &none                   &none                               &none

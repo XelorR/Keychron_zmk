@@ -288,7 +288,7 @@
         &trans      &trans                  &trans                  &trans                              &trans                  &trans              &trans          &trans          &kp INS             &trans      &trans      &to 0               &to 1               &uc LG(LS(N4))
         &trans      &trans                  &trans                  &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans      &trans                      &trans                  
         &trans      &trans                  &trans                  &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans                                  &uc LC(LG(SPACE))
-        &trans      &trans                  &trans                         &trans                                                                                                   &kp RCTRL           &trans        &kp HOME   &kp PG_UP   &kp PG_DN    &kp END  
+        &trans      &trans                  &trans                         &trans                                                                                                   &kp RCTRL           &trans      &kp HOME   &kp PG_UP   &kp PG_DN    &kp END  
         //
         &none       &none                   &none                   &none                               &none
             >;

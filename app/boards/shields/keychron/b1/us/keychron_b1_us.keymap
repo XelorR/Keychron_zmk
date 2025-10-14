@@ -269,7 +269,7 @@
         &kp CLCK    &kp LG(Q)               &kp LG(LS(LBKT))        &kp TAB                             &kp LG(LS(RBKT))        &kp LG(SPACE)       &kp INS         &home_mac       &kp UP              &end_mac    &kp DEL     &kp LG(LBKT)        &kp LG(RBKT)        &uc LG(LS(N4))
         &kp BSPC    &mt LCTRL LG(SPACE)     &kp LGUI                &kp LALT                            &kp LEFT_SHIFT          &kp LS(LG(N4))      &caps_word      &kp LEFT        &kp DOWN            &kp RIGHT   &kp BSPC    &trans                      &trans  
         &trans      &kp F11                 &kp LC(LEFT)            &kp LC(UP)                          &kp LC(RIGHT)           &kp LG(LC(F))       &kp LG(M)       &pgup_mac       &kp LS(F10)         &pgdn_mac   &kp BSPC                                &uc LC(LG(SPACE))
-        &trans      &trans                  &trans                         &trans                                                                                                   &kp RCTRL           &trans        &kp HOME   &kp PG_UP   &kp PG_DN    &kp END  
+        &trans      &trans                  &trans                         &trans                                                                                                   &kp RCTRL           &trans      &kp HOME    &kp PG_UP   &kp PG_DN    &kp END  
         //
         &none       &none                   &none                   &none                               &none
             >;
@@ -298,7 +298,7 @@
         &trans      &trans                  &trans                  &trans                              &trans                  &trans              &kp FSLH        &kp N7          &kp N8              &kp N9      &kp MINUS   &to 0               &to 1               &uc LG(LS(N4))
         &trans      &trans                  &trans                  &trans                              &trans                  &trans              &kp LS(N8)      &kp N4          &kp N5              &kp N6      &kp LS(EQUAL) &kp DOT                   &trans                  
         &trans      &trans                  &trans                  &trans                              &trans                  &trans              &kp N0          &kp N1          &kp N2              &kp N3      &kp RET                                 &uc LC(LG(SPACE))
-        &trans      &trans                  &trans                         &trans                                                                                                   &kp RCTRL           &trans      &kp HOME   &kp PG_UP   &kp PG_DN    &kp END  
+        &trans      &trans                  &trans                         &trans                                                                                                   &kp RCTRL           &trans      &kp HOME    &kp PG_UP   &kp PG_DN    &kp END  
         //
         &none       &none                   &none                   &none                               &none
             >;

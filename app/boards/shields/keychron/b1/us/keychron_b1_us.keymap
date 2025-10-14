@@ -268,7 +268,7 @@
         &trans      &kp F1                  &kp F2                  &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9      &kp F10     &kp F11             &kp F12             &trans      
         &kp CLCK    &kp LG(Q)               &kp LG(LS(LBKT))        &kp TAB                             &kp LG(LS(RBKT))        &kp LG(SPACE)       &kp INS         &home_mac       &kp UP              &end_mac    &kp DEL     &kp LG(LBKT)        &kp LG(RBKT)        &uc LG(LS(N4))
         &kp BSPC    &mt LCTRL LG(SPACE)     &kp LGUI                &kp LALT                            &kp LEFT_SHIFT          &kp LS(LG(N4))      &caps_word      &kp LEFT        &kp DOWN            &kp RIGHT   &kp BSPC    &trans                      &trans  
-        &trans      &kp F11                 &kp LC(LEFT)            &kp LC(UP)                          &kp LC(RIGHT)           &kp RET             &kp RET         &pgup_mac       &kp LS(F10)         &pgdn_mac   &kp BSPC                                &uc LC(LG(SPACE))
+        &trans      &kp F11                 &kp LC(LEFT)            &kp LC(UP)                          &kp LC(RIGHT)           &kp LG(LC(F))       &kp LG(LA(LS(T))) &pgup_mac     &kp LS(F10)         &pgdn_mac   &kp BSPC                                &uc LC(LG(SPACE))
         &trans      &trans                  &trans                         &trans                                                                                                   &kp RCTRL           &trans        &kp HOME   &kp PG_UP   &kp PG_DN    &kp END  
         //
         &none       &none                   &none                   &none                               &none
@@ -283,7 +283,7 @@
         &trans  &kp F1                  &kp F2                      &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9      &kp F10     &kp F11                     &kp F12              &trans          
         &kp CLCK &kp LA(F4)             &kp LC(LS(TAB))             &kp TAB                             &kp LC(TAB)             &kp LEFT_GUI        &kp INS         &kp HOME        &kp UP              &kp END     &kp DEL     &kp LA(LEFT)                &kp LA(RIGHT)        &uc LG(LS(S))      
         &kp DEL &kp LEFT_GUI            &kp LEFT_ALT                &kp LCTRL                           &kp LEFT_SHIFT          &kp LS(LG(S))       &caps_word      &kp LEFT        &kp DOWN            &kp RIGHT   &kp BSPC    &trans                              &trans  
-        &trans  &kp LG(D)               &kp LC(LG(LEFT))            &kp LG(TAB)                         &kp LC(LG(RIGHT))       &kp C_AL_MY_COMPUTER &kp RET        &kp PG_UP       &kp K_APP           &kp PG_DN   &kp BSPC                                        &uc LG(DOT) 
+        &trans  &kp LG(D)               &kp LC(LG(LEFT))            &kp LG(TAB)                         &kp LC(LG(RIGHT))       &kp F11             &kp C_AL_MY_COMPUTER &kp PG_UP  &kp K_APP           &kp PG_DN   &kp BSPC                                        &uc LG(DOT) 
         &trans  &trans                  &trans                           &trans                                                                                                     &kp RCTRL           &trans      &kp HOME    &kp PG_UP    &kp PG_DN   &kp END    
         //
         &none   &none                   &none                       &none                               &none

@@ -90,10 +90,6 @@
             bindings = <&long_press_fn_win 0 0>;
         };
 
-    };
-
-    combos {
-        compatible = "zmk,combos";
         Ga {
             bindings = <&kp LC(A)>;
             key-positions = <56 59>;

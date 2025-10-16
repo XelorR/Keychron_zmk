@@ -90,6 +90,11 @@
             bindings = <&long_press_fn_win 0 0>;
         };
 
+        lock_win {
+            bindings = <&kp LG(L)>;
+            key-positions = <0 1>;
+            layers = <2>;
+        };
 
         Ca {
             bindings = <&kp LC(A)>;
@@ -125,6 +130,12 @@
             bindings = <&kp LC(C)>;
             key-positions = <57 58>;
             layers = <2>;
+        };
+
+        lock_mac {
+            bindings = <&kp LG(LC(Q))>;
+            key-positions = <0 1>;
+            layers = <0>;
         };
 
         Ga {

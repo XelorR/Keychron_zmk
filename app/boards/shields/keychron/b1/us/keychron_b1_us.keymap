@@ -91,13 +91,13 @@
         };
 
         Ga {
-            bindings = <&kp LC(A)>;
+            bindings = <&kp LG(A)>;
             key-positions = <56 59>;
             layers = <0>;
         };
 
         Gz {
-            bindings = <&kp LC(Z)>;
+            bindings = <&kp LG(Z)>;
             key-positions = <56 57>;
             layers = <0>;
         };

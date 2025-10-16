@@ -90,41 +90,6 @@
             bindings = <&long_press_fn_win 0 0>;
         };
 
-        // Ga {
-        //     bindings = <&kp LG(A)>;
-        //     key-positions = <56 59>;
-        //     layers = <0>;
-        // };
-
-        // Gz {
-        //     bindings = <&kp LG(Z)>;
-        //     key-positions = <56 57>;
-        //     layers = <0>;
-        // };
-
-        // Gv {
-        //     bindings = <&kp LG(V)>;
-        //     key-positions = <58 59>;
-        //     layers = <0>;
-        // };
-
-        // Gx {
-        //     bindings = <&kp LG(X)>;
-        //     key-positions = <57 59>;
-        //     layers = <0>;
-        // };
-
-        // Gy {
-        //     bindings = <&kp LG(LS(Z))>;
-        //     key-positions = <56 58>;
-        //     layers = <0>;
-        // };
-
-        // Gc {
-        //     bindings = <&kp LG(C)>;
-        //     key-positions = <57 58>;
-        //     layers = <0>;
-        // };
 
         Ca {
             bindings = <&kp LC(A)>;
@@ -160,6 +125,42 @@
             bindings = <&kp LC(C)>;
             key-positions = <57 58>;
             layers = <2>;
+        };
+
+        Ga {
+            bindings = <&kp LG(A)>;
+            key-positions = <56 59>;
+            layers = <0>;
+        };
+
+        Gz {
+            bindings = <&kp LG(Z)>;
+            key-positions = <56 57>;
+            layers = <0>;
+        };
+
+        Gv {
+            bindings = <&kp LG(V)>;
+            key-positions = <58 59>;
+            layers = <0>;
+        };
+
+        Gx {
+            bindings = <&kp LG(X)>;
+            key-positions = <57 59>;
+            layers = <0>;
+        };
+
+        Gy {
+            bindings = <&kp LG(LS(Z))>;
+            key-positions = <56 58>;
+            layers = <0>;
+        };
+
+        Gc {
+            bindings = <&kp LG(C)>;
+            key-positions = <57 58>;
+            layers = <0>;
         };
     };
 

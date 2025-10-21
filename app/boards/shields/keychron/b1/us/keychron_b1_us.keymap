@@ -173,6 +173,16 @@
             key-positions = <57 58>;
             layers = <0>;
         };
+        lg_en {
+            bindings = <&kp LC(LS(N8))>;
+            key-positions = <30 31>;
+            layers = <0 2>;
+        };
+        lg_ru {
+            bindings = <&kp LC(LS(N9))>;
+            key-positions = <36 37>;
+            layers = <0 2>;
+        };
     };
 
     behaviors {

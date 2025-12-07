@@ -201,7 +201,7 @@
         &kp TAB     &kp Q                   &kp W                   &kp E                               &kp R                   &kp T               &kp Y           &kp U           &kp I               &kp O       &kp P       &kp LBKT            &kp RBKT            &kp BSLH      
         &kp CLCK    &kp A                   &kp S                   &kp D                               &kp F                   &kp G               &kp H           &kp J           &kp K               &kp L       &kp SEMI    &kp SQT                         &kp RET                                         
         &kp LSHFT   &kp Z                   &kp X                   &kp C                               &kp V                   &kp B               &kp N           &kp M           &kp COMMA           &kp DOT     &kp FSLH                                    &kp RSHFT 
-        &kp LCTRL   &uc LCMD                &uc LALT                       &kp SPACE                                                                                                &uc RALT            &mo 1       &kp LEFT    &kp UP              &kp DOWN            &kp RIGHT   
+        &kp LCTRL   &uc LCMD                &uc LALT                       &kp SPACE                                                                                                &mo 1               &uc RALT    &kp LEFT    &kp UP              &kp DOWN            &kp RIGHT   
         &mo 2       &out OUT_BLE            &out OUT_24G            &out OUT_CHG                        &out OUT_CHGD 
             >;
         };
@@ -226,7 +226,7 @@
         &kp TAB 	&kp Q 	               &kp W                    &kp E 	                            &kp R 	                &kp T               &kp Y 	        &kp U 	        &kp I 	            &kp O 	     &kp P 		&kp LBKT 	         &kp RBKT 	         &kp BSLH 	 	
         &mt RCTRL ESC 	&kp A 	               &kp S 	                &kp D 	                            &kp F 	                &kp G 	            &kp H 	        &kp J 	        &kp K 	            &kp L 	     &kp SEMI 	&kp SQT                      &kp RET
         &kp LSHFT   &kp Z 	               &kp X 	                &kp C 	                            &kp V 	                &kp B 	            &kp N 	        &kp M 	        &kp COMMA           &kp DOT      &kp FSLH                                &kp RSHFT				
-        &kp LCTRL 	&kp LGUI               &kp LALT                      &kp SPACE              		                                                                            &kp LS(LC(LA(LGUI))) 	&lt 3 K_APP 	&kp LEFT 	 &kp UP      &kp DOWN 	&kp RIGHT 	
+        &kp LCTRL 	&kp LGUI               &kp LALT                      &kp SPACE              		                                                                            &lt 3 K_APP	&kp LS(LC(LA(LGUI)))  	&kp LEFT 	 &kp UP      &kp DOWN 	&kp RIGHT 	
         //
         &none       &out OUT_BLE           &out OUT_24G             &out OUT_CHG                        &out OUT_CHGD 
             >;

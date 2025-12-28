@@ -233,7 +233,7 @@
             tapping-term-ms = <170>;
         };
         // hrm for pinky
-        hrp: mod_tap {
+        hrp: mod_tap_pinky {
             compatible = "zmk,behavior-hold-tap";
             label = "HRM for pinky";
             #binding-cells = <2>;

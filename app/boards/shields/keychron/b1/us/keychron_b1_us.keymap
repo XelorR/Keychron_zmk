@@ -194,6 +194,46 @@
         #binding-cells =<1>;
     };
 
+    combo {
+        compatible = "zmk,combos";
+
+        Ca {
+            bindings = <&kp LC(A)>;
+            key-positions = <56 59>;
+            layers = <2>;
+        };
+
+        Cz {
+            bindings = <&kp LC(Z)>;
+            key-positions = <56 57>;
+            layers = <2>;
+        };
+
+        Cv {
+            bindings = <&kp LC(V)>;
+            key-positions = <58 59>;
+            layers = <2>;
+        };
+
+        Cx {
+            bindings = <&kp LC(X)>;
+            key-positions = <57 59>;
+            layers = <2>;
+        };
+
+        Cy {
+            bindings = <&kp LC(Y)>;
+            key-positions = <56 58>;
+            layers = <2>;
+        };
+
+        Cc {
+            bindings = <&kp LC(C)>;
+            key-positions = <57 58>;
+            layers = <2>;
+        };
+    };
+
     macros {
         cut_row: cut_row {
             compatible = "zmk,behavior-macro";

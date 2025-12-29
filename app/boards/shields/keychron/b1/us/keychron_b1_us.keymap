@@ -137,6 +137,8 @@
             bindings = <&gresc>;
         };
 
+        // my personal combos added
+
         Ca {
             bindings = <&kp LC(A)>;
             key-positions = <56 59>;

@@ -138,6 +138,7 @@
         };
 
         // my personal combos added
+        // CUA
 
         Ca {
             bindings = <&kp LC(A)>;
@@ -172,6 +173,20 @@
         Cc {
             bindings = <&kp LC(C)>;
             key-positions = <57 58>;
+            layers = <2>;
+        };
+
+        // language switching (standard Linux Caps/Shift-Caps)
+
+        switch_us {
+            bindings = <&kp CAPS>;
+            key-positions = <30 31>;
+            layers = <2>;
+        };
+
+        switch_ru {
+            bindings = <&kp LS(CAPS)>;
+            key-positions = <36 37>;
             layers = <2>;
         };
     };

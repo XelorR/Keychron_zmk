@@ -204,13 +204,16 @@
         };
 
         // language switching (standard Linux Caps/Shift-Caps)
+        // you can set this behavior setting following xkb option: grp:shift_caps_switch
 
+        // WE
         switch_us {
             bindings = <&kp CAPS>;
             key-positions = <30 31>;
             layers = <2>;
         };
 
+        // IO
         switch_ru {
             bindings = <&kp LS(CAPS)>;
             key-positions = <36 37>;

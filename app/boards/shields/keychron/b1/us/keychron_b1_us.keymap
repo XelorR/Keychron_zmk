@@ -56,6 +56,33 @@
         bindings = <&fn_win>, <&none>;
     };
 
+    macros {
+        cut_row: cut_row {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kp LS(DOWN) &kp LC(X)>;
+            label = "CUT_ROW";
+        };
+        in_below: in_below {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp END &kp LS(RET)>;
+            label = "IN_BELOW";
+        };
+        in_above: in_above {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kp LS(RET) &kp UP>;
+            label = "IN_ABOVE";
+        };
+        del_to_beginning: del_to_beginning {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(HOME) &kp BSPC>;
+            label = "DEL_TO_BEGINNING";
+        };
+    };
+
 
     combos1 {
         compatible = "zmk,combos";
@@ -245,33 +272,6 @@
         compatible = "zmk,behavior-key-press";
         label ="user_custom";
         #binding-cells =<1>;
-    };
-
-    macros {
-        cut_row: cut_row {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp HOME &kp LS(DOWN) &kp LC(X)>;
-            label = "CUT_ROW";
-        };
-        in_below: in_below {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp END &kp LS(RET)>;
-            label = "IN_BELOW";
-        };
-        in_above: in_above {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp HOME &kp LS(RET) &kp UP>;
-            label = "IN_ABOVE";
-        };
-        del_to_beginning: del_to_beginning {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(HOME) &kp BSPC>;
-            label = "DEL_TO_BEGINNING";
-        };
     };
 
     behaviors {

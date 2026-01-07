@@ -360,8 +360,8 @@
 
 	keymap {
     	compatible = "zmk,keymap";
-            //mac
-        default_layer {
+
+        0_gaming_win {
         bindings = <
         &kp ESC     &kp F1                  &kp F2                  &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9      &kp F10     &kp F11             &kp F12             &kp DEL
         &kp GRAVE   &kp N1                  &kp N2                  &kp N3                              &kp N4                  &kp N5              &kp N6          &kp N7          &kp N8              &kp N9      &kp N0      &kp MINUS           &kp EQUAL           &kp BSPC
@@ -372,22 +372,20 @@
         &mo 2       &out OUT_BLE            &out OUT_24G            &out OUT_CHG                        &out OUT_CHGD
             >;
         };
-        //mac
-        layer_one  {
+
+        1_gaming_mac  {
         bindings = <
-          //ESC         //f1                    //f2                //f3                                    //f4                //f5                //f6            //f7            //f8                //f9        //f10       //f11               //f12               //DEL
-   &bootloader      &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC    &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS   &kp  C_AC_MAC_LAUNCH    &kp C_AC_SEARCH     &kp C_AL_LOCK   &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN   &kp C_VOLUME_UP     &trans
-        &trans      &bt_pair_0 0 0          &bt_pair_1 0 0          &bt_pair_2 0 0                      &bt_pair_3 0 0          &trans              &trans          &trans          &trans              &trans      &trans      &trans              &kp C_AC_SEARCH     &trans
-        &trans      &trans                  &trans                  &trans                              &trans                  &trans              &trans          &trans          &kp INS             &trans      &trans      &trans              &trans              &uc LG(LS(N4))
-        &trans      &trans                  &trans                  &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans      &trans                      &kp LG(LS(N3))
-        &trans      &trans                  &trans                  &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans                                  &uc LC(LG(SPACE))
-        &trans      &trans                  &trans                         &trans                                                                                                   &kp RCTRL           &trans        &kp HOME   &kp PG_UP   &kp PG_DN    &kp END
-        //
-        &none       &none                   &none                   &none                               &none
+        &kp ESC     &kp F1                  &kp F2                  &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9      &kp F10     &kp F11             &kp F12             &kp DEL
+        &kp GRAVE   &kp N1                  &kp N2                  &kp N3                              &kp N4                  &kp N5              &kp N6          &kp N7          &kp N8              &kp N9      &kp N0      &kp MINUS           &kp EQUAL           &kp BSPC
+        &kp TAB     &kp Q                   &kp W                   &kp E                               &kp R                   &kp T               &kp Y           &kp U           &kp I               &kp O       &kp P       &kp LBKT            &kp RBKT            &kp BSLH
+        &kp CLCK    &kp A                   &kp S                   &kp D                               &kp F                   &kp G               &kp H           &kp J           &kp K               &kp L       &kp SEMI    &kp SQT                         &kp RET
+        &kp LSHFT   &kp Z                   &kp X                   &kp C                               &kp V                   &kp B               &kp N           &kp M           &kp COMMA           &kp DOT     &kp FSLH                                    &kp RSHFT
+        &kp LCTRL   &uc LALT                &uc LCMD                       &kp SPACE                                                                                                &uc RCMD            &mo 1       &kp LEFT    &kp UP              &kp DOWN            &kp RIGHT
+        &mo 2       &out OUT_BLE            &out OUT_24G            &out OUT_CHG                        &out OUT_CHGD
             >;
         };
-        //win
-        layer_two {
+
+        2_typing_win {
  		bindings = <
         &kp ESC 	&kp F1 	               &kp F2 	                &kp F3 	                            &kp F4 	                &kp F5 	            &kp F6 	        &kp F7 	        &kp F8 	            &kp F9 	     &kp F10 	&kp F11 	         &kp F12 	         &kp DEL
         &kp GRAVE	&kp N1 	               &kp N2 	                &kp N3 	                            &kp N4 	                &kp N5 	            &kp N6 	        &kp N7 	        &kp N8 	            &kp N9 	     &kp N0     &kp MINUS 	         &kp EQUAL 	         &kp BSPC
@@ -399,8 +397,21 @@
         &none       &out OUT_BLE           &out OUT_24G             &out OUT_CHG                        &out OUT_CHGD
             >;
         };
-        //win
-        layer_three {
+
+        3_typing_mac {
+ 		bindings = <
+        &kp ESC 	&kp F1 	               &kp F2 	                &kp F3 	                            &kp F4 	                &kp F5 	            &kp F6 	        &kp F7 	        &kp F8 	            &kp F9 	     &kp F10 	&kp F11 	         &kp F12 	         &kp DEL
+        &kp GRAVE	&kp N1 	               &kp N2 	                &kp N3 	                            &kp N4 	                &kp N5 	            &kp N6 	        &kp N7 	        &kp N8 	            &kp N9 	     &kp N0     &kp MINUS 	         &kp EQUAL 	         &kp BSPC
+        &mt LGUI TAB 	&kp Q              &kp W                    &kp E 	                            &kp R 	                &kp T               &kp Y 	        &kp U 	        &kp I 	            &kp O 	     &kp P 		&kp LBKT 	         &kp RBKT 	         &kp BSLH
+        &mt LCTRL ESC 	&hrp LGUI A        &hrm LALT S              &hrm LCTRL D                        &mt LSHFT F             &kp G 	            &kp H 	        &mt LSHFT J     &hrm LCTRL K        &hrm LALT L  &hrp LGUI SEMI	&kp SQT                  &kp RET
+        &kp LSHFT   &kp Z 	               &kp X 	                &kp C 	                            &kp V 	                &kp B 	            &kp N 	        &kp M 	        &kp COMMA           &kp DOT      &kp FSLH                                &kp RSHFT
+        &kp LCTRL 	&kp LGUI               &kp LALT                      &lt 4 SPACE              		                                                                            &mt RALT K_CMENU    &mo 3        &kp LEFT 	 &kp UP      &kp DOWN 	&kp RIGHT
+        //
+        &none       &out OUT_BLE           &out OUT_24G             &out OUT_CHG                        &out OUT_CHGD
+            >;
+        };
+
+        4_fn_win {
         bindings = <
                     //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9        //f10           //f11                         //f12
    &bootloader  &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &uc LG(TAB)                         &uc LG(E)               &kp C_AC_SEARCH     &uc LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN           &kp C_VOLUME_UP      &trans
@@ -413,8 +424,22 @@
         &none   &none                   &none                       &none                               &none
             >;
         };
-        //win
-        layer_extend {
+
+        5_fn_mac {
+        bindings = <
+          //ESC         //f1                    //f2                //f3                                    //f4                //f5                //f6            //f7            //f8                //f9        //f10       //f11               //f12               //DEL
+   &bootloader      &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC    &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS   &kp  C_AC_MAC_LAUNCH    &kp C_AC_SEARCH     &kp C_AL_LOCK   &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN   &kp C_VOLUME_UP     &trans
+        &trans      &bt_pair_0 0 0          &bt_pair_1 0 0          &bt_pair_2 0 0                      &bt_pair_3 0 0          &trans              &trans          &trans          &trans              &trans      &trans      &trans              &kp C_AC_SEARCH     &trans
+        &trans      &trans                  &trans                  &trans                              &trans                  &trans              &trans          &trans          &kp INS             &trans      &trans      &trans              &trans              &uc LG(LS(N4))
+        &trans      &trans                  &trans                  &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans      &trans                      &kp LG(LS(N3))
+        &trans      &trans                  &trans                  &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans                                  &uc LC(LG(SPACE))
+        &trans      &trans                  &trans                         &trans                                                                                                   &kp RCTRL           &trans        &kp HOME   &kp PG_UP   &kp PG_DN    &kp END
+        //
+        &none       &none                   &none                   &none                               &none
+            >;
+        };
+
+        6_nav_win {
         bindings = <
                     //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9        //f10           //f11                         //f12
         &trans  &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &uc LG(TAB)                         &uc LG(E)               &kp C_AC_SEARCH     &uc LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN           &kp C_VOLUME_UP      &trans
@@ -428,7 +453,19 @@
             >;
         };
 
-
+        7_nav_mac {
+        bindings = <
+                    //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9        //f10           //f11                         //f12
+        &trans  &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &uc LG(TAB)                         &uc LG(E)               &kp C_AC_SEARCH     &uc LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN           &kp C_VOLUME_UP      &trans
+        &trans  &kp F1 	                &kp F2 	                    &kp F3 	                            &kp F4 	                &kp F5 	            &kp F6 	        &kp F7 	        &kp F8 	            &kp F9 	    &kp F10 	&kp F11 	                &kp F12              &trans
+        &trans  &kp DEL                 &kp LC(LS(TAB))             &kp TAB                             &kp LC(TAB)             &kp LG(LS(S))       &kp INS         &cut_row        &in_above           &in_below   &kp DEL     &kp LBKT 	                &kp RBKT             &kp LC(LS(O))
+        &trans  &sk LGUI                &sk LALT                    &sk LCTRL                           &sk LSHFT               &kp PSCRN           &kp LEFT        &kp DOWN        &kp UP              &kp RIGHT   &kp BSPC    &kp LG(LC(LS(LALT)))                &kp PSCRN
+        &trans  &kp LC(Z)               &kp LC(X)                   &kp LC(C)                           &kp LC(V)               &kp LC(Y)           &kp HOME        &kp PG_DN       &kp PG_UP           &kp END     &del_to_beginning                               &uc LG(DOT)
+        &trans  &trans                  &trans                           &trans                                                                                                     &kp RCTRL           &trans      &kp HOME    &kp PG_UP    &kp PG_DN   &kp END
+        //
+        &none   &none                   &none                       &none                               &none
+            >;
+        };
 
 	};
 };

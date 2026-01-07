@@ -377,8 +377,8 @@
         // you can swap typing/gaming layers, but then you will need go change combo applickable layers
 
         // phisical switch "mac"
-        0_typing_mac {
-   bindings = <
+  0_typing_mac {
+  bindings = <
         &kp ESC   &kp F1                 &kp F2                   &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9       &kp F10      &kp F11     &kp F12        &kp DEL
         &kp GRAVE &kp N1                 &kp N2                   &kp N3                              &kp N4                  &kp N5              &kp N6          &kp N7          &kp N8              &kp N9       &kp N0       &kp MINUS   &kp EQUAL      &kp BSPC
         &kp TAB   &kp Q                  &kp W                    &kp E                               &kp R                   &kp T               &kp Y           &kp U           &kp I               &kp O        &kp P        &kp LBKT    &kp RBKT       &kp BSLH
@@ -386,7 +386,7 @@
         &kp LSHFT &kp Z                  &kp X                    &kp C                               &kp V                   &kp B               &kp N           &kp M           &kp COMMA           &kp DOT      &kp FSLH     &kp RSHFT
         &kp LCTRL &kp LALT               &kp LGUI                          &lt 7 SPACE                                                                                            &kp RGUI            &mo 5        &kp LEFT     &kp UP      &kp DOWN       &kp RIGHT
         //
-        &none       &out OUT_BLE           &out OUT_24G             &out OUT_CHG                        &out OUT_CHGD
+        &mo 2       &out OUT_BLE            &out OUT_24G            &out OUT_CHG                        &out OUT_CHGD
             >;
         };
 
@@ -398,13 +398,13 @@
         &kp CLCK    &kp A                   &kp S                   &kp D                               &kp F                   &kp G               &kp H           &kp J           &kp K               &kp L       &kp SEMI    &kp SQT                         &kp RET
         &kp LSHFT   &kp Z                   &kp X                   &kp C                               &kp V                   &kp B               &kp N           &kp M           &kp COMMA           &kp DOT     &kp FSLH    &kp RSHFT
         &kp LCTRL   &kp LALT                &kp LCMD                       &kp SPACE                                                                                                &kp RCMD            &mo 5       &kp LEFT    &kp UP              &kp DOWN            &kp RIGHT
-        &mo 2       &out OUT_BLE            &out OUT_24G            &out OUT_CHG                        &out OUT_CHGD
+        &none       &out OUT_BLE           &out OUT_24G             &out OUT_CHG                        &out OUT_CHGD
             >;
         };
 
         // phisical switch "win"
-        2_typing_win {
-   bindings = <
+  2_typing_win {
+  bindings = <
         &kp ESC   &kp F1                 &kp F2                   &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9       &kp F10      &kp F11     &kp F12        &kp DEL
         &kp GRAVE &kp N1                 &kp N2                   &kp N3                              &kp N4                  &kp N5              &kp N6          &kp N7          &kp N8              &kp N9       &kp N0       &kp MINUS   &kp EQUAL      &kp BSPC
         &kp TAB   &kp Q                  &kp W                    &kp E                               &kp R                   &kp T               &kp Y           &kp U           &kp I               &kp O        &kp P        &kp LBKT    &kp RBKT       &kp BSLH
@@ -416,20 +416,20 @@
             >;
         };
 
-        3_gaming_win {
-        bindings = <
+  3_gaming_win {
+  bindings = <
         &kp ESC     &kp F1                  &kp F2                  &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9      &kp F10     &kp F11             &kp F12             &kp DEL
         &kp GRAVE   &kp N1                  &kp N2                  &kp N3                              &kp N4                  &kp N5              &kp N6          &kp N7          &kp N8              &kp N9      &kp N0      &kp MINUS           &kp EQUAL           &kp BSPC
         &kp TAB     &kp Q                   &kp W                   &kp E                               &kp R                   &kp T               &kp Y           &kp U           &kp I               &kp O       &kp P       &kp LBKT            &kp RBKT            &kp BSLH
         &kp CLCK    &kp A                   &kp S                   &kp D                               &kp F                   &kp G               &kp H           &kp J           &kp K               &kp L       &kp SEMI    &kp SQT                         &kp RET
         &kp LSHFT   &kp Z                   &kp X                   &kp C                               &kp V                   &kp B               &kp N           &kp M           &kp COMMA           &kp DOT     &kp FSLH    &kp RSHFT
         &kp LCTRL   &kp LCMD                &kp LALT                       &kp SPACE                                                                                                &kp RALT            &mo 4       &kp LEFT    &kp UP              &kp DOWN            &kp RIGHT
-        &mo 2       &out OUT_BLE            &out OUT_24G            &out OUT_CHG                        &out OUT_CHGD
+        &none       &out OUT_BLE           &out OUT_24G             &out OUT_CHG                        &out OUT_CHGD
             >;
         };
 
-        4_fn_win {
-        bindings = <
+  4_fn_win {
+  bindings = <
                     //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9        //f10           //f11                         //f12
    &bootloader  &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)                         &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN        &kp C_VOLUME_UP      &trans
         &trans  &bt_pair_0 0 0          &bt_pair_1 0 0              &bt_pair_2 0 0                      &bt_pair_3 0 0          &trans              &trans          &trans          &trans              &trans      &trans      &trans                   &kp C_AL_CALC        &trans
@@ -442,8 +442,8 @@
             >;
         };
 
-        5_fn_mac {
-        bindings = <
+  5_fn_mac {
+  bindings = <
           //ESC         //f1                    //f2                //f3                                    //f4                //f5                //f6            //f7            //f8                //f9        //f10       //f11               //f12               //DEL
    &bootloader      &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC    &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS   &kp  C_AC_MAC_LAUNCH    &kp C_AC_SEARCH     &kp C_AL_LOCK   &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN   &kp C_VOLUME_UP     &trans
         &trans      &bt_pair_0 0 0          &bt_pair_1 0 0          &bt_pair_2 0 0                      &bt_pair_3 0 0          &trans              &trans          &trans          &trans              &trans      &trans      &trans              &kp C_AC_SEARCH     &trans
@@ -456,8 +456,8 @@
             >;
         };
 
-        6_nav_win {
-        bindings = <
+  6_nav_win {
+  bindings = <
                     //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9        //f10           //f11                         //f12
         &trans  &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)                         &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN       &kp C_VOLUME_UP      &trans
         &trans  &kp F1                  &kp F2                      &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9      &kp F10     &kp F11                 &kp F12              &trans
@@ -471,8 +471,8 @@
         };
 
         // assuming setting CapsLock as Globe and having F-keys as F-keys in MacOS settings
-        7_nav_mac {
-        bindings = <
+  7_nav_mac {
+  bindings = <
                     //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9        //f10           //f11                         //f12
         &trans  &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)                         &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN      &kp C_VOLUME_UP      &trans
         &trans  &kp F1                  &kp F2                      &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9      &kp F10     &kp F11                &kp F12              &trans

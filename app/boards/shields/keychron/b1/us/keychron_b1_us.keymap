@@ -374,6 +374,8 @@
  keymap {
      compatible = "zmk,keymap";
 
+        // you can swap typing/gaming layers, but then you will need go change combo applickable layers
+
         // phisical switch "mac"
         0_typing_mac {
    bindings = <
@@ -468,6 +470,7 @@
             >;
         };
 
+        // assuming setting CapsLock as Globe and havint F-keys as F-keys in MacOS settings
         7_nav_mac {
         bindings = <
                     //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9        //f10           //f11                         //f12

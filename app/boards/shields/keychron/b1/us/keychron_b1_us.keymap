@@ -470,14 +470,14 @@
             >;
         };
 
-        // assuming setting CapsLock as Globe and havint F-keys as F-keys in MacOS settings
+        // assuming setting CapsLock as Globe and having F-keys as F-keys in MacOS settings
         7_nav_mac {
         bindings = <
                     //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9        //f10           //f11                         //f12
         &trans  &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)                         &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN      &kp C_VOLUME_UP      &trans
         &trans  &kp F1                  &kp F2                      &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9      &kp F10     &kp F11                &kp F12              &trans
         &trans  &kp DEL                 &kp LG(LS(LBKT))            &kp TAB                             &kp LG(LS(RBKT))        &kp LG(SPACE)       &kp INS         &cut_row_m      &in_above_m         &in_below_m &kp DEL     &kp C_VOLUME_DOWN      &kp C_VOLUME_UP      &kp C_MUTE
-        &trans  &sk LCTRL               &sk LGUI                    &sk LALT                            &sk LSHFT               &kp PSCRN           &kp LEFT        &kp DOWN        &kp UP              &kp RIGHT   &kp BSPC    &none                               &kp PSCRN
+        &trans  &sk LCTRL               &sk LGUI                    &sk LALT                            &sk LSHFT               &kp LG(LS(N4))      &kp LEFT        &kp DOWN        &kp UP              &kp RIGHT   &kp BSPC    &none                               &kp PSCRN
         &trans  &kp LG(Z)               &kp LG(X)                   &kp LG(C)                           &kp LG(V)               &kp LG(LS(Z))       &kp LG(LEFT)    &kp PG_DN       &kp PG_UP           &kp LG(RIGHT) &kp LG(BSPC) &kp LC(LG(SPACE))
         &trans  &trans                  &trans                           &trans                                                                                                     &kp RCTRL           &trans      &kp HOME    &kp PG_UP              &kp PG_DN            &kp END
         //

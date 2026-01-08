@@ -13,6 +13,13 @@
 &sk {
         release-after-ms = <60000>;
 };
+&lt {
+        flavor = "balanced";
+        tapping-term-ms = <280>;
+        quick-tap-ms = <175>;
+        require-prior-idle-ms = <150>;
+        hold-trigger-on-release;
+};
 
 / {
     ZMK_MACRO(recover, bindings = <&out OUT_RECOVER>;)

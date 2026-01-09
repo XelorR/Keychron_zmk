@@ -255,7 +255,7 @@
             require-prior-idle-ms = <150>;
         };
 
-        // or use kawa on mac
+        // or use kawa on mac (bind Ctrl-Shift-8/9)
         // WE
         switch_us_mac {
             bindings = <&kp LS(LC(N8))>;

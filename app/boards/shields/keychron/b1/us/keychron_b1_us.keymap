@@ -254,6 +254,23 @@
             layers = <2>;
             require-prior-idle-ms = <150>;
         };
+
+        // or use kawa on mac
+        // WE
+        switch_us_mac {
+            bindings = <&kp LS(LC(N8))>;
+            key-positions = <30 31>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        // IO
+        switch_ru_mac {
+            bindings = <&kp LS(LC(N9))>;
+            key-positions = <36 37>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
     };
 
     td0 {

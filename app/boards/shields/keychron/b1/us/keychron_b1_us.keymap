@@ -243,6 +243,7 @@
             bindings = <&kp CAPS>;
             key-positions = <30 31>;
             layers = <2>;
+            require-prior-idle-ms = <150>;
         };
 
         // IO
@@ -250,6 +251,7 @@
             bindings = <&kp LS(CAPS)>;
             key-positions = <36 37>;
             layers = <2>;
+            require-prior-idle-ms = <150>;
         };
     };
 

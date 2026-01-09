@@ -319,7 +319,7 @@
         enter {
             bindings = <&kp RET>;
             key-positions = <46 47>;
-            layers = <0 2>;
+            layers = <0 2 6 7>;
             require-prior-idle-ms = <150>;
         };
         cw {

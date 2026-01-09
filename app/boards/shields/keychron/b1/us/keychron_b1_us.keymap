@@ -236,6 +236,50 @@
             layers = <2>;
         };
 
+        // Mac version doesn't work properly and somehow conflicts with win version postions
+
+        // WORKS
+        // Ca_mac {
+        //     bindings = <&kp LG(A)>;
+        //     key-positions = <56 59>;
+        //     layers = <0>;
+        // };
+
+        /// DOESN'T WORK
+        // Cz_mac {
+        //     bindings = <&kp LG(Z)>;
+        //     key-positions = <56 57>;
+        //     layers = <0>;
+        // };
+
+        // WORKS
+        // Cv_mac {
+        //     bindings = <&kp LG(V)>;
+        //     key-positions = <58 59>;
+        //     layers = <0>;
+        // };
+
+        /// DOESN'T WORK
+        // Cx_mac {
+        //     bindings = <&kp LG(X)>;
+        //     key-positions = <57 59>;
+        //     layers = <0>;
+        // };
+
+        /// DOESN'T WORK
+        // Cy_mac {
+        //     bindings = <&kp LG(LS(Z))>;
+        //     key-positions = <56 58>;
+        //     layers = <0>;
+        // };
+
+        /// DOESN'T WORK
+        // Cc_mac {
+        //     bindings = <&kp LG(C)>;
+        //     key-positions = <57 58>;
+        //     layers = <0>;
+        // };
+
         // language switching (standard Linux Caps/Shift-Caps)
         // you can set this behavior setting following xkb option: grp:shift_caps_switch
 
@@ -269,6 +313,19 @@
             bindings = <&kp LS(LC(N9))>;
             key-positions = <36 37>;
             layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        enter {
+            bindings = <&kp RET>;
+            key-positions = <46 47>;
+            layers = <0 2>;
+            require-prior-idle-ms = <150>;
+        };
+        cw {
+            bindings = <&caps_word>;
+            key-positions = <48 49>;
+            layers = <0 2>;
             require-prior-idle-ms = <150>;
         };
     };

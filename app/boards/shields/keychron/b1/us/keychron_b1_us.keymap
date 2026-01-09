@@ -107,22 +107,7 @@
             bindings = <&kp LS(HOME) &kp BSPC>;
             label = "CMD_DEL_WIN";
         };
-        pgup_mac_macro: pgup_mac_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&key_on CAPS &kp UP &key_off CAPS>;
-            label = "PGUP MAC MACRO";
-            wait-ms = <0>;
-            tap-ms = <0>;
-        };
-        pgdn_mac_macro: pgdn_mac_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&key_on CAPS &kp DOWN &key_off CAPS>;
-            label = "PGDN MAC MACRO";
-            wait-ms = <0>;
-            tap-ms = <0>;
-        };
+
         // ms excel in windows (us version)
         ins_row: ins_row {
             compatible = "zmk,behavior-macro";
@@ -418,7 +403,7 @@
         pgup_mac: pgup_mac {
             compatible = "zmk,behavior-mod-morph";
             label = "PGUP_MAC";
-            bindings = <&pgup_mac_macro>, <&kp LG(LS(LBKT))>;
+            bindings = <&kp PG_UP>, <&kp LG(LS(LBKT))>;
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
             keep-mods = <0>;
@@ -427,7 +412,7 @@
         pgdn_mac: pgdn_mac {
             compatible = "zmk,behavior-mod-morph";
             label = "PGDN_MAC";
-            bindings = <&pgdn_mac_macro>, <&kp LG(LS(RBKT))>;
+            bindings = <&kp PG_DN>, <&kp LG(LS(RBKT))>;
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
             keep-mods = <0>;
@@ -448,6 +433,7 @@
             compatible = "zmk,behavior-key-toggle";
             label = "KEY_ON";
             #binding-cells = <1>;
+            toggle-mode = "on";
         };
 
         key_off: key_off {
@@ -456,7 +442,6 @@
             #binding-cells = <1>;
             toggle-mode = "off";
         };
-
     };
 
  keymap {
@@ -470,7 +455,7 @@
         &kp ESC   &kp F1                 &kp F2                   &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9       &kp F10      &kp F11     &kp F12        &kp DEL
         &kp GRAVE &kp N1                 &kp N2                   &kp N3                              &kp N4                  &kp N5              &kp N6          &kp N7          &kp N8              &kp N9       &kp N0       &kp MINUS   &kp EQUAL      &kp BSPC
         &kp TAB   &kp Q                  &kp W                    &kp E                               &kp R                   &kp T               &kp Y           &kp U           &kp I               &kp O        &kp P        &kp LBKT    &kp RBKT       &kp BSLH
-        &kp ESC   &hml LCTRL A           &hml LALT S              &hml LGUI D                         &hsl LSHFT F            &kp G               &kp H           &hsr LSHFT J    &hmr LGUI K         &hmr LALT L  &hmr LCTRL SEMI &kp SQT          &kp RET
+        &kp ESC   &hml LCTRL A           &hml LALT S              &hml LGUI D                         &hsl LSHFT F            &kp G               &kp H           &hsr LSHFT J    &hmr LGUI K         &hmr LALT L  &hmr LCTRL SEMI &hmr GLOBE SQT &kp RET
         &kp LSHFT &kp Z                  &kp X                    &kp C                               &kp V                   &kp B               &kp N           &kp M           &kp COMMA           &kp DOT      &kp FSLH     &kp RSHFT
         &kp LCTRL &kp LALT               &kp LGUI                          &lt 7 SPACE                                                                                            &kp RGUI            &mo 5        &kp LEFT     &kp UP      &kp DOWN       &kp RIGHT
         //
@@ -565,7 +550,7 @@
         &trans  &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)                         &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN      &kp C_VOLUME_UP      &trans
         &trans  &kp F1                  &kp F2                      &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9      &kp F10     &kp F11                &kp F12              &trans
         &trans  &kp DEL                 &kp LG(LS(LBKT))            &kp TAB                             &kp LG(LS(RBKT))        &kp LG(SPACE)       &kp INS         &cut_row_m      &in_above_m         &in_below_m &kp DEL     &kp C_VOLUME_DOWN      &kp C_VOLUME_UP      &kp C_MUTE
-        &trans  &sk LCTRL               &msk LGUI LALT              &msk LALT LGUI                      &sk LSHFT               &kp LG(LS(N4))      &kp LEFT        &kp DOWN        &kp UP              &kp RIGHT   &kp BSPC    &none                               &kp PSCRN
+        &trans  &sk LCTRL               &msk LGUI LALT              &msk LALT LGUI                      &sk LSHFT               &kp LG(LS(N4))      &kp LEFT        &kp DOWN        &kp UP              &kp RIGHT   &kp BSPC    &kp GLOBE                               &kp PSCRN
         &trans  &kp LG(Z)               &kp LG(X)                   &kp LG(C)                           &kp LG(V)               &kp LG(LS(Z))       &home_mac       &pgdn_mac       &pgup_mac           &end_mac    &kp LG(BSPC) &kp LC(LG(SPACE))
         &trans  &trans                  &trans                           &trans                                                                                                     &kp RCTRL           &trans      &kp HOME    &kp PG_UP              &kp PG_DN            &kp END
         //

@@ -401,7 +401,6 @@
             compatible = "zmk,behavior-mod-morph";
             label = "HOME_MAC";
             bindings = <&kp LG(LEFT)>, <&kp LG(UP)>;
-
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
             keep-mods = <0>;
@@ -411,7 +410,6 @@
             compatible = "zmk,behavior-mod-morph";
             label = "END_MAC";
             bindings = <&kp LG(RIGHT)>, <&kp LG(DOWN)>;
-
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
             keep-mods = <0>;
@@ -421,7 +419,6 @@
             compatible = "zmk,behavior-mod-morph";
             label = "PGUP_MAC";
             bindings = <&pgup_mac_macro>, <&kp LG(LS(LBKT))>;
-
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
             keep-mods = <0>;
@@ -431,7 +428,6 @@
             compatible = "zmk,behavior-mod-morph";
             label = "PGDN_MAC";
             bindings = <&pgdn_mac_macro>, <&kp LG(LS(RBKT))>;
-
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
             keep-mods = <0>;

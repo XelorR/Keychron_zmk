@@ -306,15 +306,16 @@
         bindings = <&bt_pair3>, <&bt_recon_3>;
     };
 
-    // HRM tunung
-    //
-    // Noticeable delay when tapping HRMs: Increase require-prior-idle-ms. As a rule of thumb, you want to set it to at least 10500/x where x is your (relaxed) WPM for English prose.3
-    // False negatives (same-hand): Reduce tapping-term-ms (or disable hold-trigger-key-positions)
-    // False negatives (cross-hand): Reduce require-prior-idle-ms (or set flavor to hold-preferred -- to continue using hold-trigger-on-release, you must apply this patch to ZMK
-    // False positives (same-hand): Increase tapping-term-ms
-    // False positives (cross-hand): Increase require-prior-idle-ms (or set flavor to tap-preferred, which requires holding HRMs past tapping term to activate
-
     behaviors {
+
+        // HRM tunung
+        //
+        // Noticeable delay when tapping HRMs: Increase require-prior-idle-ms. As a rule of thumb, you want to set it to at least 10500/x where x is your (relaxed) WPM for English prose.3
+        // False negatives (same-hand): Reduce tapping-term-ms (or disable hold-trigger-key-positions)
+        // False negatives (cross-hand): Reduce require-prior-idle-ms (or set flavor to hold-preferred -- to continue using hold-trigger-on-release, you must apply this patch to ZMK
+        // False positives (same-hand): Increase tapping-term-ms
+        // False positives (cross-hand): Increase require-prior-idle-ms (or set flavor to tap-preferred, which requires holding HRMs past tapping term to activate
+
         hml: hrm_left {
             compatible = "zmk,behavior-hold-tap";
             label = "HRM left side";
@@ -363,6 +364,9 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 42 43 44 45 46 47 55 56 57 58 59 60 66 67 68 69 70 71 72 73 74 75 76>;
             hold-trigger-on-release;
         };
+
+        // sticky modtaps
+
         msk: mod_tap_sticky_key {
             compatible = "zmk,behavior-hold-tap";
             label = "mod-tap for OSSM";
@@ -374,6 +378,49 @@
             bindings = <&kp>, <&sk>;
             hold-trigger-on-release;
         };
+
+        // unified navigation
+
+        home_mac: home_mac {
+            compatible = "zmk,behavior-mod-morph";
+            label = "HOME_MAC";
+            bindings = <&kp LG(LEFT)>, <&kp LG(UP)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+            keep-mods = <0>;
+        };
+
+        end_mac: end_mac {
+            compatible = "zmk,behavior-mod-morph";
+            label = "END_MAC";
+            bindings = <&kp LG(RIGHT)>, <&kp LG(DOWN)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+            keep-mods = <0>;
+        };
+
+        pgup_mac: pgup_mac {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PGUP_MAC";
+            bindings = <&kp PG_UP>, <&kp LG(LS(LBKT))>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+            keep-mods = <0>;
+        };
+
+        pgdn_mac: pgdn_mac {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PGDN_MAC";
+            bindings = <&kp PG_DN>, <&kp LG(LS(RBKT))>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+            keep-mods = <0>;
+        };
+
     };
 
  keymap {
@@ -483,7 +530,7 @@
         &trans  &kp F1                  &kp F2                      &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9      &kp F10     &kp F11                &kp F12              &trans
         &trans  &kp DEL                 &kp LG(LS(LBKT))            &kp TAB                             &kp LG(LS(RBKT))        &kp LG(SPACE)       &kp INS         &cut_row_m      &in_above_m         &in_below_m &kp DEL     &kp C_VOLUME_DOWN      &kp C_VOLUME_UP      &kp C_MUTE
         &trans  &sk LCTRL               &msk LGUI LALT              &msk LALT LGUI                      &sk LSHFT               &kp LG(LS(N4))      &kp LEFT        &kp DOWN        &kp UP              &kp RIGHT   &kp BSPC    &none                               &kp PSCRN
-        &trans  &kp LG(Z)               &kp LG(X)                   &kp LG(C)                           &kp LG(V)               &kp LG(LS(Z))       &kp LG(LEFT)    &kp PG_DN       &kp PG_UP           &kp LG(RIGHT) &kp LG(BSPC) &kp LC(LG(SPACE))
+        &trans  &kp LG(Z)               &kp LG(X)                   &kp LG(C)                           &kp LG(V)               &kp LG(LS(Z))       &home_mac       &pgdn_mac       &pgup_mac           &end_mac    &kp LG(BSPC) &kp LC(LG(SPACE))
         &trans  &trans                  &trans                           &trans                                                                                                     &kp RCTRL           &trans      &kp HOME    &kp PG_UP              &kp PG_DN            &kp END
         //
         &none   &none                   &none                       &none                               &none

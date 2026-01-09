@@ -304,28 +304,15 @@
         bindings = <&bt_pair3>, <&bt_recon_3>;
     };
 
+    // HRM tunung
+    //
+    // Noticeable delay when tapping HRMs: Increase require-prior-idle-ms. As a rule of thumb, you want to set it to at least 10500/x where x is your (relaxed) WPM for English prose.3
+    // False negatives (same-hand): Reduce tapping-term-ms (or disable hold-trigger-key-positions)
+    // False negatives (cross-hand): Reduce require-prior-idle-ms (or set flavor to hold-preferred -- to continue using hold-trigger-on-release, you must apply this patch to ZMK
+    // False positives (same-hand): Increase tapping-term-ms
+    // False positives (cross-hand): Increase require-prior-idle-ms (or set flavor to tap-preferred, which requires holding HRMs past tapping term to activate
+
     behaviors {
-        hrm: mod_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HRM";
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-            quick-tap-ms = <100>;
-            global-quick-tap;
-            flavor = "tap-preferred";
-            tapping-term-ms = <170>;
-        };
-        // hrm for pinky
-        hrp: mod_tap_pinky {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HRM for pinky";
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-            quick-tap-ms = <100>;
-            global-quick-tap;
-            flavor = "tap-preferred";
-            tapping-term-ms = <190>;
-        };
         hml: hrm_left {
             compatible = "zmk,behavior-hold-tap";
             label = "HRM left side";

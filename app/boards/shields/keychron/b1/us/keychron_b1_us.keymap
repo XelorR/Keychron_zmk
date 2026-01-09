@@ -107,6 +107,22 @@
             bindings = <&kp LS(HOME) &kp BSPC>;
             label = "CMD_DEL_WIN";
         };
+        pgup_mac_macro: pgup_mac_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&key_on CAPS &kp UP &key_off CAPS>;
+            label = "PGUP MAC MACRO";
+            wait-ms = <0>;
+            tap-ms = <0>;
+        };
+        pgdn_mac_macro: pgdn_mac_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&key_on CAPS &kp DOWN &key_off CAPS>;
+            label = "PGDN MAC MACRO";
+            wait-ms = <0>;
+            tap-ms = <0>;
+        };
         // ms excel in windows (us version)
         ins_row: ins_row {
             compatible = "zmk,behavior-macro";
@@ -404,7 +420,7 @@
         pgup_mac: pgup_mac {
             compatible = "zmk,behavior-mod-morph";
             label = "PGUP_MAC";
-            bindings = <&kp PG_UP>, <&kp LG(LS(LBKT))>;
+            bindings = <&pgup_mac_macro>, <&kp LG(LS(LBKT))>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
@@ -414,7 +430,7 @@
         pgdn_mac: pgdn_mac {
             compatible = "zmk,behavior-mod-morph";
             label = "PGDN_MAC";
-            bindings = <&kp PG_DN>, <&kp LG(LS(RBKT))>;
+            bindings = <&pgdn_mac_macro>, <&kp LG(LS(RBKT))>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
@@ -428,6 +444,21 @@
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
             keep-mods = <0>;
+        };
+
+        // lego blocks
+
+        key_on: key_on {
+            compatible = "zmk,behavior-key-toggle";
+            label = "KEY_ON";
+            #binding-cells = <1>;
+        };
+
+        key_off: key_off {
+            compatible = "zmk,behavior-key-toggle";
+            label = "KEY_OFF";
+            #binding-cells = <1>;
+            toggle-mode = "off";
         };
 
     };

@@ -109,19 +109,19 @@
         };
 
         // ms excel in windows (us version)
-        ins_row: ins_row {
+        insert_row: insert_row {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LALT &none &none &none &none &none &none &none &none &none &none &kp H &kp I &kp R>;
             label = "INSERT_ROW_BELOW";
         };
-        ins_col: ins_col {
+        insert_col: insert_col {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LALT &none &none &none &none &none &none &none &none &none &none &kp H &kp I &kp C>;
             label = "INSERT_COLUMN_BELOW";
         };
-        ins_sheet: ins_sheet {
+        insert_sheet: insert_sheet {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LALT &none &none &none &none &none &none &none &none &none &none &kp H &kp I &kp S>;
@@ -501,6 +501,24 @@
             keep-mods = <0>;
         };
 
+        ins_row: ins_row {
+            compatible = "zmk,behavior-mod-morph";
+            label = "INSERT_ROW";
+            bindings = <&in_below>, <&in_above>;
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <0>;
+        };
+
+        ins_row_m: ins_row_m {
+            compatible = "zmk,behavior-mod-morph";
+            label = "INSERT_ROW_MAC";
+            bindings = <&in_below_m>, <&in_above_m>;
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <0>;
+        };
+
         // lego blocks
 
         key_on: key_on {
@@ -581,7 +599,7 @@
    &bootloader  &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)                         &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN        &kp C_VOLUME_UP      &trans
         &trans  &bt_pair_0 0 0          &bt_pair_1 0 0              &bt_pair_2 0 0                      &bt_pair_3 0 0          &trans              &trans          &trans          &trans              &trans      &trans      &trans                   &kp C_AL_CALC        &trans
         &trans  &trans                  &rm_sheet                   &rm_col                             &rm_row                 &trans              &trans          &trans          &kp INS             &trans      &trans      &str1                    &str2                &kp LC(LS(S))
-        &trans  &mv_sheet               &ins_sheet                  &ins_col                            &ins_row                &trans              &trans          &trans          &trans              &trans      &trans      &trans                              &kp PSCRN
+        &trans  &mv_sheet               &insert_sheet               &insert_col                         &insert_row             &trans              &trans          &trans          &trans              &trans      &trans      &trans                              &kp PSCRN
         &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &trans              &to 2       &to 3       &kp LG(DOT)
         &trans  &trans                  &trans                             &trans                                                                                                   &kp RCTRL           &trans      &kp HOME    &kp PG_UP                &kp PG_DN            &kp END
         //
@@ -608,7 +626,7 @@
                     //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9        //f10           //f11                         //f12
         &trans  &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)                         &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN       &kp C_VOLUME_UP      &trans
         &trans  &kp F1                  &kp F2                      &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9      &kp F10     &kp F11                 &kp F12              &trans
-        &trans  &kp DEL                 &kp LC(LS(TAB))             &kp TAB                             &kp LC(TAB)             &kp LGUI            &kp INS         &in_below       &in_above           &sel_row    &kp DEL     &kp C_VOLUME_DOWN       &kp C_VOLUME_UP      &kp C_MUTE
+        &trans  &kp DEL                 &kp LC(LS(TAB))             &kp TAB                             &kp LC(TAB)             &kp LGUI            &kp INS         &sel_row        &in_above           &ins_row    &kp DEL     &kp C_VOLUME_DOWN       &kp C_VOLUME_UP      &kp C_MUTE
         &trans  &sk LGUI                &sk LALT                    &sk LCTRL                           &sk LSHFT               &kp PSCRN           &kp LEFT        &kp DOWN        &kp UP              &kp RIGHT   &kp BSPC    &kp LG(LC(LS(LALT)))                &kp PSCRN
         &trans  &kp LC(Z)               &kp LC(X)                   &kp LC(C)                           &kp LC(V)               &kp LC(Y)           &kp HOME        &kp PG_DN       &kp PG_UP           &kp END     &cmd_del_win &kp LG(DOT)
         &trans  &trans                  &trans                           &trans                                                                                                     &kp RCTRL           &trans      &kp HOME    &kp PG_UP               &kp PG_DN            &kp END
@@ -623,7 +641,7 @@
                     //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9        //f10           //f11                         //f12
         &trans  &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)                         &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN      &kp C_VOLUME_UP      &trans
         &trans  &kp F1                  &kp F2                      &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9      &kp F10     &kp F11                &kp F12              &trans
-        &trans  &kp DEL                 &kp LG(LS(LBKT))            &kp TAB                             &kp LG(LS(RBKT))        &kp LG(SPACE)       &kp INS         &in_below_m     &in_above_m         &sel_row_m  &kp DEL     &kp C_VOLUME_DOWN      &kp C_VOLUME_UP      &kp C_MUTE
+        &trans  &kp DEL                 &kp LG(LS(LBKT))            &kp TAB                             &kp LG(LS(RBKT))        &kp LG(SPACE)       &kp INS         &sel_row_m      &in_above_m         &ins_row_m  &kp DEL     &kp C_VOLUME_DOWN      &kp C_VOLUME_UP      &kp C_MUTE
         &trans  &sk LCTRL               &msk LGUI LALT              &msk LALT LGUI                      &sk LSHFT               &kp LG(LS(N4))      &kp LEFT        &kp DOWN        &kp UP              &kp RIGHT   &kp BSPC    &kp GLOBE                               &kp PSCRN
         &trans  &kp LG(Z)               &kp LG(X)                   &kp LG(C)                           &kp LG(V)               &kp LG(LS(Z))       &home_mac       &pgdn_mac       &pgup_mac           &end_mac    &kp LG(BSPC) &kp LC(LG(SPACE))
         &trans  &trans                  &trans                           &trans                                                                                                     &kp RCTRL           &trans      &kp HOME    &kp PG_UP              &kp PG_DN            &kp END

@@ -64,7 +64,7 @@
     };
 
     macros {
-        // lego blocks
+        // for my caps-word
         kp_unshift: kp_unshift {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -100,6 +100,7 @@
             bindings = <&macro_release &kp LSHFT>,
                        <&macro_tap &kp HOME &kp LS(RET) &kp UP>;
             label = "IN_ABOVE";
+            wait-ms = <0>;
         };
         sel_row_m: sel_row_m {
             compatible = "zmk,behavior-macro";
@@ -119,6 +120,7 @@
             bindings = <&macro_release &kp LSHFT>,
                        <&macro_tap &kp LG(LEFT) &kp LS(RET) &kp UP>;
             label = "IN_ABOVE_MAC";
+            wait-ms = <0>;
         };
         cmd_del_win: cmd_del_win {
             compatible = "zmk,behavior-macro";
@@ -538,7 +540,7 @@
             keep-mods = <0>;
         };
 
-        // lego blocks
+        // for my caps-word
 
         lt_unshift: lt_unshift {
             compatible = "zmk,behavior-hold-tap";
@@ -547,6 +549,38 @@
             #binding-cells = <2>;
             tapping-term-ms = <170>;
             quick-tap-ms = <100>;
+        };
+        up_no_rsft: up_no_rsft {
+            compatible = "zmk,behavior-mod-morph";
+            label = "UP_IGNORING_RSHIFT";
+            #binding-cells = <0>;
+            bindings = <&kp UP>, <&kp UP>;
+            mods = <(MOD_RSFT)>;
+            keep-mods = <0>;
+        };
+        down_no_rsft: down_no_rsft {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOWN_IGNORING_RSHIFT";
+            #binding-cells = <0>;
+            bindings = <&kp DOWN>, <&kp DOWN>;
+            mods = <(MOD_RSFT)>;
+            keep-mods = <0>;
+        };
+        left_no_rsft: left_no_rsft {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LEFT_IGNORING_RSHIFT";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT>, <&kp LEFT>;
+            mods = <(MOD_RSFT)>;
+            keep-mods = <0>;
+        };
+        right_no_rsft: right_no_rsft {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RIGHT_IGNORING_RSHIFT";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT>, <&kp RIGHT>;
+            mods = <(MOD_RSFT)>;
+            keep-mods = <0>;
         };
     };
 
@@ -641,7 +675,7 @@
         &trans  &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)                         &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN       &kp C_VOLUME_UP      &trans
         &trans  &kp F1                  &kp F2                      &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9      &kp F10     &kp F11                 &kp F12              &trans
         &trans  &kp DEL                 &kp LC(LS(TAB))             &kp TAB                             &kp LC(TAB)             &kp LGUI            &kp INS         &sel_row        &my_caps_word       &ins_row    &kp DEL     &kp C_VOLUME_DOWN       &kp C_VOLUME_UP      &kp C_MUTE
-        &trans  &sk LGUI                &sk LALT                    &sk LCTRL                           &sk LSHFT               &kp PSCRN           &kp LEFT        &kp DOWN        &kp UP              &kp RIGHT   &kp BSPC    &kp LG(LC(LS(LALT)))                &kp PSCRN
+        &trans  &sk LGUI                &sk LALT                    &sk LCTRL                           &sk LSHFT               &kp PSCRN           &left_no_rsft   &down_no_rsft   &up_no_rsft         &right_no_rsft &kp BSPC &kp LG(LC(LS(LALT)))                &kp PSCRN
         &trans  &kp LC(Z)               &kp LC(X)                   &kp LC(C)                           &kp LC(V)               &kp LC(Y)           &kp HOME        &kp PG_DN       &kp PG_UP           &kp END     &cmd_del_win &kp LG(DOT)
         &trans  &trans                  &trans                           &trans                                                                                                     &kp RCTRL           &trans      &kp HOME    &kp PG_UP               &kp PG_DN            &kp END
         //
@@ -656,7 +690,7 @@
         &trans  &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)                         &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN      &kp C_VOLUME_UP      &trans
         &trans  &kp F1                  &kp F2                      &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9      &kp F10     &kp F11                &kp F12              &trans
         &trans  &kp DEL                 &kp LG(LS(LBKT))            &kp TAB                             &kp LG(LS(RBKT))        &kp LG(SPACE)       &kp INS         &sel_row_m      &my_caps_word       &ins_row_m  &kp DEL     &kp C_VOLUME_DOWN      &kp C_VOLUME_UP      &kp C_MUTE
-        &trans  &sk LCTRL               &msk LGUI LALT              &msk LALT LGUI                      &sk LSHFT               &kp LG(LS(N4))      &kp LEFT        &kp DOWN        &kp UP              &kp RIGHT   &kp BSPC    &kp GLOBE                               &kp PSCRN
+        &trans  &sk LCTRL               &msk LGUI LALT              &msk LALT LGUI                      &sk LSHFT               &kp LG(LS(N4))      &left_no_rsft   &down_no_rsft   &up_no_rsft         &right_no_rsft &kp BSPC &kp GLOBE                           &kp PSCRN
         &trans  &kp LG(Z)               &kp LG(X)                   &kp LG(C)                           &kp LG(V)               &kp LG(LS(Z))       &home_mac       &pgdn_mac       &pgup_mac           &end_mac    &kp LG(BSPC) &kp LC(LG(SPACE))
         &trans  &trans                  &trans                           &trans                                                                                                     &kp RCTRL           &trans      &kp HOME    &kp PG_UP              &kp PG_DN            &kp END
         //

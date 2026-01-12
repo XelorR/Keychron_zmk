@@ -97,8 +97,7 @@
         in_above: in_above {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_release &kp LSHFT>,
-                       <&macro_tap &kp HOME &kp LS(RET) &kp UP>;
+            bindings = <&kp HOME &kp LS(RET) &kp UP>;
             label = "IN_ABOVE";
             wait-ms = <0>;
         };
@@ -117,8 +116,7 @@
         in_above_m: in_above_m {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_release &kp LSHFT>,
-                       <&macro_tap &kp LG(LEFT) &kp LS(RET) &kp UP>;
+            bindings = <&kp LG(LEFT) &kp LS(RET) &kp UP>;
             label = "IN_ABOVE_MAC";
             wait-ms = <0>;
         };

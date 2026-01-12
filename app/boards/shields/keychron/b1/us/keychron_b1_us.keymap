@@ -80,7 +80,7 @@
         in_above: in_above {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp HOME &kp LS(RET) &kp UP>;
+            bindings = <&key_off LSHFT &kp HOME &kp LS(RET) &kp UP>;
             label = "IN_ABOVE";
         };
         sel_row_m: sel_row_m {
@@ -98,7 +98,7 @@
         in_above_m: in_above_m {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(LEFT) &kp LS(RET) &kp UP>;
+            bindings = <&key_off LSHFT &kp LG(LEFT) &kp LS(RET) &kp UP>;
             label = "IN_ABOVE_MAC";
         };
         cmd_del_win: cmd_del_win {

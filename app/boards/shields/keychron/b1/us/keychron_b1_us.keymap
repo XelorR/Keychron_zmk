@@ -67,6 +67,33 @@
     };
 
     macros {
+        // language switching win/lin, assign shortunts using PowerToys on Windows or xkb option grp:shift_caps_switch on GNU Linux
+        en_win: en_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp_unshift CAPS>;
+            label = "EN_WIN";
+        };
+        ru_win: ru_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp_unshift LS(CAPS)>;
+            label = "RU_WIN";
+        };
+        // language switching mac, assign shortcunts using Kawa
+        en_mac: en_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp_unshift LC(LS(N8))>;
+            label = "EN_MAC";
+        };
+        ru_mac: ru_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp_unshift LC(LS(N9))>;
+            label = "RU_MAC";
+        };
+
         // for my caps-word
         kp_unshift: kp_unshift {
             compatible = "zmk,behavior-macro-one-param";
@@ -314,12 +341,11 @@
         //     layers = <0>;
         // };
 
-        // language switching (standard Linux Caps/Shift-Caps)
-        // you can set this behavior setting following xkb option: grp:shift_caps_switch
+        // language switching (configure shortcuts in corresponding macros)
 
         // WE
         switch_us {
-            bindings = <&kp CAPS>;
+            bindings = <&en_win>;
             key-positions = <30 31>;
             layers = <2>;
             require-prior-idle-ms = <150>;
@@ -327,16 +353,15 @@
 
         // IO
         switch_ru {
-            bindings = <&kp LS(CAPS)>;
+            bindings = <&ru_win>;
             key-positions = <36 37>;
             layers = <2>;
             require-prior-idle-ms = <150>;
         };
 
-        // or use kawa on mac (bind Ctrl-Shift-8/9)
         // WE
         switch_us_mac {
-            bindings = <&kp LS(LC(N8))>;
+            bindings = <&en_mac>;
             key-positions = <30 31>;
             layers = <0>;
             require-prior-idle-ms = <150>;
@@ -344,7 +369,7 @@
 
         // IO
         switch_ru_mac {
-            bindings = <&kp LS(LC(N9))>;
+            bindings = <&ru_mac>;
             key-positions = <36 37>;
             layers = <0>;
             require-prior-idle-ms = <150>;

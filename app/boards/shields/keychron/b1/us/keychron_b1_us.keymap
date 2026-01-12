@@ -65,11 +65,11 @@
 
     macros {
         // basic editing
-        cut_row: cut_row {
+        indent: indent {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp HOME &kp LS(DOWN) &kp LC(X)>;
-            label = "CUT_ROW";
+            bindings = <&kp HOME &kp SPACE &kp SPACE &kp END>;
+            label = "indent line, two spaces";
         };
         in_below: in_below {
             compatible = "zmk,behavior-macro";
@@ -83,11 +83,11 @@
             bindings = <&kp HOME &kp LS(RET) &kp UP>;
             label = "IN_ABOVE";
         };
-        cut_row_m: cut_row_m {
+        indent_m: indent_m {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(LEFT) &kp LS(DOWN) &kp LG(X)>;
-            label = "CUT_ROW_MAC";
+            bindings = <&kp LG(LEFT) &kp SPACE &kp SPACE &kp LG(RIGHT)>;
+            label = "indent line, two spaces";
         };
         in_below_m: in_below_m {
             compatible = "zmk,behavior-macro";
@@ -608,7 +608,7 @@
                     //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9        //f10           //f11                         //f12
         &trans  &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)                         &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN       &kp C_VOLUME_UP      &trans
         &trans  &kp F1                  &kp F2                      &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9      &kp F10     &kp F11                 &kp F12              &trans
-        &trans  &kp DEL                 &kp LC(LS(TAB))             &kp TAB                             &kp LC(TAB)             &kp LGUI            &kp INS         &cut_row        &in_above           &in_below   &kp DEL     &kp C_VOLUME_DOWN       &kp C_VOLUME_UP      &kp C_MUTE
+        &trans  &kp DEL                 &kp LC(LS(TAB))             &kp TAB                             &kp LC(TAB)             &kp LGUI            &kp INS         &in_below       &in_above           &indent     &kp DEL     &kp C_VOLUME_DOWN       &kp C_VOLUME_UP      &kp C_MUTE
         &trans  &sk LGUI                &sk LALT                    &sk LCTRL                           &sk LSHFT               &kp PSCRN           &kp LEFT        &kp DOWN        &kp UP              &kp RIGHT   &kp BSPC    &kp LG(LC(LS(LALT)))                &kp PSCRN
         &trans  &kp LC(Z)               &kp LC(X)                   &kp LC(C)                           &kp LC(V)               &kp LC(Y)           &kp HOME        &kp PG_DN       &kp PG_UP           &kp END     &cmd_del_win &kp LG(DOT)
         &trans  &trans                  &trans                           &trans                                                                                                     &kp RCTRL           &trans      &kp HOME    &kp PG_UP               &kp PG_DN            &kp END
@@ -623,7 +623,7 @@
                     //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9        //f10           //f11                         //f12
         &trans  &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)                         &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN      &kp C_VOLUME_UP      &trans
         &trans  &kp F1                  &kp F2                      &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9      &kp F10     &kp F11                &kp F12              &trans
-        &trans  &kp DEL                 &kp LG(LS(LBKT))            &kp TAB                             &kp LG(LS(RBKT))        &kp LG(SPACE)       &kp INS         &cut_row_m      &in_above_m         &in_below_m &kp DEL     &kp C_VOLUME_DOWN      &kp C_VOLUME_UP      &kp C_MUTE
+        &trans  &kp DEL                 &kp LG(LS(LBKT))            &kp TAB                             &kp LG(LS(RBKT))        &kp LG(SPACE)       &kp INS         &in_below_m     &in_above_m         &indent_m   &kp DEL     &kp C_VOLUME_DOWN      &kp C_VOLUME_UP      &kp C_MUTE
         &trans  &sk LCTRL               &msk LGUI LALT              &msk LALT LGUI                      &sk LSHFT               &kp LG(LS(N4))      &kp LEFT        &kp DOWN        &kp UP              &kp RIGHT   &kp BSPC    &kp GLOBE                               &kp PSCRN
         &trans  &kp LG(Z)               &kp LG(X)                   &kp LG(C)                           &kp LG(V)               &kp LG(LS(Z))       &home_mac       &pgdn_mac       &pgup_mac           &end_mac    &kp LG(BSPC) &kp LC(LG(SPACE))
         &trans  &trans                  &trans                           &trans                                                                                                     &kp RCTRL           &trans      &kp HOME    &kp PG_UP              &kp PG_DN            &kp END

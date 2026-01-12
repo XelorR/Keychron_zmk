@@ -91,6 +91,12 @@
             bindings = <&kp HOME &kp LS(DOWN)>;
             label = "select row";
         };
+        sel_word: sel_word {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LEFT) &kp LS(LC(RIGHT))>;
+            label = "select word";
+        };
         in_below: in_below {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -109,6 +115,12 @@
             #binding-cells = <0>;
             bindings = <&kp LG(LEFT) &kp LS(DOWN)>;
             label = "select row, mac";
+        };
+        sel_word_m: sel_word_m {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LEFT) &kp LS(LA(RIGHT))>;
+            label = "select word, mac";
         };
         in_below_m: in_below_m {
             compatible = "zmk,behavior-macro";
@@ -345,7 +357,7 @@
             require-prior-idle-ms = <150>;
         };
         cw {
-            bindings = <&caps_word>;
+            bindings = <&my_caps_word>;
             key-positions = <48 49>;
             layers = <0 2>;
             require-prior-idle-ms = <150>;
@@ -651,7 +663,7 @@
                     //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9        //f10           //f11                         //f12
         &trans  &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)                         &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN       &kp C_VOLUME_UP      &trans
         &trans  &kp F1                  &kp F2                      &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9      &kp F10     &kp F11                 &kp F12              &trans
-        &trans  &kp DEL                 &kp LC(LS(TAB))             &kp TAB                             &kp LC(TAB)             &kp LGUI            &kp INS         &sel_row        &my_caps_word       &ins_row    &kp DEL     &kp C_VOLUME_DOWN       &kp C_VOLUME_UP      &kp C_MUTE
+        &trans  &kp DEL                 &kp LC(LS(TAB))             &kp TAB                             &kp LC(TAB)             &kp LGUI            &kp INS         &sel_row        &sel_word           &ins_row    &kp DEL     &kp C_VOLUME_DOWN       &kp C_VOLUME_UP      &kp C_MUTE
         &trans  &sk LGUI                &sk LALT                    &sk LCTRL                           &sk LSHFT               &kp PSCRN           &left_no_rsft   &down_no_rsft   &up_no_rsft         &right_no_rsft &kp BSPC &kp LG(LC(LS(LALT)))                &kp PSCRN
         &trans  &kp LC(Z)               &kp LC(X)                   &kp LC(C)                           &kp LC(V)               &kp LC(Y)           &kp HOME        &kp PG_DN       &kp PG_UP           &kp END     &cmd_del_win &kp LG(DOT)
         &trans  &trans                  &trans                           &trans                                                                                                     &kp RCTRL           &trans      &kp HOME    &kp PG_UP               &kp PG_DN            &kp END
@@ -666,7 +678,7 @@
                     //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9        //f10           //f11                         //f12
         &trans  &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)                         &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN      &kp C_VOLUME_UP      &trans
         &trans  &kp F1                  &kp F2                      &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9      &kp F10     &kp F11                &kp F12              &trans
-        &trans  &kp DEL                 &kp LG(LS(LBKT))            &kp TAB                             &kp LG(LS(RBKT))        &kp LG(SPACE)       &kp INS         &sel_row_m      &my_caps_word       &ins_row_m  &kp DEL     &kp C_VOLUME_DOWN      &kp C_VOLUME_UP      &kp C_MUTE
+        &trans  &kp DEL                 &kp LG(LS(LBKT))            &kp TAB                             &kp LG(LS(RBKT))        &kp LG(SPACE)       &kp INS         &sel_row_m      &sel_word_m         &ins_row_m  &kp DEL     &kp C_VOLUME_DOWN      &kp C_VOLUME_UP      &kp C_MUTE
         &trans  &sk LCTRL               &msk LGUI LALT              &msk LALT LGUI                      &sk LSHFT               &kp LG(LS(N4))      &left_no_rsft   &down_no_rsft   &up_no_rsft         &right_no_rsft &kp BSPC &kp GLOBE                           &kp PSCRN
         &trans  &kp LG(Z)               &kp LG(X)                   &kp LG(C)                           &kp LG(V)               &kp LG(LS(Z))       &home_mac       &pgdn_mac       &pgup_mac           &end_mac    &kp LG(BSPC) &kp LC(LG(SPACE))
         &trans  &trans                  &trans                           &trans                                                                                                     &kp RCTRL           &trans      &kp HOME    &kp PG_UP              &kp PG_DN            &kp END

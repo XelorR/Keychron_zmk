@@ -18,12 +18,6 @@
         release-after-ms = <60000>;
 };
 
-&lt {
-  flavor = "balanced";
-  tapping-term-ms = <200>;
-  quick-tap-ms = <QUICK_TAP_MS>;
-};
-
 / {
     ZMK_MACRO(recover, bindings = <&out OUT_RECOVER>;)
     ZMK_MACRO(change, bindings = <&out OUT_FN>;)

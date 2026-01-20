@@ -427,27 +427,27 @@
 
   4_SIM_BASE {
   bindings = <
-        ___     &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)                         &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN        &kp C_VOLUME_UP      ___   
-        ___     &bt_pair_0 0 0          &bt_pair_1 0 0              &bt_pair_2 0 0                      &bt_pair_3 0 0          ___                 ___             ___             ___                 ___         ___         ___                      &kp C_AL_CALC        ___   
-        ___     ___                     ___                         ___                                 ___                     ___                 ___             ___             &kp N7              &kp N8      &kp N9      &kp PLUS                 ___                  &kp PRINTSCREEN
-        ___     ___                     ___                         ___                                 ___                     ___                 ___             ___             &kp N4              &kp N5      &kp N6      &kp MINUS                                     ___   
-        ___     ___                     ___                         ___                                 ___                     ___                 ___             &kp N0          &kp N1              &kp N2      &kp N3                                                    &kp LG(DOT)
-        ___     ___                     ___                         ___                                                                                                             &kp RCTRL           ___         &kp HOME    &kp PG_UP                &kp PG_DN            &kp END
+        ___      &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)          &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN        &kp C_VOLUME_UP      ___   
+        ___      &bt_pair_0 0 0          &bt_pair_1 0 0              &bt_pair_2 0 0       &bt_pair_3 0 0          ___                 ___             ___             ___                 ___         ___         ___                      &kp C_AL_CALC        ___   
+        ___      &kp GRAVE               &kp TILDE                   &kp HASH             &kp DLLR                &kp PRCNT           &kp EQUAL       &kp N7          &kp N8              &kp N9      &kp PLUS    ___                      ___                  &kp PRINTSCREEN
+        &kp BSLH &kp PIPE                &kp LT                      &kp LBRC             &kp LPAR                &kp LBKT            &kp STAR        &kp N4          &kp N5              &kp N6      &kp MINUS   &kp UNDER                                     ___   
+        ___      &kp GT                  &kp RBRC                    &kp RPAR             &kp RBKT                &kp CARET           &kp N0          &kp N1          &kp N2              &kp N3      &kp FSLH                                                    &kp LG(DOT)
+        ___      ___                     ___                         ___                                                                                              &kp RCTRL           ___         &kp HOME    &kp PG_UP                &kp PG_DN            &kp END
         //
-        XXX     XXX                     XXX                         XXX                                 XXX  
+        XXX      XXX                     XXX                         XXX                  XXX  
             >;
         };
 
   5_SIM_RU {
   bindings = <
-        ___         &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC   &kp LG(TAB)                         &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN        &kp C_VOLUME_UP      ___   
-        ___         &bt_pair_0 0 0          &bt_pair_1 0 0         &bt_pair_2 0 0                      &bt_pair_3 0 0          ___                 ___             ___             ___                 ___         ___         ___                      &kp C_AL_CALC        ___   
-        ___         ___                     ___                    ___                                 ___                     ___                 ___             ___             &kp N7              &kp N8      &kp N9      &kp PLUS                 ___                  &kp PRINTSCREEN
-        ___         ___                     ___                    ___                                 ___                     ___                 ___             ___             &kp N4              &kp N5      &kp N6      &kp MINUS                                     ___   
-        ___         ___                     ___                    ___                                 ___                     ___                 ___             &kp N0          &kp N1              &kp N2      &kp N3                                                    &kp LG(DOT)
-        ___         ___                     ___                    ___                                                                                                             &kp RCTRL           ___         &kp HOME    &kp PG_UP           &kp PG_DN           &kp END
+        ___      &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)          &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN        &kp C_VOLUME_UP      ___   
+        ___      &bt_pair_0 0 0          &bt_pair_1 0 0              &bt_pair_2 0 0       &bt_pair_3 0 0          ___                 ___             ___             ___                 ___         ___         ___                      &kp C_AL_CALC        ___   
+        ___      &ruen GRAVE             &ruen TILDE                 &ruen HASH           &ruen DLLR              &kp PRCNT           &kp EQUAL       &kp N7          &kp N8              &kp N9      &kp PLUS    ___                      ___                  &kp PRINTSCREEN
+        &kp BSLH &ruen PIPE              &ruen LT                    &ruen LBRC           &kp LPAR                &ruen LBKT          &kp STAR        &kp N4          &kp N5              &kp N6      &kp MINUS   &kp UNDER                                     ___   
+        ___      &ruen GT                &ruen RBRC                  &kp RPAR             &ruen RBKT              &ruen CARET         &kp N0          &kp N1          &kp N2              &kp N3      &kp PIPE                                                  &kp LG(DOT)
+        ___      ___                     ___                         ___                                                                                              &kp RCTRL           ___         &kp HOME    &kp PG_UP                &kp PG_DN            &kp END
         //
-        XXX         XXX                     XXX                     XXX                                 XXX  
+        XXX      XXX                     XXX                         XXX                  XXX  
             >;
         };
 

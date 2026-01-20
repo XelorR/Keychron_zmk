@@ -11,6 +11,8 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define QUICK_TAP_MS 175
+#define XXX &none
+#define ___ &trans
 
 &sk {
         release-after-ms = <60000>;
@@ -391,7 +393,7 @@
         &kp LSHFT  &kp Z         &kp X         &kp C         &kp V          &kp B          &kp N       &kp M       &kp COMMA    &kp DOT     &kp_unshift FSLH                                &kp RSHFT
         &kp LCTRL  &kp LGUI      &kp LALT                                   &lt_unshift 6 SPACE                    &mo 5        &kp_unshift K_CMENU      &kp LEFT    &kp UP            &kp DOWN          &kp RIGHT
         //
-        &none      &out OUT_BLE  &out OUT_24G  &out OUT_CHG  &out OUT_CHGD
+        XXX        &out OUT_BLE  &out OUT_24G  &out OUT_CHG  &out OUT_CHGD
             >;
         };
 
@@ -405,60 +407,60 @@
         &kp LSHFT  &kp Z         &kp X         &kp C         &kp V          &kp B          &kp N       &kp M       &kp COMMA    &kp DOT     &kp FSLH                             &kp RSHFT
         &kp LCTRL  &kp LGUI      &kp LALT                                   &kp SPACE                          &mt RALT K_CMENU &mo 3       &kp LEFT    &kp UP      &kp DOWN     &kp RIGHT
         //
-        &none      &out OUT_BLE  &out OUT_24G  &out OUT_CHG  &out OUT_CHGD
+        XXX        &out OUT_BLE  &out OUT_24G  &out OUT_CHG  &out OUT_CHGD
             >;
         };
 
   3_NORMAL_FN {
   bindings = <
                     //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9        //f10           //f11                         //f12
-   &bootloader  &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)                         &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN        &kp C_VOLUME_UP      &trans
-        &trans  &bt_pair_0 0 0          &bt_pair_1 0 0              &bt_pair_2 0 0                      &bt_pair_3 0 0          &trans              &trans          &trans          &trans              &trans      &trans      &trans                   &kp C_AL_CALC        &trans
-        &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &kp INS             &trans      &trans      &str1                    &str2                &kp PRINTSCREEN
-        &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans      &trans                                        &trans
-        &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans                                                    &kp LG(DOT)
-        &trans  &trans                  &trans                             &trans                                                                                                   &kp RCTRL           &trans      &kp HOME    &kp PG_UP                &kp PG_DN            &kp END
+   &bootloader  &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)                         &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN        &kp C_VOLUME_UP      ___   
+        ___     &bt_pair_0 0 0          &bt_pair_1 0 0              &bt_pair_2 0 0                      &bt_pair_3 0 0          ___                 ___             ___             ___                 ___         ___         ___                      &kp C_AL_CALC        ___   
+        ___     ___                     ___                         ___                                 ___                     ___                 ___             ___             &kp INS             ___         ___         &str1                    &str2                &kp PRINTSCREEN
+        ___     ___                     ___                         ___                                 ___                     ___                 ___             ___             ___                 ___         ___         ___                                           ___   
+        ___     ___                     ___                         ___                                 ___                     ___                 ___             ___             ___                 ___         ___                                                       &kp LG(DOT)
+        ___     ___                     ___                                ___                                                                                                      &kp RCTRL           ___         &kp HOME    &kp PG_UP                &kp PG_DN            &kp END
         //
-        &none   &none                   &none                       &none                               &none
+        XXX     XXX                     XXX                         XXX                                 XXX  
             >;
         };
 
   4_SIM_BASE {
   bindings = <
-        &trans  &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)                         &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN        &kp C_VOLUME_UP      &trans
-        &trans  &bt_pair_0 0 0          &bt_pair_1 0 0              &bt_pair_2 0 0                      &bt_pair_3 0 0          &trans              &trans          &trans          &trans              &trans      &trans      &trans                   &kp C_AL_CALC        &trans
-        &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &kp N7              &kp N8      &kp N9      &kp PLUS                 &trans               &kp PRINTSCREEN
-        &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &kp N4              &kp N5      &kp N6      &kp MINUS                                     &trans
-        &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &kp N0          &kp N1              &kp N2      &kp N3                                                    &kp LG(DOT)
-        &trans  &trans                  &trans                      &trans                                                                                                          &kp RCTRL           &trans      &kp HOME    &kp PG_UP                &kp PG_DN            &kp END
+        ___     &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)                         &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN        &kp C_VOLUME_UP      ___   
+        ___     &bt_pair_0 0 0          &bt_pair_1 0 0              &bt_pair_2 0 0                      &bt_pair_3 0 0          ___                 ___             ___             ___                 ___         ___         ___                      &kp C_AL_CALC        ___   
+        ___     ___                     ___                         ___                                 ___                     ___                 ___             ___             &kp N7              &kp N8      &kp N9      &kp PLUS                 ___                  &kp PRINTSCREEN
+        ___     ___                     ___                         ___                                 ___                     ___                 ___             ___             &kp N4              &kp N5      &kp N6      &kp MINUS                                     ___   
+        ___     ___                     ___                         ___                                 ___                     ___                 ___             &kp N0          &kp N1              &kp N2      &kp N3                                                    &kp LG(DOT)
+        ___     ___                     ___                         ___                                                                                                             &kp RCTRL           ___         &kp HOME    &kp PG_UP                &kp PG_DN            &kp END
         //
-        &none   &none                   &none                       &none                               &none
+        XXX     XXX                     XXX                         XXX                                 XXX  
             >;
         };
 
   5_SIM_RU {
   bindings = <
-        &trans      &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC   &kp LG(TAB)                         &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN        &kp C_VOLUME_UP      &trans
-        &trans      &bt_pair_0 0 0          &bt_pair_1 0 0         &bt_pair_2 0 0                      &bt_pair_3 0 0          &trans              &trans          &trans          &trans              &trans      &trans      &trans                   &kp C_AL_CALC        &trans
-        &trans      &trans                  &trans                 &trans                              &trans                  &trans              &trans          &trans          &kp N7              &kp N8      &kp N9      &kp PLUS                 &trans               &kp PRINTSCREEN
-        &trans      &trans                  &trans                 &trans                              &trans                  &trans              &trans          &trans          &kp N4              &kp N5      &kp N6      &kp MINUS                                     &trans
-        &trans      &trans                  &trans                 &trans                              &trans                  &trans              &trans          &kp N0          &kp N1              &kp N2      &kp N3                                                    &kp LG(DOT)
-        &trans      &trans                  &trans                 &trans                                                                                                          &kp RCTRL           &trans      &kp HOME    &kp PG_UP           &kp PG_DN           &kp END
+        ___         &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC   &kp LG(TAB)                         &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN        &kp C_VOLUME_UP      ___   
+        ___         &bt_pair_0 0 0          &bt_pair_1 0 0         &bt_pair_2 0 0                      &bt_pair_3 0 0          ___                 ___             ___             ___                 ___         ___         ___                      &kp C_AL_CALC        ___   
+        ___         ___                     ___                    ___                                 ___                     ___                 ___             ___             &kp N7              &kp N8      &kp N9      &kp PLUS                 ___                  &kp PRINTSCREEN
+        ___         ___                     ___                    ___                                 ___                     ___                 ___             ___             &kp N4              &kp N5      &kp N6      &kp MINUS                                     ___   
+        ___         ___                     ___                    ___                                 ___                     ___                 ___             &kp N0          &kp N1              &kp N2      &kp N3                                                    &kp LG(DOT)
+        ___         ___                     ___                    ___                                                                                                             &kp RCTRL           ___         &kp HOME    &kp PG_UP           &kp PG_DN           &kp END
         //
-        &none       &none                   &none                   &none                               &none
+        XXX         XXX                     XXX                     XXX                                 XXX  
             >;
         };
 
   6_NAVI {
   bindings = <
-        &trans        &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)                         &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT     &kp C_MUTE     &kp C_VOLUME_DOWN       &kp C_VOLUME_UP      &trans
-        &trans        &kp F1                  &kp F2                      &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9         &kp F10        &kp F11                 &kp F12              &trans
+        ___           &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)                         &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT     &kp C_MUTE     &kp C_VOLUME_DOWN       &kp C_VOLUME_UP      ___   
+        ___           &kp F1                  &kp F2                      &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9         &kp F10        &kp F11                 &kp F12              ___   
         &my_caps_word &kp DEL                 &kp LC(LS(TAB))             &kp TAB                             &kp LC(TAB)             &kp LGUI            &kp INS         &sel_row        &sel_word           &ins_row       &kp DEL        &kp C_VOLUME_DOWN       &kp C_VOLUME_UP      &kp C_MUTE
-        &trans        &sk LGUI                &sk LALT                    &sk LCTRL                           &sk LSHFT               &kp PSCRN           &left_no_rsft   &down_no_rsft   &up_no_rsft         &right_no_rsft &kp BSPC       &kp LC(LG(LA(LCTRL)))                        &trans
-        &kp LC(Z)     &kp LC(X)               &kp LC(C)                   &kp LC(V)                           &kp LC(Y)               &none               &kp HOME         &kp PG_DN      &kp PG_UP           &kp END        &cmd_del_win                                                &kp LG(DOT)
-        &trans        &trans                  &trans                      &trans                                                                                                          &kp RCTRL           &trans         &kp HOME       &kp PG_UP               &kp PG_DN            &kp END
+        ___           &sk LGUI                &sk LALT                    &sk LCTRL                           &sk LSHFT               &kp PSCRN           &left_no_rsft   &down_no_rsft   &up_no_rsft         &right_no_rsft &kp BSPC       &kp LC(LG(LA(LCTRL)))                        ___   
+        &kp LC(Z)     &kp LC(X)               &kp LC(C)                   &kp LC(V)                           &kp LC(Y)               XXX                 &kp HOME         &kp PG_DN      &kp PG_UP           &kp END        &cmd_del_win                                                &kp LG(DOT)
+        ___           ___                     ___                         ___                                                                                                             &kp RCTRL           ___            &kp HOME       &kp PG_UP               &kp PG_DN            &kp END
         //
-        &none         &none                   &none                       &none                               &none
+        XXX           XXX                     XXX                         XXX                                 XXX  
             >;
         };
 

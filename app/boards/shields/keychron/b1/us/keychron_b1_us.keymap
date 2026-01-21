@@ -226,6 +226,7 @@
             require-prior-idle-ms = <120>;
         };
 
+        // UO
         combo_qwerty {
             bindings = <&switch_qwerty>;
             key-positions = <35 37>;

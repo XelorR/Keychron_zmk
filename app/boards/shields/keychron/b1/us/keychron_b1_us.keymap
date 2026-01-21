@@ -65,14 +65,14 @@
         lg_en: lg_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp CAPS>;
+            bindings = <&kp LC(LGUI)>;
             label = "LG_EN";
         };
 
         lg_ru: lg_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(CAPS)>;
+            bindings = <&kp RC(K_CMENU)>;
             label = "LG_RU";
         };
 
@@ -372,7 +372,7 @@
         &kp TAB            &kp Q         &kp W         &kp F         &kp P          &kp B          &kp J       &kp L       &kp U               &kp Y               &kp_unshift SEMI &kp LBKT            &kp RBKT             &kp_unshift BSLH
         &kp RCTRL          &kp A         &kp R         &kp S         &kp T          &kp G          &kp M       &kp N       &kp E               &kp I               &kp O            &kp_unshift SQT                          &kp_unshift RET
         &kp LSHFT          &kp X         &kp C         &kp D         &kp V          &kp Z          &kp K       &kp H       &kp_unshift COMMA   &kp_unshift DOT     &kp_unshift FSLH                                          &kp RSHFT
-        &kp LCTRL          &kp LGUI      &kp LALT                                   &lt_unshift 7 SPACE                    &mo 5               &kp_unshift K_CMENU &kp LEFT         &kp UP              &kp DOWN             &kp RIGHT
+        &kp LCTRL          &kp RGUI      &kp LALT                                   &lt_unshift 7 SPACE                    &mo 5               &kp_unshift K_CMENU &kp LEFT         &kp UP              &kp DOWN             &kp RIGHT
         //
         &mo 2              &out OUT_BLE  &out OUT_24G  &out OUT_CHG  &out OUT_CHGD
             >;
@@ -385,7 +385,7 @@
         &kp TAB          &kp Q         &kp W         &kp E         &kp R          &kp T          &kp Y       &kp U       &kp I        &kp O       &kp P       &kp LBKT          &kp RBKT          &kp_unshift BSLH
         &kp RCTRL        &kp A         &kp S         &kp D         &kp F          &kp G          &kp H       &kp J       &kp K        &kp L       &kp SEMI    &kp SQT                             &kp_unshift RET
         &kp LSHFT        &kp X         &kp C         &kp V         &kp B          &kp Z          &kp N       &kp M       &kp COMMA    &kp DOT     &kp_unshift FSLH                                &kp RSHFT
-        &kp LCTRL        &kp LGUI      &kp LALT                                   &lt_unshift 7 SPACE                    &mo 6        &kp_unshift K_CMENU      &kp LEFT    &kp UP            &kp DOWN          &kp RIGHT
+        &kp LCTRL        &kp RGUI      &kp LALT                                   &lt_unshift 7 SPACE                    &mo 6        &kp_unshift K_CMENU      &kp LEFT    &kp UP            &kp DOWN          &kp RIGHT
         //
         XXX              &out OUT_BLE  &out OUT_24G  &out OUT_CHG  &out OUT_CHGD
             >;
@@ -399,7 +399,7 @@
         &kp TAB    &kp Q         &kp W         &kp E         &kp R          &kp T          &kp Y       &kp U       &kp I        &kp O       &kp P       &kp LBKT    &kp RBKT     &kp BSLH
         &kp CAPS   &kp A         &kp S         &kp D         &kp F          &kp G          &kp H       &kp J       &kp K        &kp L       &kp SEMI    &kp SQT                  &kp RET
         &kp LSHFT  &kp Z         &kp X         &kp C         &kp V          &kp B          &kp N       &kp M       &kp COMMA    &kp DOT     &kp FSLH                             &kp RSHFT
-        &kp LCTRL  &kp LGUI      &kp LALT                                   &kp SPACE                          &mt RALT K_CMENU &mo 3       &kp LEFT    &kp UP      &kp DOWN     &kp RIGHT
+        &kp LCTRL  &kp RGUI      &kp LALT                                   &kp SPACE                          &mt RALT K_CMENU &mo 3       &kp LEFT    &kp UP      &kp DOWN     &kp RIGHT
         //
         XXX        &out OUT_BLE  &out OUT_24G  &out OUT_CHG  &out OUT_CHGD
             >;
@@ -426,7 +426,7 @@
         &kp TAB          &kp Q         &kp W         &kp E         &kp R          &kp T          &kp Y       &kp U       &kp I        &kp O       &kp P       &kp LBKT          &kp RBKT          &kp_unshift BSLH
         &kp RCTRL        &kp A         &kp S         &kp D         &kp F          &kp G          &kp H       &kp J       &kp K        &kp L       &kp SEMI    &kp SQT                             &kp_unshift RET
         &kp LSHFT        &kp Z         &kp X         &kp C         &kp V          &kp B          &kp N       &kp M       &kp COMMA    &kp DOT     &kp_unshift FSLH                                &kp RSHFT
-        &kp LCTRL        &kp LGUI      &kp LALT                                   &lt_unshift 7 SPACE                    &mo 5        &kp_unshift K_CMENU      &kp LEFT    &kp UP            &kp DOWN          &kp RIGHT
+        &kp LCTRL        &kp RGUI      &kp LALT                                   &lt_unshift 7 SPACE                    &mo 5        &kp_unshift K_CMENU      &kp LEFT    &kp UP            &kp DOWN          &kp RIGHT
         //
         XXX              &out OUT_BLE  &out OUT_24G  &out OUT_CHG  &out OUT_CHGD
             >;
@@ -462,8 +462,8 @@
   bindings = <
         ___           &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)                         &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT     &kp C_MUTE     &kp C_VOLUME_DOWN       &kp C_VOLUME_UP      ___   
         ___           &kp F1                  &kp F2                      &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9         &kp F10        &kp F11                 &kp F12              ___   
-        &my_caps_word &kp DEL                 &kp LC(LS(TAB))             &kp TAB                             &kp LC(TAB)             &kp LGUI            &kp INS         &sel_row        &sel_word           &ins_row       &kp DEL        &kp C_VOLUME_DOWN       &kp C_VOLUME_UP      &kp C_MUTE
-        ___           &sk LGUI                &sk LALT                    &sk LCTRL                           &sk LSHFT               &kp PSCRN           &left_no_rsft   &down_no_rsft   &up_no_rsft         &right_no_rsft &kp BSPC       &kp LC(LG(LA(LCTRL)))                        ___   
+        &my_caps_word &kp DEL                 &kp LC(LS(TAB))             &kp TAB                             &kp LC(TAB)             &kp RGUI            &kp INS         &sel_row        &sel_word           &ins_row       &kp DEL        &kp C_VOLUME_DOWN       &kp C_VOLUME_UP      &kp C_MUTE
+        ___           &sk RGUI                &sk LALT                    &sk LCTRL                           &sk LSHFT               &kp PSCRN           &left_no_rsft   &down_no_rsft   &up_no_rsft         &right_no_rsft &kp BSPC       &kp LC(LG(LA(LCTRL)))                        ___   
         &kp LC(Z)     &kp LC(X)               &kp LC(C)                   &kp LC(V)                           &kp LC(Y)               &my_caps_word       &kp HOME         &kp PG_DN      &kp PG_UP           &kp END        &cmd_del_win                                                &kp LG(DOT)
         ___           ___                     ___                         ___                                                                                                             &kp RCTRL           ___            &kp HOME       &kp PG_UP               &kp PG_DN            &kp END
         //

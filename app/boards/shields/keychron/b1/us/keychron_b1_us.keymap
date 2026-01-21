@@ -365,7 +365,8 @@
  keymap {
      compatible = "zmk,keymap";
 
-        // phisical switch "mac"
+  // phisical switch "mac"
+  // Typing layer - Colemak with Curl and Angle mods
   0_COLEMAK_DH {
   bindings = <
         &kp_unshift ESC    &kp F1        &kp F2        &kp F3        &kp F4         &kp F5         &kp F6      &kp F7      &kp F8              &kp F9              &kp F10          &kp F11             &kp F12              &kp DEL
@@ -379,6 +380,7 @@
             >;
         };
 
+  // Typing layer - Jcuken with Angle mod
   1_JCUKEN  {
   bindings = <
         &kp_unshift ESC  &kp F1        &kp F2        &kp F3        &kp F4         &kp F5         &kp F6      &kp F7      &kp F8       &kp F9      &kp F10     &kp F11           &kp F12           &kp DEL
@@ -392,7 +394,10 @@
             >;
         };
 
-        // phisical switch "win"
+  // phisical switch "win"
+  // Default ANSI layout, by Keychron
+  // No modifications, no SpaceFN
+  // Switch to it if you want to share the keyboard.
   2_NORMAL_ANSI {
   bindings = <
         &kp ESC    &kp F1        &kp F2        &kp F3        &kp F4         &kp F5         &kp F6      &kp F7      &kp F8       &kp F9      &kp F10     &kp F11     &kp F12      &kp DEL
@@ -420,6 +425,7 @@
             >;
         };
 
+  // Vim layer, non-modded QWERTY with access to NAVI and SIM, same way as typing layers
   4_QWERTY  {
   bindings = <
         &kp_unshift ESC  &kp F1        &kp F2        &kp F3        &kp F4         &kp F5         &kp F6      &kp F7      &kp F8       &kp F9      &kp F10     &kp F11           &kp F12           &kp DEL

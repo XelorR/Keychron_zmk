@@ -161,6 +161,12 @@
             bindings = <&kp LS(HOME) &kp BSPC>;
             label = "CMD_DEL_WIN";
         };
+        vim_esc: vim_esc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESC &switch_qwerty>;
+            label = "VIM_ESCAPE";
+        };
 
         // insert strings (replace it before compile)
         str1: str1 {
@@ -380,7 +386,7 @@
         &kp_unshift ESC    &kp F1        &kp F2        &kp F3        &kp F4         &kp F5         &kp F6      &kp F7      &kp F8              &kp F9              &kp F10          &kp F11             &kp F12              &kp DEL
         &kp_unshift GRAVE  &kp N1        &kp N2        &kp N3        &kp N4         &kp N5         &kp N6      &kp N7      &kp N8              &kp N9              &kp N0           &kp_unshift MINUS   &kp_unshift EQUAL    &kp BSPC
         &kp TAB            &kp Q         &kp W         &kp F         &kp P          &kp B          &kp J       &kp L       &kp U               &kp Y               &kp_unshift SEMI &kp LBKT            &kp RBKT             &kp_unshift BSLH
-        &kp RCTRL          &kp A         &kp R         &kp S         &kp T          &kp G          &kp M       &kp N       &kp E               &kp I               &kp O            &kp_unshift SQT                          &kp_unshift RET
+        &vim_esc           &kp A         &kp R         &kp S         &kp T          &kp G          &kp M       &kp N       &kp E               &kp I               &kp O            &kp_unshift SQT                          &kp_unshift RET
         &kp LSHFT          &kp X         &kp C         &kp D         &kp V          &kp Z          &kp K       &kp H       &kp_unshift COMMA   &kp_unshift DOT     &kp_unshift FSLH                                          &kp RSHFT
         &kp LCTRL          &kp RGUI      &kp LALT                                   &lt_unshift 7 SPACE                    &mo 5               &kp_unshift K_CMENU &kp LEFT         &kp UP              &kp DOWN             &kp RIGHT
         //
@@ -394,7 +400,7 @@
         &kp_unshift ESC  &kp F1        &kp F2        &kp F3        &kp F4         &kp F5         &kp F6      &kp F7      &kp F8       &kp F9      &kp F10     &kp F11           &kp F12           &kp DEL
         &kp GRAVE        &kp N1        &kp N2        &kp N3        &kp N4         &kp N5         &kp N6      &kp N7      &kp N8       &kp N9      &kp N0      &kp_unshift MINUS &kp_unshift EQUAL &kp BSPC
         &kp TAB          &kp Q         &kp W         &kp E         &kp R          &kp T          &kp Y       &kp U       &kp I        &kp O       &kp P       &kp LBKT          &kp RBKT          &kp_unshift BSLH
-        &kp RCTRL        &kp A         &kp S         &kp D         &kp F          &kp G          &kp H       &kp J       &kp K        &kp L       &kp SEMI    &kp SQT                             &kp_unshift RET
+        &vim_esc         &kp A         &kp S         &kp D         &kp F          &kp G          &kp H       &kp J       &kp K        &kp L       &kp SEMI    &kp SQT                             &kp_unshift RET
         &kp LSHFT        &kp X         &kp C         &kp V         &kp B          &kp Z          &kp N       &kp M       &kp COMMA    &kp DOT     &kp_unshift FSLH                                &kp RSHFT
         &kp LCTRL        &kp RGUI      &kp LALT                                   &lt_unshift 7 SPACE                    &mo 6        &kp_unshift K_CMENU      &kp LEFT    &kp UP            &kp DOWN          &kp RIGHT
         //
@@ -439,7 +445,7 @@
         &kp_unshift ESC  &kp F1        &kp F2        &kp F3        &kp F4         &kp F5         &kp F6      &kp F7      &kp F8       &kp F9      &kp F10     &kp F11           &kp F12           &kp DEL
         &kp GRAVE        &kp N1        &kp N2        &kp N3        &kp N4         &kp N5         &kp N6      &kp N7      &kp N8       &kp N9      &kp N0      &kp_unshift MINUS &kp_unshift EQUAL &kp BSPC
         &kp TAB          &kp Q         &kp W         &kp E         &kp R          &kp T          &kp Y       &kp U       &kp I        &kp O       &kp P       &kp LBKT          &kp RBKT          &kp_unshift BSLH
-        &kp RCTRL        &kp A         &kp S         &kp D         &kp F          &kp G          &kp H       &kp J       &kp K        &kp L       &kp SEMI    &kp SQT                             &kp_unshift RET
+        &vim_esc         &kp A         &kp S         &kp D         &kp F          &kp G          &kp H       &kp J       &kp K        &kp L       &kp SEMI    &kp SQT                             &kp_unshift RET
         &kp LSHFT        &kp Z         &kp X         &kp C         &kp V          &kp B          &kp N       &kp M       &kp COMMA    &kp DOT     &kp_unshift FSLH                                &kp RSHFT
         &kp LCTRL        &kp RGUI      &kp LALT                                   &lt_unshift 7 SPACE                    &mo 5        &kp_unshift K_CMENU      &kp LEFT    &kp UP            &kp DOWN          &kp RIGHT
         //

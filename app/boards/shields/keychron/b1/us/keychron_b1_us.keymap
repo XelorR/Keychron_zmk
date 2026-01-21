@@ -182,19 +182,19 @@
         compatible = "zmk,combos";
         combo_jz {
             timeout-ms = <1000>;
-            layers = <4 5>;
+            layers = < 3>;
             key-positions = <49 56>; //fn+j+z
             bindings = <&long_press_recover 0 0>;
         };
         combo_xl {
             timeout-ms = <1000>;
-            layers =< 4 5>;
+            layers =< 3>;
             key-positions = <57 51>; //fn+x+l
             bindings = <&long_press_change 0 0>;
         };
         combo_b {
             timeout-ms = <1000>;
-            layers =< 4 5>;
+            layers =< 3>;
             //slow-release = <true>;
             key-positions = <60>; //fn+b
             bindings = <&out OUT_BAT>;
@@ -202,7 +202,7 @@
 
         combo_win_l {
             timeout-ms = <1000>;
-            layers =< 4 5>;
+            layers =< 3>;
             //slow-release = <true>;
             key-positions = <68>; //fn+win
             bindings = <&long_press_fn_win 0 0>;

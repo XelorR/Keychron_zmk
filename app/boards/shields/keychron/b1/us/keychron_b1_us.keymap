@@ -112,14 +112,14 @@
         ruen: ruen {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&lg_en &macro_param_1to1 &kp MACRO_PLACEHOLDER &lg_ru>;
+            bindings = <&lg_en &macro_param_1to1 &kp_unshift MACRO_PLACEHOLDER &lg_ru>;
             label = "RUEN";
         };
 
         enru: enru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&lg_ru &macro_param_1to1 &kp MACRO_PLACEHOLDER &lg_en>;
+            bindings = <&lg_ru &macro_param_1to1 &kp_unshift MACRO_PLACEHOLDER &lg_en>;
             label = "ENRU";
         };
 
@@ -436,9 +436,9 @@
   bindings = <
         ___      &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)          &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN        &kp C_VOLUME_UP      ___   
         ___      &bt_pair_0 0 0          &bt_pair_1 0 0              &bt_pair_2 0 0       &bt_pair_3 0 0          ___                 ___             ___             ___                 ___         ___         ___                      &kp C_AL_CALC        ___   
-        ___      &kp GRAVE               &kp TILDE                   &kp HASH             &kp DLLR                &kp PRCNT           &kp EQUAL       &kp N7          &kp N8              &kp N9      &kp PLUS    ___                      ___                  &kp PRINTSCREEN
-        &kp BSLH &kp PIPE                &kp LT                      &kp LBRC             &kp LPAR                &kp LBKT            &kp STAR        &kp N4          &kp N5              &kp N6      &kp MINUS   &kp UNDER                                     ___   
-        ___      &kp GT                  &kp RBRC                    &kp RPAR             &kp RBKT                &kp CARET           &kp N0          &kp N1          &kp N2              &kp N3      &kp FSLH                                                    &kp LG(DOT)
+        ___      &kp_unshift GRAVE               &kp_unshift TILDE                   &kp_unshift HASH             &kp_unshift DLLR                &kp_unshift PRCNT           &kp_unshift EQUAL       &kp_unshift N7          &kp_unshift N8              &kp_unshift N9      &kp_unshift PLUS    ___                      ___                  &kp_unshift PRINTSCREEN
+        &kp_unshift BSLH &kp_unshift PIPE                &kp_unshift LT                      &kp_unshift LBRC             &kp_unshift LPAR                &kp_unshift LBKT            &kp_unshift STAR        &kp_unshift N4          &kp_unshift N5              &kp_unshift N6      &kp_unshift MINUS   &kp_unshift UNDER                                     ___   
+        ___      &kp_unshift GT                  &kp_unshift RBRC                    &kp_unshift RPAR             &kp_unshift RBKT                &kp_unshift CARET           &kp_unshift N0          &kp_unshift N1          &kp_unshift N2              &kp_unshift N3      &kp_unshift FSLH                                                    &kp_unshift LG(DOT)
         ___      ___                     ___                         ___                                                                                              &kp RCTRL           ___         &kp HOME    &kp PG_UP                &kp PG_DN            &kp END
         //
         XXX      XXX                     XXX                         XXX                  XXX  
@@ -449,9 +449,9 @@
   bindings = <
         ___      &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)          &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN        &kp C_VOLUME_UP      ___   
         ___      &bt_pair_0 0 0          &bt_pair_1 0 0              &bt_pair_2 0 0       &bt_pair_3 0 0          ___                 ___             ___             ___                 ___         ___         ___                      &kp C_AL_CALC        ___   
-        ___      &ruen GRAVE             &ruen TILDE                 &ruen HASH           &ruen DLLR              &kp PRCNT           &kp EQUAL       &kp N7          &kp N8              &kp N9      &kp PLUS    ___                      ___                  &kp PRINTSCREEN
-        &kp BSLH &ruen PIPE              &ruen LT                    &ruen LBRC           &kp LPAR                &ruen LBKT          &kp STAR        &kp N4          &kp N5              &kp N6      &kp MINUS   &kp UNDER                                     ___   
-        ___      &ruen GT                &ruen RBRC                  &kp RPAR             &ruen RBKT              &ruen CARET         &kp N0          &kp N1          &kp N2              &kp N3      &kp PIPE                                                  &kp LG(DOT)
+        ___      &ruen GRAVE             &ruen TILDE                 &ruen HASH           &ruen DLLR              &kp_unshift PRCNT           &kp_unshift EQUAL       &kp_unshift N7          &kp_unshift N8              &kp_unshift N9      &kp_unshift PLUS    ___                      ___                  &kp_unshift PRINTSCREEN
+        &kp_unshift BSLH &ruen PIPE              &ruen LT                    &ruen LBRC           &kp_unshift LPAR                &ruen LBKT          &kp_unshift STAR        &kp_unshift N4          &kp_unshift N5              &kp_unshift N6      &kp_unshift MINUS   &kp_unshift UNDER                                     ___   
+        ___      &ruen GT                &ruen RBRC                  &kp_unshift RPAR             &ruen RBKT              &ruen CARET         &kp_unshift N0          &kp_unshift N1          &kp_unshift N2              &kp_unshift N3      &kp_unshift PIPE                                                  &kp_unshift LG(DOT)
         ___      ___                     ___                         ___                                                                                              &kp RCTRL           ___         &kp HOME    &kp PG_UP                &kp PG_DN            &kp END
         //
         XXX      XXX                     XXX                         XXX                  XXX  

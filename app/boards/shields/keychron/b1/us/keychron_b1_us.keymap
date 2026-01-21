@@ -234,6 +234,14 @@
             require-prior-idle-ms = <120>;
         };
 
+        // IO
+        combo_lg_tablet {
+            bindings = <&kp_unshift LC(SPACE)>;
+            key-positions = <36 37>;
+            layers = <0 1 4>;
+            require-prior-idle-ms = <120>;
+        };
+
         // missing letters for RU
 
         soft_sign {

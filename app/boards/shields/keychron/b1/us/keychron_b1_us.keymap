@@ -460,9 +460,9 @@
         ___              &kp_unshift GRAVE     &kp_unshift TILDE     &kp_unshift HASH  &kp_unshift DLLR  &kp_unshift PRCNT  &kp_unshift EQUAL  &kp_unshift N7  &kp_unshift N8    &kp_unshift N9  &kp_unshift PLUS  ___                ___              &kp_unshift PRINTSCREEN
         &kp_unshift BSLH &kp_unshift PIPE      &kp_unshift LT        &kp_unshift LBRC  &kp_unshift LPAR  &kp_unshift LBKT   &kp_unshift STAR   &kp_unshift N4  &kp_unshift N5    &kp_unshift N6  &kp_unshift MINUS &kp_unshift UNDER                   ___   
         ___              &kp_unshift GT        &kp_unshift RBRC      &kp_unshift RPAR  &kp_unshift RBKT  &kp_unshift CARET  &kp_unshift N0     &kp_unshift N1  &kp_unshift N2    &kp_unshift N3  &kp_unshift FSLH                                      &kp_unshift LG(DOT)
-        ___      ___                     ___                         ___                                                                                              &kp RCTRL           ___         &kp HOME    &kp PG_UP                &kp PG_DN            &kp END
+        ___              ___                   ___                   ___                                                                                       &kp RCTRL         ___             &kp HOME          &kp PG_UP          &kp PG_DN        &kp END
         //
-        XXX      XXX                     XXX                         XXX                  XXX  
+        XXX              XXX                   XXX                   XXX               XXX
             >;
         };
 

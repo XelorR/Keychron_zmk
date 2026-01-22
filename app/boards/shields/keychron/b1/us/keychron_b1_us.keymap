@@ -248,6 +248,20 @@
             require-prior-idle-ms = <120>;
         };
 
+        // switch to/from deefault without touching phisical switch
+
+        combo_alt {
+            bindings = <&to 0>;
+            key-positions = <9 10>;
+            layers = <0 1 2 4>;
+        };
+
+        combo_ansi {
+            bindings = <&to 2>;
+            key-positions = <11 12>;
+            layers = <0 1 2 4>;
+        };
+
         // missing letters for RU
 
         soft_sign {

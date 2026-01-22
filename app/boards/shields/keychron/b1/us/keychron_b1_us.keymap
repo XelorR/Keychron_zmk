@@ -468,14 +468,14 @@
 
   6_SIM_RU {
   bindings = <
-        ___      &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)          &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN        &kp C_VOLUME_UP      ___   
-        ___      &bt_pair_0 0 0          &bt_pair_1 0 0              &bt_pair_2 0 0       &bt_pair_3 0 0          ___                 ___             ___             ___                 ___         ___         ___                      &kp C_AL_CALC        ___   
-        ___      &ruen GRAVE             &ruen TILDE                 &ruen HASH           &ruen DLLR              &kp_unshift PRCNT           &kp_unshift EQUAL       &kp_unshift N7          &kp_unshift N8              &kp_unshift N9      &kp_unshift PLUS    ___                      ___                  &kp_unshift PRINTSCREEN
-        &kp_unshift BSLH &ruen PIPE              &ruen LT                    &ruen LBRC           &kp_unshift LPAR                &ruen LBKT          &kp_unshift STAR        &kp_unshift N4          &kp_unshift N5              &kp_unshift N6      &kp_unshift MINUS   &kp_unshift UNDER                                     ___   
-        ___      &ruen GT                &ruen RBRC                  &kp_unshift RPAR             &ruen RBKT              &ruen CARET         &kp_unshift N0          &kp_unshift N1          &kp_unshift N2              &kp_unshift N3      &kp_unshift PIPE                                                  &kp_unshift LG(DOT)
-        ___      ___                     ___                         ___                                                                                              &kp RCTRL           ___         &kp HOME    &kp PG_UP                &kp PG_DN            &kp END
+        ___               &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LG(TAB)       &kp LG(E)         &kp C_AC_SEARCH    &kp LG(L)          &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT      &kp C_MUTE         &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  ___   
+        ___               &bt_pair_0 0 0        &bt_pair_1 0 0        &bt_pair_2 0 0    &bt_pair_3 0 0    ___                ___                ___             ___               ___             ___                ___                &kp C_AL_CALC    ___   
+        ___               &ruen GRAVE           &ruen TILDE           &ruen HASH        &ruen DLLR        &kp_unshift PRCNT  &kp_unshift EQUAL  &kp_unshift N7  &kp_unshift N8    &kp_unshift N9  &kp_unshift PLUS   ___                ___              &kp_unshift PRINTSCREEN
+        &kp_unshift BSLH  &ruen PIPE            &ruen LT              &ruen LBRC        &kp_unshift LPAR  &ruen LBKT         &kp_unshift STAR   &kp_unshift N4  &kp_unshift N5    &kp_unshift N6  &kp_unshift MINUS  &kp_unshift UNDER                   ___   
+        ___               &ruen GT              &ruen RBRC            &kp_unshift RPAR  &ruen RBKT        &ruen CARET        &kp_unshift N0     &kp_unshift N1  &kp_unshift N2    &kp_unshift N3  &kp_unshift PIPE                                       &kp_unshift LG(DOT)
+        ___               ___                   ___                   ___                                                                                       &kp RCTRL         ___             &kp HOME           &kp PG_UP          &kp PG_DN        &kp END
         //
-        XXX      XXX                     XXX                         XXX                  XXX  
+        XXX               XXX                   XXX                   XXX               XXX  
             >;
         };
 

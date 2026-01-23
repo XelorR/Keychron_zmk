@@ -133,38 +133,38 @@
         sel_row: sel_row {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp HOME &kp LS(DOWN)>;
+            bindings = <&kp_unshift HOME &kp LS(DOWN)>;
             label = "select row";
         };
         sel_word: sel_word {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LEFT) &kp LS(LC(RIGHT))>;
+            bindings = <&kp_unshift LC(LEFT) &kp LS(LC(RIGHT))>;
             label = "select word";
         };
         in_below: in_below {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp END &kp LS(RET)>;
+            bindings = <&kp_unshift END &kp LS(RET)>;
             label = "IN_BELOW";
         };
         in_above: in_above {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp HOME &kp LS(RET) &kp UP>;
+            bindings = <&kp_unshift HOME &kp LS(RET) &kp UP>;
             label = "IN_ABOVE";
             wait-ms = <0>;
         };
         cmd_del_win: cmd_del_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(HOME) &kp BSPC>;
+            bindings = <&kp_unshift LS(HOME) &kp BSPC>;
             label = "CMD_DEL_WIN";
         };
         vim_esc: vim_esc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp ESC &switch_qwerty>;
+            bindings = <&kp_unshift ESC &switch_qwerty>;
             label = "VIM_ESCAPE";
         };
 

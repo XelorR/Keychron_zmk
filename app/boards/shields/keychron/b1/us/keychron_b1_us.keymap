@@ -198,13 +198,13 @@
 
         combo_en {
             bindings = <&switch_en>;
-            key-positions = <57 58>;
+            key-positions = <45 58>;
             layers = <0 1>;
         };
 
         combo_ru {
             bindings = <&switch_ru>;
-            key-positions = <62 63>;
+            key-positions = <62 50>;
             layers = <0 1>;
         };
 

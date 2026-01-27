@@ -147,12 +147,6 @@
             bindings = <&kp_unshift LS(HOME) &kp BSPC>;
             label = "CMD_DEL_WIN";
         };
-        vim_esc: vim_esc {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp_unshift ESC &switch_en>;
-            label = "VIM_ESCAPE";
-        };
 
         // insert strings (replace it before compile)
         str1: str1 {
@@ -201,6 +195,18 @@
         };
 
         // switch to/from deefault without touching phisical switch
+
+        combo_en {
+            bindings = <&switch_en>;
+            key-positions = <57 58>;
+            layers = <0 1>;
+        };
+
+        combo_ru {
+            bindings = <&switch_ru>;
+            key-positions = <62 63>;
+            layers = <0 1>;
+        };
 
         combo_alt {
             bindings = <&to 0>;
@@ -402,7 +408,7 @@
         ___              &bt_pair_0 0 0        &bt_pair_1 0 0        &bt_pair_2 0 0    &bt_pair_3 0 0    ___                ___                ___               ___               ___              ___               ___                &kp C_AL_CALC    ___
         ___              &kp_unshift EXCL      &kp_unshift LT        &kp_unshift EQUAL &kp_unshift GT    &kp_unshift GRAVE  &enru HASH         &kp_unshift LBKT  &kp_unshift UNDER &kp_unshift RBKT &kp_unshift AT    &str1              &str2            &kp_unshift PRINTSCREEN
         ___              &kp_unshift BSLH      &kp_unshift LPAR      &kp_unshift MINUS &kp_unshift RPAR  &kp_unshift PLUS   &kp_unshift PRCNT  &kp_unshift LBRC  &kp_unshift SEMI  &kp_unshift RBRC &kp_unshift CARET &kp_unshift DQT                     ___
-        ___              &kp_unshift STAR      &kp_unshift COLON     &kp_unshift FSLH  &kp_unshift HASH  &my_caps_word      &kp_unshift DLLR   &kp_unshift PIPE  &kp_unshift TILDE &kp_unshift AMPS &kp_unshift QMARK                                     &kp_unshift LG(DOT)
+        ___              &kp_unshift STAR      &kp_unshift COLON     &kp_unshift FSLH  &kp_unshift HASH  &none              &kp_unshift DLLR   &kp_unshift PIPE  &kp_unshift TILDE &kp_unshift AMPS &kp_unshift QMARK                                     &kp_unshift LG(DOT)
         ___              ___                   ___                   ___                                                                                         &kp RCTRL         ___              &kp HOME          &kp PG_UP          &kp PG_DN        &kp END
         //
         XXX              XXX                   XXX                   XXX               XXX
@@ -415,7 +421,7 @@
         ___              &bt_pair_0 0 0        &bt_pair_1 0 0        &bt_pair_2 0 0    &bt_pair_3 0 0    ___                ___                ___               ___               ___              ___               ___                &kp C_AL_CALC    ___
         ___              &kp_unshift EXCL      &ruen LT              &kp_unshift EQUAL &ruen GT          &ruen GRAVE        &kp_unshift HASH   &ruen LBKT        &kp_unshift UNDER &ruen RBKT       &ruen AT          &str1              &str2            &kp_unshift PRINTSCREEN
         ___              &kp_unshift BSLH      &kp_unshift LPAR      &kp_unshift MINUS &kp_unshift RPAR  &kp_unshift PLUS   &kp_unshift PRCNT  &ruen LBRC        &kp_unshift DLLR  &ruen RBRC       &ruen CARET       &kp_unshift AT                     ___
-        ___              &kp_unshift STAR      &kp_unshift CARET     &kp_unshift PIPE  &ruen HASH        &my_caps_word      &ruen DLLR         &ruen PIPE        &ruen TILDE       &ruen AMPS       &kp_unshift AMPS                                      &kp_unshift LG(DOT)
+        ___              &kp_unshift STAR      &kp_unshift CARET     &kp_unshift PIPE  &ruen HASH        &none              &ruen DLLR         &ruen PIPE        &ruen TILDE       &ruen AMPS       &kp_unshift AMPS                                      &kp_unshift LG(DOT)
         ___              ___                   ___                   ___                                                                                         &kp RCTRL         ___              &kp HOME          &kp PG_UP          &kp PG_DN        &kp END
         //
         XXX              XXX                   XXX                   XXX               XXX
@@ -424,12 +430,12 @@
 
   6_NAVI {
   bindings = <
-        ___           &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)                         &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)         &kp C_PREVIOUS     &kp C_PLAY_PAUSE   &kp C_NEXT       &kp C_MUTE     &kp C_VOLUME_DOWN      &kp C_VOLUME_UP  ___
-        ___           &kp F1                  &kp F2                      &kp F3                              &kp F4                  &kp F5              &kp F6            &kp F7             &kp F8             &kp F9           &kp F10        &kp F11                &kp F12          ___
-        ___           &kp DEL                 &kp LC(LS(TAB))             &kp TAB                             &kp LC(TAB)             &vim_esc            &kp INS           &switch_en         &switch_ru         &ins_row         &kp DEL        &kp C_VOLUME_DOWN      &kp C_VOLUME_UP  &kp C_MUTE
-        ___           &sk RGUI                &sk LALT                    &sk LCTRL                           &sk LSHFT               &kp RET             &left_no_rsft     &down_no_rsft      &up_no_rsft        &right_no_rsft   &kp BSPC       &kp LC(LG(LA(LCTRL)))                   ___
-        &kp LC(Z)     &kp LC(X)               &kp LC(C)                   &kp LC(V)                           &kp RGUI                &my_caps_word       &kp_unshift HOME  &kp_unshift PG_DN  &kp_unshift PG_UP  &kp_unshift END  &cmd_del_win                                           &kp LG(DOT)
-        ___           ___                     ___                         ___                                                                                                                  &kp RCTRL          ___              &kp HOME       &kp PG_UP              &kp PG_DN        &kp END
+        ___           &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)                         &kp LG(E)               &kp C_AC_SEARCH     &kp LG(L)         &kp C_PREVIOUS     &kp C_PLAY_PAUSE   &kp C_NEXT        &kp C_MUTE     &kp C_VOLUME_DOWN      &kp C_VOLUME_UP  ___
+        ___           &kp F1                  &kp F2                      &kp F3                              &kp F4                  &kp F5              &kp F6            &kp F7             &kp F8             &kp F9            &kp F10        &kp F11                &kp F12          ___
+        ___           &kp DEL                 &kp LC(LS(TAB))             &kp TAB                             &kp LC(TAB)             &kp_unshift ESC     &kp_unshift ESC   &kp_unshift HOME   &up_no_rsft        &kp_unshift END   &kp DEL        &kp C_VOLUME_DOWN      &kp C_VOLUME_UP  &kp C_MUTE
+        &kp PSCRN     &sk RGUI                &sk LALT                    &sk LCTRL                           &sk LSHFT               &kp_unshift RET     &kp_unshift RET   &left_no_rsft      &down_no_rsft      &right_no_rsft    &kp BSPC       &kp K_CMENU                             ___
+        &kp LC(Z)     &kp LC(X)               &kp LC(C)                   &kp LC(V)                           &kp RGUI                &none               &my_caps_word     &kp_unshift PG_UP  &ins_row           &kp_unshift PG_DN &cmd_del_win                                           &kp LG(DOT)
+        ___           ___                     ___                         ___                                                                                                                  &kp RCTRL          ___               &kp HOME       &kp PG_UP              &kp PG_DN        &kp END
         //
         XXX           XXX                     XXX                         XXX                                 XXX
             >;
@@ -442,7 +448,7 @@
         ___       &bt_pair_0 0 0          &bt_pair_1 0 0              &bt_pair_2 0 0                      &bt_pair_3 0 0          ___                 ___             ___             ___                 ___               ___          ___                      &kp C_AL_CALC        ___
         ___       &kp HOME                &kp UP                      &kp END                             &kp DEL                 &kp ESC             &kp KP_DIVIDE   &kp KP_N7       &kp KP_N8           &kp KP_N9         &kp KP_MINUS &kp KP_LPAR              &kp KP_RPAR          &kp PRINTSCREEN
         ___       &kp LEFT                &kp DOWN                    &kp RIGHT                           &kp BSPC                &kp KP_NLCK         &kp KP_MULTIPLY &kp KP_N4       &kp KP_N5           &kp KP_N6         &kp KP_PLUS  &kp KP_EQUAL                                  &kp KP_ENTER
-        &kp LC(Z) &kp LC(X)               &kp LC(C)                   &kp LC(V)                           &kp RGUI                &my_caps_word       &kp KP_N0       &kp KP_N1       &kp KP_N2           &kp KP_N3         &kp KP_DOT                                                 &kp LG(DOT)
+        &kp LC(Z) &kp LC(X)               &kp LC(C)                   &kp LC(V)                           &kp RGUI                &none               &kp KP_N0       &kp KP_N1       &kp KP_N2           &kp KP_N3         &kp KP_DOT                                                 &kp LG(DOT)
         ___       ___                     ___                                ___                                                                                                      &kp RCTRL           ___               &kp HOME     &kp PG_UP                &kp PG_DN            &kp END
         //
         XXX       XXX                     XXX                         XXX                                 XXX

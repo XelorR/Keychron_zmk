@@ -346,14 +346,14 @@
   // Typing layer - Colemak with Curl and Angle mods
   0_COLEMAK_DH {
   bindings = <
-        &kp_unshift ESC    &kp F1        &kp F2        &kp F3        &kp F4         &kp F5         &kp F6      &kp F7      &kp F8              &kp F9              &kp F10          &kp F11             &kp F12              &kp DEL
-        &kp_unshift GRAVE  &kp N1        &kp N2        &kp N3        &kp N4         &kp N5         &kp N6      &kp N7      &kp N8              &kp N9              &kp N0           &kp_unshift MINUS   &kp_unshift EQUAL    &kp BSPC
-        &kp TAB            &kp Q         &kp W         &kp F         &kp P          &kp B          &kp J       &kp L       &kp U               &kp Y               &kp_unshift SEMI &kp_unshift LBKT    &kp_unshift RBKT     &kp_unshift BSLH
-        &mo 7              &kp A         &kp R         &kp S         &kp T          &kp G          &kp M       &kp N       &kp E               &kp I               &kp O            &kp_unshift SQT                          &kp_unshift RET
-        &kp LSHFT          &kp X         &kp C         &kp D         &kp V          &kp Z          &kp K       &kp H       &kp_unshift COMMA   &kp_unshift DOT     &kp_unshift FSLH                                          &kp LSHFT
-        &kp LCTRL          &kp RGUI      &kp LALT                                   &lt_unshift 6 SPACE                    &mo 4               &kp_unshift K_CMENU &kp LEFT         &kp UP              &kp DOWN             &kp RIGHT
+        &kp_unshift ESC    &kp_unshift F1 &kp_unshift F2 &kp_unshift F3 &kp_unshift F4 &kp_unshift F5 &kp_unshift F6 &kp_unshift F7 &kp_unshift F8    &kp_unshift F9      &kp_unshift F10  &kp_unshift F11     &kp_unshift F12   &kp DEL
+        &kp_unshift GRAVE  &kp_unshift N1 &kp_unshift N2 &kp_unshift N3 &kp_unshift N4 &kp_unshift N5 &kp_unshift N6 &kp_unshift N7 &kp_unshift N8    &kp_unshift N9      &kp_unshift N0   &kp_unshift MINUS   &kp_unshift EQUAL &kp BSPC
+        &kp TAB            &kp Q          &kp W          &kp F          &kp P          &kp B          &kp J          &kp L          &kp U             &kp Y               &kp_unshift SEMI &kp_unshift LBKT    &kp_unshift RBKT  &kp_unshift BSLH
+        &mo 7              &kp A          &kp R          &kp S          &kp T          &kp G          &kp M          &kp N          &kp E             &kp I               &kp O            &kp_unshift SQT                       &kp_unshift RET
+        &kp LSHFT          &kp X          &kp C          &kp D          &kp V          &kp Z          &kp K          &kp H          &kp_unshift COMMA &kp_unshift DOT     &kp_unshift FSLH                                       &kp LSHFT
+        &kp LCTRL          &kp RGUI       &kp LALT                                     &lt_unshift 6 SPACE                          &mo 4             &kp_unshift K_CMENU &kp LEFT         &kp UP              &kp DOWN          &kp RIGHT
         //
-        &mo 2              &out OUT_BLE  &out OUT_24G  &out OUT_CHG  &out OUT_CHGD
+        &mo 2              &out OUT_BLE   &out OUT_24G   &out OUT_CHG   &out OUT_CHGD
             >;
         };
 

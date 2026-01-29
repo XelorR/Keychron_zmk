@@ -205,7 +205,7 @@
 
         combo_ru {
             bindings = <&switch_ru>;
-            key-positions = <36 37>;
+            key-positions = <37 38>;
             layers = <0 1>;
         };
 

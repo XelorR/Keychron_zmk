@@ -156,12 +156,6 @@
             bindings = <&kp S &kp O &kp M &kp E &kp SPACE &kp S &kp T &kp R>;
             label = "INSERT_STRING_1";
         };
-        str2: str2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp S &kp O &kp M &kp E &kp SPACE &kp S &kp T &kp R>;
-            label = "INSERT_STRING_2";
-        };
     };
 
 

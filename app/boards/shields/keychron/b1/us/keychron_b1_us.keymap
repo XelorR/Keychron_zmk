@@ -418,12 +418,12 @@
 
   5_SIM_RU {
   bindings = <
-        ___                &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LG(TAB)         &kp LG(E)         &kp HYPER_KEY      &kp LG(L)          &kp C_PREVIOUS    &kp C_PLAY_PAUSE  &kp C_NEXT        &kp C_MUTE        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  ___
-        ___                &bt_pair_0 0 0        &bt_pair_1 0 0        &bt_pair_2 0 0      &bt_pair_3 0 0    ___                ___                ___               ___               ___               ___               ___                &kp C_AL_CALC    ___
-        ___                &ruen GRAVE           &ruen LT              &kp_unshift EQUAL   &ruen GT          &ruen AT           &kp_unshift HASH   &ruen LBKT        &kp_unshift AT    &ruen RBKT        &ruen PIPE        &str1              &str2            &kp_unshift PRINTSCREEN
-        &ruen CARET        &ruen DLLR            &kp_unshift LPAR      &kp_unshift MINUS   &kp_unshift RPAR  &ruen HASH         &kp_unshift STAR   &ruen LBRC        &kp_unshift UNDER &ruen RBRC        &kp_unshift PLUS  &ruen AMPS                          ___
-        &kp_unshift BSLH   &kp_unshift EXCL      &kp_unshift DLLR      &kp_unshift FSLH    &ruen TILDE       &none              &kp_unshift PRCNT  &kp_unshift QMARK &kp_unshift CARET &kp_unshift AMPS  &kp_unshift PIPE                                      &kp_unshift LG(DOT)
-        ___                ___                   ___                   ___                                                                                           &kp RCTRL         ___               &kp HOME          &kp PG_UP          &kp PG_DN        &kp END
+        ___                &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LG(TAB)         &kp LG(E)         &kp HYPER_KEY      &kp LG(L) &kp C_PREVIOUS    &kp C_PLAY_PAUSE  &kp C_NEXT        &kp C_MUTE        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP ___
+        ___                &bt_pair_0 0 0        &bt_pair_1 0 0        &bt_pair_2 0 0      &bt_pair_3 0 0    ___                ___       ___               ___               ___               ___               ___                &kp C_AL_CALC   ___
+        ___                &ruen GRAVE           &ruen LT              &kp_unshift EQUAL   &ruen GT          &ruen AT           XXX       &kp_unshift HASH  &ruen LBKT        &kp_unshift AT    &ruen RBKT        &ruen PIPE         &str1           &kp_unshift PRINTSCREEN
+        &ruen CARET        &ruen DLLR            &kp_unshift LPAR      &kp_unshift MINUS   &kp_unshift RPAR  &ruen HASH         XXX       &kp_unshift STAR  &ruen LBRC        &kp_unshift UNDER &ruen RBRC        &kp_unshift PLUS                   &ruen AMPS
+        &kp_unshift BSLH   &kp_unshift EXCL      &kp_unshift DLLR      &kp_unshift FSLH    &ruen TILDE       XXX                XXX       &kp_unshift PRCNT &kp_unshift QMARK &kp_unshift CARET &kp_unshift AMPS                                     &kp_unshift PIPE
+        ___                ___                   ___                   ___                                                                                  &kp RCTRL         ___               &kp HOME          &kp PG_UP          &kp PG_DN       &kp END
         //
         XXX                XXX                   XXX                   XXX                 XXX
             >;

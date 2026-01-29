@@ -13,6 +13,7 @@
 #define QUICK_TAP_MS 175
 #define XXX &none
 #define ___ &trans
+#define HYPER_KEY LS(LG(LC(LA())))
 
 &sk {
         release-after-ms = <60000>;
@@ -446,7 +447,7 @@
                       //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9              //f10        //f11                    //f12
         ___       &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)                         &kp C_AL_MY_COMPUTER    &kp C_AC_SEARCH     &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT        &kp C_MUTE   &kp C_VOLUME_DOWN        &kp C_VOLUME_UP      ___
         ___       &bt_pair_0 0 0          &bt_pair_1 0 0              &bt_pair_2 0 0                      &bt_pair_3 0 0          ___                 ___             ___             ___                 ___               ___          ___                      &kp C_AL_CALC        ___
-        ___       &kp C_AL_CALC           &kp LG(TAB)                 &kp C_AL_MY_COMPUTER                &kp LC(LA(T))           &kp ESC             &kp KP_DIVIDE   &kp KP_N7       &kp KP_N8           &kp KP_N9         &kp KP_MINUS &kp KP_LPAR              &kp KP_RPAR          &kp PRINTSCREEN
+        ___       &kp C_AL_CALC           &kp HYPER_KEY               &kp C_AL_MY_COMPUTER                &kp LC(LA(T))           &kp ESC             &kp KP_DIVIDE   &kp KP_N7       &kp KP_N8           &kp KP_N9         &kp KP_MINUS &kp KP_LPAR              &kp KP_RPAR          &kp PRINTSCREEN
         ___       &bt_pair_0 0 0          &bt_pair_1 0 0              &bt_pair_2 0 0                      &bt_pair_3 0 0          &kp KP_NLCK         &kp KP_MULTIPLY &kp KP_N4       &kp KP_N5           &kp KP_N6         &kp KP_PLUS  &kp KP_EQUAL                                  &kp KP_ENTER
         &kp LC(Z) &kp LC(X)               &kp LC(C)                   &kp LC(V)                           &kp RGUI                &none               &kp KP_N0       &kp KP_N1       &kp KP_N2           &kp KP_N3         &kp KP_DOT                                                 &kp LG(DOT)
         ___       ___                     ___                                ___                                                                                                      &kp RCTRL           ___               &kp HOME     &kp PG_UP                &kp PG_DN            &kp END

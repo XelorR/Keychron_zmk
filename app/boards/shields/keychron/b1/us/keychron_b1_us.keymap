@@ -444,15 +444,15 @@
 
   7_NUM {
   bindings = <
-                        //f1                    //f2                        //f3                                //f4                        //f5            //f6              //f7            //f8              //f9              //f10        //f11                    //f12
-        ___             &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LG(TAB)                         &kp C_AL_MY_COMPUTER    &kp HYPER_KEY       &kp LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT        &kp C_MUTE   &kp C_VOLUME_DOWN        &kp C_VOLUME_UP      ___
-        ___             &bt_pair_0 0 0          &bt_pair_1 0 0              &bt_pair_2 0 0                      &bt_pair_3 0 0          ___                 ___             ___             ___                 ___               ___          ___                      &kp C_AL_CALC        ___
-        ___             &bt_pair_3 0 0          &bt_pair_0 0 0              &bt_pair_1 0 0                      &bt_pair_2 0 0          &kp ESC             &kp HASH        &kp N7          &kp N8              &kp N9            &kp MINUS    &kp KP_LPAR              &kp KP_RPAR          &kp KP_NLCK
-        ___             &sk RGUI                &sk LALT                    &sk LCTRL                           &sk LSHFT               &kp RET             &kp STAR        &kp N4          &kp N5              &kp N6            &kp PLUS     &kp EQUAL                                     &kp KP_ENTER
-        &kp BSLH        &kp EXCL                &kp SEMI                    &kp KP_DOT                          &kp RGUI                &none               &kp PRCNT       &kp N1          &kp N2              &kp N3            &kp KP_DIVIDE                                              &kp LG(DOT)
-        ___             ___                     ___                         ___                                                                                                             &kp N0              ___               &kp HOME     &kp PG_UP                &kp PG_DN            &kp END
+                 //f1                 //f2                 //f3           //f4                 //f5          //f6      //f7            //f8             //f9       //f10       //f11                    //f12
+        ___      &kp C_BRIGHTNESS_DEC &kp C_BRIGHTNESS_INC &kp LG(TAB)    &kp C_AL_MY_COMPUTER &kp HYPER_KEY &kp LG(L) &kp C_PREVIOUS  &kp C_PLAY_PAUSE &kp C_NEXT &kp C_MUTE  &kp C_VOLUME_DOWN &kp C_VOLUME_UP ___
+        ___      &bt_pair_0 0 0       &bt_pair_1 0 0       &bt_pair_2 0 0 &bt_pair_3 0 0       ___           ___       ___             ___              ___        ___         ___               &kp C_AL_CALC   ___
+        ___      &bt_pair_3 0 0       &bt_pair_0 0 0       &bt_pair_1 0 0 &bt_pair_2 0 0       &kp ESC       XXX       &kp HASH        &kp N7           &kp N8     &kp N9      &kp MINUS         &kp BSLH        &kp KP_NLCK
+        ___      &sk RGUI             &sk LALT             &sk LCTRL      &sk LSHFT            &kp RET       XXX       &kp STAR        &kp N4           &kp N5     &kp N6      &kp PLUS                          &kp EQUAL
+        &kp BSLH &kp EXCL             &kp SEMI             &kp KP_DOT     &kp RGUI             XXX           XXX       &kp PRCNT       &kp N1           &kp N2     &kp N3                                        &kp KP_DIVIDE
+        ___      ___                  ___                  ___                                                                         &kp N0           ___        &kp HOME    &kp PG_UP         &kp PG_DN       &kp END
         //
-        XXX             XXX                     XXX                         XXX                                 XXX
+        XXX      XXX                  XXX                  XXX                                 XXX
             >;
         };
 

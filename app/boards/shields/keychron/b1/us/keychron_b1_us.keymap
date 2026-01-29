@@ -409,7 +409,7 @@
         ___                &bt_pair_0 0 0        &bt_pair_1 0 0        &bt_pair_2 0 0      &bt_pair_3 0 0    ___                ___                ___               ___               ___               ___               ___                &kp C_AL_CALC    ___
         ___                &kp_unshift GRAVE     &kp_unshift LT        &kp_unshift EQUAL   &kp_unshift GT    &kp_unshift AT     &enru HASH         &kp_unshift LBKT  &kp_unshift DQT   &kp_unshift RBKT  &kp_unshift PIPE  &str1              &str2            &kp_unshift PRINTSCREEN
         &kp_unshift CARET  &kp_unshift DLLR      &kp_unshift LPAR      &kp_unshift MINUS   &kp_unshift RPAR  &kp_unshift HASH   &kp_unshift STAR   &kp_unshift LBRC  &kp_unshift UNDER &kp_unshift RBRC  &kp_unshift PLUS  &kp_unshift AMPS                    ___
-        &kp_unshift BSLH   &kp_unshift EXCL      &kp_unshift SEMI      &kp_unshift KP_DOT  &kp_unshift TILDE &none              &kp_unshift PRCNT  &kp_unshift COMMA &kp_unshift SEMI  &kp_unshift QMARK &kp_unshift FSLH                                      &kp_unshift LG(DOT)
+        &kp_unshift BSLH   &kp_unshift EXCL      &kp_unshift COLON     &kp_unshift DOT     &kp_unshift TILDE &none              &kp_unshift PRCNT  &kp_unshift COMMA &kp_unshift COLON &kp_unshift QMARK &kp_unshift FSLH                                      &kp_unshift LG(DOT)
         ___                ___                   ___                   ___                                                                                           &kp RCTRL         ___               &kp HOME          &kp PG_UP          &kp PG_DN        &kp END
         //
         XXX                XXX                   XXX                   XXX                 XXX
@@ -420,9 +420,9 @@
   bindings = <
         ___                &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LG(TAB)         &kp LG(E)         &kp HYPER_KEY      &kp LG(L)          &kp C_PREVIOUS    &kp C_PLAY_PAUSE  &kp C_NEXT        &kp C_MUTE        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  ___
         ___                &bt_pair_0 0 0        &bt_pair_1 0 0        &bt_pair_2 0 0      &bt_pair_3 0 0    ___                ___                ___               ___               ___               ___               ___                &kp C_AL_CALC    ___
-        ___                &kp_unshift GRAVE     &kp_unshift LT        &kp_unshift EQUAL   &kp_unshift GT    &kp_unshift AT     &enru HASH         &kp_unshift LBKT  &kp_unshift DQT   &kp_unshift RBKT  &kp_unshift PIPE  &str1              &str2            &kp_unshift PRINTSCREEN
-        &kp_unshift CARET  &kp_unshift DLLR      &kp_unshift LPAR      &kp_unshift MINUS   &kp_unshift RPAR  &kp_unshift HASH   &kp_unshift STAR   &kp_unshift LBRC  &kp_unshift UNDER &kp_unshift RBRC  &kp_unshift PLUS  &kp_unshift AMPS                    ___
-        &kp_unshift BSLH   &kp_unshift EXCL      &kp_unshift SEMI      &kp_unshift KP_DOT  &kp_unshift TILDE &none              &kp_unshift PRCNT  &kp_unshift COMMA &kp_unshift SEMI  &kp_unshift QMARK &kp_unshift FSLH                                      &kp_unshift LG(DOT)
+        ___                &ruen GRAVE           &ruen LT              &kp_unshift EQUAL   &ruen GT          &ruen AT           &kp_unshift HASH   &ruen LBKT        &kp_unshift AT    &ruen RBKT        &ruen PIPE        &str1              &str2            &kp_unshift PRINTSCREEN
+        &ruen CARET        &ruen DLLR            &kp_unshift LPAR      &kp_unshift MINUS   &kp_unshift RPAR  &ruen HASH         &kp_unshift STAR   &ruen LBRC        &kp_unshift UNDER &ruen RBRC        &kp_unshift PLUS  &ruen AMPS                          ___
+        &kp_unshift BSLH   &kp_unshift EXCL      &kp_unshift DLLR      &kp_unshift FSLH    &ruen TILDE       &none              &kp_unshift PRCNT  &kp_unshift QMARK &kp_unshift CARET &kp_unshift AMPS  &kp_unshift PIPE                                      &kp_unshift LG(DOT)
         ___                ___                   ___                   ___                                                                                           &kp RCTRL         ___               &kp HOME          &kp PG_UP          &kp PG_DN        &kp END
         //
         XXX                XXX                   XXX                   XXX                 XXX

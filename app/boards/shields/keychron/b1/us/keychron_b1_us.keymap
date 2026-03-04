@@ -540,7 +540,8 @@
 
 	keymap {
     	compatible = "zmk,keymap";
-            //mac
+
+        // 0
         en {
         bindings = <
           //ESC         //f1                    //f2                //f3                                    //f4                //f5                //f6            //f7            //f8                //f9        //f10       //f11               //f12               //DEL                                              
@@ -553,7 +554,8 @@
         &mo 2       &out OUT_BLE            &out OUT_24G            &out OUT_CHG                        &out OUT_CHGD 
             >;
         };
-        //mac
+
+        // 1
         ru  {
         bindings = < 
         &trans      &kp F1                  &kp F2                  &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9      &kp F10     &kp F11             &kp F12             &trans    
@@ -566,7 +568,8 @@
         &none       &none                   &none                   &none                               &none
             >;
         };
-        //win
+
+        // 2
         gam {
  		bindings = <
         &kp ESC 	&kp F1 	               &kp F2 	                &kp F3 	                            &kp F4 	                &kp F5 	            &kp F6 	        &kp F7 	        &kp F8 	            &kp F9 	     &kp F10 	&kp F11 	         &kp F12 	         &kp DEL     
@@ -579,7 +582,8 @@
         &none       &out OUT_BLE           &out OUT_24G             &out OUT_CHG                        &out OUT_CHGD 
             >;
         };
-        //win
+        
+        // 3
         shortcut {
         bindings = < 
                     //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9        //f10           //f11                         //f12                     
@@ -594,6 +598,7 @@
             >;
         };
    
+        // 4
         fn {
         bindings = < 
                     //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9        //f10           //f11                         //f12                     
@@ -608,6 +613,7 @@
             >;
         };
    
+        // 5
         sym {
         bindings = < 
                     //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9        //f10           //f11                         //f12                     
@@ -622,6 +628,7 @@
             >;
         };
 
+        // 6
         sym_ru {
         bindings = < 
                     //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9        //f10           //f11                         //f12                     
@@ -636,6 +643,7 @@
             >;
         };
 
+        // 7
         nav {
         bindings = < 
                     //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9        //f10           //f11                         //f12                     

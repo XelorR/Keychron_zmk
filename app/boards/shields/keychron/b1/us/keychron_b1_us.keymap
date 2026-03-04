@@ -403,6 +403,31 @@
 
     combos1 {
         compatible = "zmk,combos";
+
+        combo_en {
+            bindings = <&switch_en>;
+            key-positions = <30 31>;
+            layers = <0 1>;
+        };
+
+        combo_ru {
+            bindings = <&switch_ru>;
+            key-positions = <36 37>;
+            layers = <0 1>;
+        };
+
+        combo_en_tablet {
+            bindings = <&switch_en_tablet>;
+            key-positions = <30 32>;
+            layers = <0 1>;
+        };
+
+        combo_ru_tablet {
+            bindings = <&switch_ru_tablet>;
+            key-positions = <35 37>;
+            layers = <0 1>;
+        };
+
         combo_jz {
             timeout-ms = <1000>;
             layers = <4>;

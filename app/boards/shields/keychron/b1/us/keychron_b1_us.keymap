@@ -405,19 +405,19 @@
         compatible = "zmk,combos";
         combo_jz {
             timeout-ms = <1000>;
-            layers = <1 3>;
+            layers = <4>;
             key-positions = <49 56>; //fn+j+z
             bindings = <&long_press_recover 0 0>;
         };
         combo_xl {
             timeout-ms = <1000>;
-            layers =< 1 3>;
+            layers =< 4>;
             key-positions = <57 51>; //fn+x+l
             bindings = <&long_press_change 0 0>;
         };
         combo_b {
             timeout-ms = <1000>;
-            layers =< 1 3>;
+            layers =< 4>;
             //slow-release = <true>;
             key-positions = <60>; //fn+b
             bindings = <&out OUT_BAT>;
@@ -425,61 +425,12 @@
 
         combo_win_l {
             timeout-ms = <1000>;
-            layers =< 1 3>;
+            layers =< 4>;
             //slow-release = <true>;
             key-positions = <68>; //fn+win
             bindings = <&long_press_fn_win 0 0>;
         };
 
-        combo_t0 {
-            timeout-ms = <10 >;
-            layers =<4>;
-          
-            key-positions = <80 90>;  
-            bindings = <&to 3 >;
-        };
-        combo_t1 {
-            timeout-ms = <10 >;
-            layers =<4>;
-          
-            key-positions = <80 91>;  
-            bindings = <&tog 3 >;
-        };
-        combo_t2 {
-            timeout-ms = <10 >;
-            layers =<4>;
-          
-            key-positions = <80 92>;  
-            bindings = <&sl 3 >;
-        };
-        combo_t3 {
-            timeout-ms = <10 >;
-            layers =<4>;
-          
-            key-positions = <70 93>;  
-            bindings = <&lt 3 SPACE>;
-        };
-        combo_t4 {
-            timeout-ms = <10 >;
-            layers =<4>;
-          
-            key-positions = <81 94>;  
-            bindings = <&sk LSHIFT>;
-        };
-        combo_t5 {
-            timeout-ms = <10 >;
-            layers =<4>;
-          
-            key-positions = <81 93>;  
-            bindings = <&mt LSHIFT SPACE>;
-        };
-        combo_t6 {
-            timeout-ms = <10 >;
-            layers =<4>;
-          
-            key-positions = <81 93>;  
-            bindings = <&gresc>;
-        };
     };
 
     td0 {

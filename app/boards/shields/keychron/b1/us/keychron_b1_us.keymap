@@ -249,18 +249,18 @@
 
     behaviors {
 
-        // key_on: key_on {
-        //     compatible = "zmk,behavior-key-toggle";
-        //     label = "KEY_ON";
-        //     #binding-cells = <1>;
-        // };
+        key_on: key_on {
+            compatible = "zmk,behavior-key-toggle";
+            label = "KEY_ON";
+            #binding-cells = <1>;
+        };
 
-        // key_off: key_off {
-        //     compatible = "zmk,behavior-key-toggle";
-        //     label = "KEY_OFF";
-        //     #binding-cells = <1>;
-        //     toggle-mode = "off";
-        // };
+        key_off: key_off {
+            compatible = "zmk,behavior-key-toggle";
+            label = "KEY_OFF";
+            #binding-cells = <1>;
+            toggle-mode = "off";
+        };
 
         layer_on: layer_on {
             compatible = "zmk,behavior-toggle-layer";

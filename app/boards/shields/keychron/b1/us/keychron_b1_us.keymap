@@ -262,18 +262,19 @@
         //     toggle-mode = "off";
         // };
 
-        // layer_on: layer_on {
-        //     compatible = "zmk,behavior-toggle-layer";
-        //     label = "LAYER_ON";
-        //     #binding-cells = <1>;
-        // };
+        layer_on: layer_on {
+            compatible = "zmk,behavior-toggle-layer";
+            label = "LAYER_ON";
+            #binding-cells = <1>;
+            toggle-mode = "on";
+        };
 
-        // layer_off: layer_off {
-        //     compatible = "zmk,behavior-toggle-layer";
-        //     label = "LAYER_OFF";
-        //     #binding-cells = <1>;
-        //     toggle-mode = "off";
-        // };
+        layer_off: layer_off {
+            compatible = "zmk,behavior-toggle-layer";
+            label = "LAYER_OFF";
+            #binding-cells = <1>;
+            toggle-mode = "off";
+        };
 
         // hrml: hrml {
         //     compatible = "zmk,behavior-hold-tap";

@@ -282,15 +282,15 @@
         // 6
         mac_navi {
         bindings = < 
-                    //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9        //f10           //f11                         //f12                     
-        &trans  &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS   &kp  C_AC_MAC_LAUNCH    &kp C_AC_SEARCH     &kp C_AL_LOCK   &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN           &kp C_VOLUME_UP      &trans
-        &trans  &bt_pair_0 0 0          &bt_pair_1 0 0              &bt_pair_2 0 0                      &bt_pair_3 0 0          &trans              &trans          &trans          &trans              &trans      &trans      &trans                      &kp C_AL_CALC        &trans          
-        &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &kp INS             &trans      &trans      &trans                      &trans               &uc LG(LS(S))      
-        &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans      &trans                              &trans  
-        &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans                                          &uc LG(DOT) 
-        &trans  &trans                  &trans                           &trans                                                                                                     &kp RCTRL           &trans      &kp HOME    &kp PG_UP    &kp PG_DN   &kp END    
+                      //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9                  //f10           //f11                         //f12
+        &trans    &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS   &kp  C_AC_MAC_LAUNCH    &kp C_AC_SEARCH     &kp C_AL_LOCK   &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT            &kp C_MUTE  &kp C_VOLUME_DOWN           &kp C_VOLUME_UP      &trans
+        &trans    &kp F1                  &kp F2                      &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9                &kp F10     &kp F11                     &kp F12              &trans
+        &trans    &kp BSPC                &kp LG(LS(LBKT))            &kp TAB                             &kp LG(LS(RBKT))        &kp K_APP           &kp PG_UP       &kp LG(LEFT)    &kp UP              &kp LG(RIGHT)         &in_above_mac  &tog 3                   &none                &uc LG(LS(N3))
+        &kp CAPS  &kp LCTRL               &kp LGUI                    &kp LALT                            &kp LSHFT               &kp LG(LS(N4))      &kp PG_DN       &kp LEFT        &kp DOWN            &kp RIGHT             &in_below_mac  &kp INS                             &trans
+        &trans    &kp LG(Z)               &kp LG(X)                   &kp LG(C)                           &kp LG(V)               &kp LG(LS(Z))       &kp RET         &kp BSPC        &kp DEL             &kp LG(BSPC)          &select_row_mac                                    &uc LC(LG(SPACE))
+        &trans    &trans                  &trans                           &trans                                                                                                     &kp RET             &trans                &kp HOME    &kp PG_UP    &kp PG_DN   &kp END
         //
-        &none   &none                   &none                       &none                               &none
+        &none     &none                   &none                       &none                               &none
             >;
         };
 

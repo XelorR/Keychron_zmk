@@ -321,7 +321,7 @@
         &trans    &kp BSPC                &kp LG(LS(LBKT))            &kp TAB                             &kp LG(LS(RBKT))        &kp K_APP           &kp PG_UP       &kp LG(LEFT)    &kp UP              &kp LG(RIGHT)         &in_above_mac  &none                    &none                &uc LG(LS(N3))
         &trans    &kp LCTRL               &kp LGUI                    &kp LALT                            &kp LSHFT               &kp LG(LS(N4))      &kp PG_DN       &kp LEFT        &kp DOWN            &kp RIGHT             &in_below_mac  &kp INS                             &trans
         &kp CAPS  &kp LG(Z)               &kp LG(X)                   &kp LG(C)                           &kp LG(V)               &kp LG(LS(Z))       &kp RET         &kp BSPC        &kp DEL             &none                 &none                                              &uc LC(LG(SPACE))
-        &trans    &trans                  &trans                           &trans                                                                                                     &trans              &trans                &kp HOME    &kp PG_UP    &kp PG_DN   &kp END
+        &trans    &trans                  &trans                           &kp RET                                                                                                    &trans              &trans                &kp HOME    &kp PG_UP    &kp PG_DN   &kp END
         //
         &none     &none                   &none                       &none                               &none
             >;
@@ -336,7 +336,7 @@
         &trans    &kp DEL                 &kp LC(LS(TAB))             &kp TAB                             &kp LC(TAB)             &kp K_APP           &kp PG_UP       &kp HOME        &kp UP              &kp END               &in_above   &none                       &none                &uc LG(LS(S))
         &trans    &kp LGUI                &kp LALT                    &kp LCTRL                           &kp LSHFT               &kp PSCRN           &kp PG_DN       &kp LEFT        &kp DOWN            &kp RIGHT             &in_below   &kp INS                             &trans
         &kp CAPS  &undo_redo              &kp LC(X)                   &kp LC(C)                           &kp LC(V)               &kp LC(Y)           &kp RET         &kp BSPC        &kp DEL             &none                 &none                                           &uc LG(DOT)
-        &trans    &trans                  &trans                           &trans                                                                                                     &trans              &trans                &kp HOME    &kp PG_UP    &kp PG_DN   &kp END
+        &trans    &trans                  &trans                           &kp RET                                                                                                    &trans              &trans                &kp HOME    &kp PG_UP    &kp PG_DN   &kp END
         //
         &none     &none                   &none                       &none                               &none
             >;

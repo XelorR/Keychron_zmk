@@ -297,15 +297,15 @@
         // 7
         win_navi {
         bindings = < 
-                    //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9        //f10           //f11                         //f12                     
-        &trans  &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &uc LG(TAB)                         &uc LG(E)               &kp C_AC_SEARCH     &uc LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN           &kp C_VOLUME_UP      &trans   
-        &trans  &bt_pair_0 0 0          &bt_pair_1 0 0              &bt_pair_2 0 0                      &bt_pair_3 0 0          &trans              &trans          &trans          &trans              &trans      &trans      &trans                      &kp C_AL_CALC        &trans          
-        &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &kp INS             &trans      &trans      &trans                      &trans               &uc LG(LS(S))      
-        &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans      &trans                              &trans  
-        &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans                                          &uc LG(DOT) 
-        &trans  &trans                  &trans                           &trans                                                                                                     &kp RCTRL           &trans      &kp HOME    &kp PG_UP    &kp PG_DN   &kp END    
+                      //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9                  //f10           //f11                         //f12
+        &trans    &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &uc LG(TAB)                         &uc C_AL_MY_COMPUTER    &kp C_AC_SEARCH     &uc LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT            &kp C_MUTE  &kp C_VOLUME_DOWN           &kp C_VOLUME_UP      &trans
+        &trans    &kp F1                  &kp F2                      &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9                &kp F10     &kp F11                     &kp F12              &trans
+        &trans    &kp DEL                 &kp LC(LS(TAB))             &kp TAB                             &kp LC(TAB)             &kp K_APP           &kp PG_UP       &kp HOME        &kp UP              &kp END               &in_above   &none                       &tog 3               &uc LG(LS(S))
+        &kp CAPS  &kp LGUI                &kp LALT                    &kp LCTRL                           &kp LSHFT               &kp PSCRN           &kp PG_DN       &kp LEFT        &kp DOWN            &kp RIGHT             &in_below   &kp INS                             &trans
+        &trans    &undo_redo              &kp LC(X)                   &kp LC(C)                           &kp LC(V)               &kp LC(Y)           &kp RET         &kp BSPC        &kp DEL             &delete_to_row_start  &select_row                                     &uc LG(DOT)
+        &trans    &trans                  &trans                           &trans                                                                                                     &kp RET             &trans                &kp HOME    &kp PG_UP    &kp PG_DN   &kp END
         //
-        &none   &none                   &none                       &none                               &none
+        &none     &none                   &none                       &none                               &none
             >;
         };
 

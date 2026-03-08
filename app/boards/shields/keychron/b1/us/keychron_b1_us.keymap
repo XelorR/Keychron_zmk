@@ -52,6 +52,39 @@
         bindings = <&fn_win>, <&none>;
     };
    
+    macro {
+
+        in_below: in_below {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp_unshift END &kp LS(RET)>;
+            label = "IN_BELOW";
+        };
+
+        in_above: in_above {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp_unshift HOME &kp LS(RET) &kp UP>;
+            label = "IN_ABOVE";
+            wait-ms = <0>;
+        };
+
+        in_below_mac: in_below_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(RIGHT) &kp LS(RET)>;
+            label = "IN_BELOW_MAC";
+        };
+
+        in_above_mac: in_above_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LEFT) &kp LS(RET) &kp UP>;
+            label = "IN_ABOVE_MAC";
+            wait-ms = <0>;
+        };
+
+    };
 
     combos1 {
         compatible = "zmk,combos";

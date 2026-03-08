@@ -57,14 +57,14 @@
         in_below: in_below {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp_unshift END &kp LS(RET)>;
+            bindings = <&kp END &kp LS(RET)>;
             label = "IN_BELOW";
         };
 
         in_above: in_above {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp_unshift HOME &kp LS(RET) &kp UP>;
+            bindings = <&kp HOME &kp LS(RET) &kp UP>;
             label = "IN_ABOVE";
             wait-ms = <0>;
         };
@@ -342,7 +342,7 @@
         &trans    &kp F1                  &kp F2                      &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9                &kp F10     &kp F11                     &kp F12              &trans
         &trans    &kp DEL                 &kp LC(LS(TAB))             &kp LS(F10)                         &kp LC(TAB)             &kp LGUI            &kp PG_UP       &kp HOME        &kp UP              &kp END               &in_above   &none                       &none                &uc LG(LS(S))
         &trans    &kp LGUI                &kp LALT                    &kp LCTRL                           &kp LSHFT               &kp PSCRN           &kp PG_DN       &kp LEFT        &kp DOWN            &kp RIGHT             &in_below   &kp INS                             &trans
-        &kp CAPS  &undo_redo              &kp LC(X)                   &kp LC(C)                           &kp LC(V)               &kp LS(LC(Z))       &kp RET         &kp BSPC        &kp DEL             &delete_to_row_start  &kp CAPS                                        &uc LG(DOT)
+        &kp CAPS  &kp LC(Z)               &kp LC(X)                   &kp LC(C)                           &kp LC(V)               &kp LS(LC(Z))       &kp RET         &kp BSPC        &kp DEL             &delete_to_row_start  &kp CAPS                                        &uc LG(DOT)
         &trans    &trans                  &trans                           &kp TAB                                                                                                    &trans              &kp ESC               &kp HOME    &kp PG_UP    &kp PG_DN   &kp END
         //
         &none     &none                   &none                       &none                               &none

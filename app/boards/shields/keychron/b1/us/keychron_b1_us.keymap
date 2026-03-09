@@ -18,40 +18,6 @@
     ZMK_MACRO(en_bootloader, bindings = <&bootloader>;)
     ZMK_MACRO1(MA,bindings=<&kp 0x770000>;)
 
-    long_press_recover:l1 {
-        compatible = "zmk,behavior-hold-tap";
-        label = "l1";
-        #binding-cells = <2>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <3000>;  // delay amount in ms
-        bindings = <&recover>, <&none>;
-    };
-
-    long_press_change:l2{
-        compatible = "zmk,behavior-hold-tap";
-        label = "lp_change";
-        #binding-cells = <2>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <3000>;  // delay amount in ms
-        bindings = <&change>, <&none>;
-    };
-    long_press_bootloader:l3{
-        compatible = "zmk,behavior-hold-tap";
-        label = "lp_bootloader";
-        #binding-cells = <2>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <3000>;  // delay amount in ms
-        bindings = <&en_bootloader>, <&none>;
-    };
-    long_press_fn_win:l4{
-        compatible = "zmk,behavior-hold-tap";
-        label = "lp_fn_win";
-        #binding-cells = <2>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <3000>;   
-        bindings = <&fn_win>, <&none>;
-    };
-   
     macro {
 
         in_below: in_below {

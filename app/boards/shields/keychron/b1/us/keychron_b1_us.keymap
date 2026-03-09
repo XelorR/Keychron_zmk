@@ -93,6 +93,19 @@
 
     };
 
+    behaviors {
+
+        alttab_with_rctl: alttab_with_rctl {
+            compatible = "zmk,behavior-mod-morph";
+            label = "UNDO_REDO";
+            bindings = <&kp TAB>, <&kp LA(TAB)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RCTL)>;
+        };
+
+    };
+
     combos1 {
         compatible = "zmk,combos";
         combo_jz {

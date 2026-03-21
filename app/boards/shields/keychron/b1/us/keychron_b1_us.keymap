@@ -73,6 +73,35 @@
 
     };
 
+    combos1 {
+        compatible = "zmk,combos";
+
+        combo_en_keep {
+            bindings = <&kp LC(SPACE)>;
+            key-positions = <9 10>;
+            layers = <4>;
+        };
+
+        combo_ru_keep {
+            bindings = <&kp LC(SPACE)>;
+            key-positions = <11 12>;
+            layers = <0 2>;
+        };
+
+        combo_en_switch {
+            bindings = <&lg_tog_colemak>;
+            key-positions = <9 10>;
+            layers = <0 2>;
+        };
+
+        combo_ru_switch {
+            bindings = <&lg_tog_colemak>;
+            key-positions = <11 12>;
+            layers = <4>;
+        };
+
+    };
+
     td0 {
         compatible = "zmk,behavior-tap-dance";
         label = "TAPD_LAYER";

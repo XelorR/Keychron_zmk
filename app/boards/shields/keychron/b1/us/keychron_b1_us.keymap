@@ -64,6 +64,13 @@
             label = "DELETE_TO_ROW_START";
         };
 
+        lg_tog_colemak: lg_tog_colemak {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 4 &kp LC(SPACE)>;
+            label = "LG_TOG_COLEMAK";
+        };
+
     };
 
     td0 {

@@ -59,28 +59,6 @@
 
     };
 
-    behaviors {
-
-        mac_like_history_back: mac_like_history_back {
-            compatible = "zmk,behavior-mod-morph";
-            label = "HIST_BACK";
-            bindings = <&kp LBKT>, <&kp LA(LEFT)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-
-        mac_like_history_forward: mac_like_history_forward {
-            compatible = "zmk,behavior-mod-morph";
-            label = "HIST_FORWARD";
-            bindings = <&kp RBKT>, <&kp LA(RIGHT)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-
-    };
-
     td0 {
         compatible = "zmk,behavior-tap-dance";
         label = "TAPD_LAYER";

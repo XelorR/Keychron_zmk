@@ -61,13 +61,22 @@
 
     behaviors {
 
-        alttab_with_rctl: alttab_with_rctl {
+        mac_like_history_back: mac_like_history_back {
             compatible = "zmk,behavior-mod-morph";
-            label = "UNDO_REDO";
-            bindings = <&kp TAB>, <&kp LA(TAB)>;
+            label = "HIST_BACK";
+            bindings = <&kp LBKT>, <&kp LA(LEFT)>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RCTL)>;
+            mods = <(MOD_LALT)>;
+        };
+
+        mac_like_history_forward: mac_like_history_forward {
+            compatible = "zmk,behavior-mod-morph";
+            label = "HIST_FORWARD";
+            bindings = <&kp RBKT>, <&kp LA(RIGHT)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
         };
 
     };

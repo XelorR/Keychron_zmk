@@ -20,41 +20,47 @@
 
     macro {
 
-        in_below: in_below {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp END &kp LS(RET)>;
-            label = "IN_BELOW";
-        };
-
-        in_above: in_above {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp HOME &kp LS(RET) &kp UP>;
-            label = "IN_ABOVE";
-            wait-ms = <0>;
-        };
-
-        in_below_mac: in_below_mac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(RIGHT) &kp LS(RET)>;
-            label = "IN_BELOW_MAC";
-        };
-
-        in_above_mac: in_above_mac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(LEFT) &kp LS(RET) &kp UP>;
-            label = "IN_ABOVE_MAC";
-            wait-ms = <0>;
-        };
-
         delete_to_row_start: delete_to_row_start {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(HOME) &kp BSPC>;
             label = "DELETE_TO_ROW_START";
+        };
+
+        lg_tog_colemak: lg_tog_colemak {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 4 &kp LC(SPACE)>;
+            label = "LG_TOG_COLEMAK";
+        };
+
+    };
+
+    combos1 {
+        compatible = "zmk,combos";
+
+        combo_en_keep {
+            bindings = <&kp LC(SPACE)>;
+            key-positions = <9 10>;
+            layers = <4>;
+        };
+
+        combo_ru_keep {
+            bindings = <&kp LC(SPACE)>;
+            key-positions = <10 11>;
+            layers = <0 2>;
+        };
+
+        combo_en_switch {
+            bindings = <&lg_tog_colemak>;
+            key-positions = <9 10>;
+            layers = <0 2>;
+        };
+
+        combo_ru_switch {
+            bindings = <&lg_tog_colemak>;
+            key-positions = <10 11>;
+            layers = <4>;
         };
 
     };
@@ -174,8 +180,22 @@
         &none   &none                   &none                       &none                               &none
             >;
         };
-
+        
         // 4
+        colemak {
+        bindings = <
+        &trans      &trans                  &trans                  &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans      &trans              &trans              &trans
+        &trans      &trans                  &trans                  &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans      &trans              &trans              &trans
+        &kp TAB     &kp Q                   &kp W                   &kp F                               &kp P                   &kp G               &kp J           &kp L           &kp U               &kp Y       &kp SEMI    &kp LBKT            &kp RBKT            &kp BSLH
+        &kp CAPS    &kp A                   &kp R                   &kp S                               &kp T                   &kp D               &kp H           &kp N           &kp E               &kp I       &kp O       &kp SQT                         &kp RET
+        &kp LSHFT   &kp Z                   &kp X                   &kp C                               &kp V                   &kp B               &kp K           &kp M           &kp COMMA           &kp DOT     &kp FSLH                                    &kp RSHFT
+        &trans      &trans                  &trans                         &trans                                                                                                   &trans              &trans      &trans      &trans              &trans      &trans
+        //
+        &trans      &trans                  &trans                      &trans                               &trans
+            >;
+        };
+
+        // 5
         mac_navi {
         bindings = <
                       //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9                  //f10           //f11                         //f12
@@ -190,7 +210,7 @@
             >;
         };
 
-        // 5
+        // 6
         win_navi {
         bindings = <
                       //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9                  //f10           //f11                         //f12
@@ -205,27 +225,12 @@
             >;
         };
 
-        // 6
-        sixth {
-        bindings = <
-                    //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9        //f10           //f11                         //f12
-        &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &kp INS             &trans      &trans      &trans                      &trans               &trans
-        &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &kp INS             &trans      &trans      &trans                      &trans               &trans
-        &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans      &trans                      &trans               &trans
-        &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans      &trans                              &trans
-        &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans                                          &trans
-        &trans  &trans                  &trans                           &trans                                                                                                     &trans              &trans      &trans      &trans       &trans      &trans
-        //
-        &none   &none                   &none                       &none                               &none
-            >;
-        };
-
         // 7
         seventh {
         bindings = <
                     //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9        //f10           //f11                         //f12
-        &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &kp INS             &trans      &trans      &trans                      &trans               &trans
-        &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &kp INS             &trans      &trans      &trans                      &trans               &trans
+        &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans      &trans                      &trans               &trans
+        &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans      &trans                      &trans               &trans
         &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans      &trans                      &trans               &trans
         &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans      &trans                              &trans
         &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans                                          &trans

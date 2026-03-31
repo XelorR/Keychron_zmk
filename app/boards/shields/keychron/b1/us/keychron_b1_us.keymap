@@ -93,6 +93,30 @@
             layers = <4>;
         };
 
+        combo_typing_keep {
+            bindings = <&none>;
+            key-positions = <5 6>;
+            layers = <7>;
+        };
+
+        combo_gaming_keep {
+            bindings = <&none>;
+            key-positions = <6 7>;
+            layers = <0 2>;
+        };
+
+        combo_typing_switch {
+            bindings = <&tog 7>;
+            key-positions = <5 6>;
+            layers = <7>;
+        };
+
+        combo_gaming_switch {
+            bindings = <&tog 7>;
+            key-positions = <6 7>;
+            layers = <0 2>;
+        };
+
     };
 
     td0 {

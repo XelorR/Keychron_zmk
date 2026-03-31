@@ -234,7 +234,7 @@
         &trans    &kp BSPC                &kp LG(LS(LBKT))            &kp TAB                             &kp LG(LS(RBKT))        &kp LG(SPACE)       &kp LS(F10)     &kp LG(LEFT)    &kp UP              &kp LG(RIGHT)         &kp PG_UP   &none                    &none                &uc LG(LS(N3))
         &trans    &kp LCTRL               &uc LCMD                    &kp LALT                            &kp LSHFT               &kp LG(LS(N4))      &kp LA(SPACE)   &kp LEFT        &kp DOWN            &kp RIGHT             &kp PG_DN   &kp LC(LG(SPACE))                   &trans
         &trans    &kp LG(Z)               &kp LG(X)                   &kp LG(C)                           &kp LG(V)               &kp LG(LS(Z))       &kp RET         &kp BSPC        &kp DEL             &kp LG(BSPC)          &kp ESC                                            &uc LC(LG(SPACE))
-        &trans    &trans                  &trans                           &kp TAB                                                                                                    &trans              &trans                &kp HOME    &kp PG_UP    &kp PG_DN   &kp END
+        &trans    &trans                  &trans                           &trans                                                                                                     &trans              &trans                &kp HOME    &kp PG_UP    &kp PG_DN   &kp END
         //
         &none     &none                   &none                       &none                               &none
             >;
@@ -249,7 +249,7 @@
         &trans    &kp DEL                 &kp LC(LS(TAB))             &kp TAB                             &kp LC(TAB)             &kp LGUI            &kp LS(F10)     &kp HOME        &kp UP              &kp END               &kp PG_UP   &trans                      &trans               &uc PSCRN
         &trans    &kp LGUI                &kp LALT                    &kp LCTRL                           &kp LSHFT               &kp PSCRN           &kp LS(LG(LC(LALT))) &kp LEFT   &kp DOWN            &kp RIGHT             &kp PG_DN   &kp LG(DOT)                         &trans
         &trans    &kp LC(Z)               &kp LC(X)                   &kp LC(C)                           &kp LC(V)               &kp LS(LC(Z))       &kp RET         &kp BSPC        &kp DEL             &delete_to_row_start  &kp ESC                                         &uc LG(DOT)
-        &trans    &trans                  &trans                           &kp TAB                                                                                                    &trans              &trans                &kp HOME    &kp PG_UP    &kp PG_DN   &kp END
+        &trans    &trans                  &trans                           &trans                                                                                                     &trans              &trans                &kp HOME    &kp PG_UP    &kp PG_DN   &kp END
         //
         &none     &none                   &none                       &none                               &none
             >;

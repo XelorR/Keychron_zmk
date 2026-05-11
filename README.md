@@ -35,8 +35,6 @@ cd zephyr-sdk-0.17.4 && \
 
 prepare:
 ```bash
-mkdir keychron
-cd keychron
 git clone -b keychron_bpro https://github.com/keychron/zmk.git 
 cd zmk
 west init -l app/

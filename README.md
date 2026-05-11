@@ -49,7 +49,7 @@ cd zephyr
 git am ../0001-esb-nrf-fix.patch
 ```
 build firmware:
-```
+```bash
 cd app
 west build -b keychron -p -- -DSHIELD=keychron_b1_us
 cp ./build/zephyr/zmk.uf2 ~/Downloads/b1_$(git branch --show-current).uf2

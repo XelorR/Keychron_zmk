@@ -26,32 +26,33 @@ install prerequisites:
 - `pipx inject west pyelftools`
 
 install SDK:
-```
-    mkdir -p ~/.opt && cd ~/.opt && \
-    wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.17.4/zephyr-sdk-0.17.4_linux-x86_64.tar.xz && \
-    tar xf zephyr-sdk-0.17.4_linux-x86_64.tar.xz && \
-    cd zephyr-sdk-0.17.4 && \
-    ./setup.sh -t all -h -c
+```bash
+mkdir -p ~/.opt && cd ~/.opt && \
+wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.17.4/zephyr-sdk-0.17.4_linux-x86_64.tar.xz && \
+tar xf zephyr-sdk-0.17.4_linux-x86_64.tar.xz && \
+cd zephyr-sdk-0.17.4 && \
+./setup.sh -t all -h -c
 ```
 
 prepare:
-```    
-    mkdir keychron
-    cd keychron
-    git clone -b keychron_bpro https://github.com/keychron/zmk.git 
-    cd zmk
-    west init -l app/
-    west update
+```bash
+mkdir keychron
+cd keychron
+git clone -b keychron_bpro https://github.com/keychron/zmk.git 
+cd zmk
+west init -l app/
+west update
 ```
 patch zephyr:
-```
-    cd zephyr
-    git am ../0001-esb-nrf-fix.patch
+```bash
+cd zephyr
+git am ../0001-esb-nrf-fix.patch
 ```
 build firmware:
 ```
-    cd app
-    west build -b keychron -p -- -DSHIELD=keychron_b1_us
+cd app
+west build -b keychron -p -- -DSHIELD=keychron_b1_us
+cp ./build/zephyr/zmk.uf2 ~/Downloads/b1_$(git branch --show-current).uf2
 ```
 
 flash compiled firmware from ./app/build/zephyr/ folder

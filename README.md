@@ -16,6 +16,14 @@ To review features, check out the [feature overview](https://zmk.dev/docs/). ZMK
 
 To build the firmware ,for example: keychorn b1 pro
 
+install prerequisites:
+
+- zephyr-sdk-0.17.4_linux-x86_64.tar.xz
+- cmake
+- ninja
+- `pipx install west`
+- `pipx inject west pyelftools`
+
 prepare:
 ```    
     mkdir keychron
@@ -28,10 +36,12 @@ prepare:
 patch zephyr:
 ```
     cd zephyr
-    git am ../001-esb-nrf-fix.patch
+    git am ../0001-esb-nrf-fix.patch
 ```
 build firmware:
 ```
     cd app
     west build -b keychron -p -- -DSHIELD=keychron_b1_us
 ```
+
+flash compiled firmware from ./app/build/zephyr/ folder

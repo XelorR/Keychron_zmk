@@ -18,7 +18,6 @@ To build the firmware ,for example: keychorn b1 pro
 
 install prerequisites:
 
-- zephyr-sdk-0.17.4_linux-x86_64.tar.xz
 - wget
 - cmake
 - ninja

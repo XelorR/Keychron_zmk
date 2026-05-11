@@ -16,22 +16,40 @@ To review features, check out the [feature overview](https://zmk.dev/docs/). ZMK
 
 To build the firmware ,for example: keychorn b1 pro
 
+install prerequisites:
+
+- wget
+- cmake
+- ninja
+- `pipx install west`
+- `pipx inject west pyelftools`
+
+install SDK:
+```bash
+mkdir -p ~/.opt && cd ~/.opt && \
+wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.17.4/zephyr-sdk-0.17.4_linux-x86_64.tar.xz && \
+tar xf zephyr-sdk-0.17.4_linux-x86_64.tar.xz && \
+cd zephyr-sdk-0.17.4 && \
+./setup.sh -t all -h -c
+```
+
 prepare:
-```    
-    mkdir keychron
-    cd keychron
-    git clone -b keychron_bpro https://github.com/keychron/zmk.git 
-    cd zmk
-    west init -l app/
-    west update
+```bash
+git clone -b keychron_bpro https://github.com/keychron/zmk.git Keychron_ZMK
+cd Keychron_ZMK
+west init -l app/
+west update
 ```
 patch zephyr:
-```
-    cd zephyr
-    git am ../001-esb-nrf-fix.patch
+```bash
+cd zephyr
+git am ../0001-esb-nrf-fix.patch
 ```
 build firmware:
+```bash
+cd app
+west build -b keychron -p -- -DSHIELD=keychron_b1_us
+cp ./build/zephyr/zmk.uf2 ~/Downloads/b1_$(git branch --show-current).uf2
 ```
-    cd app
-    west build -b keychron -p -- -DSHIELD=keychron_b1_us
-```
+
+flash compiled firmware from ./app/build/zephyr/ folder

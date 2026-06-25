@@ -78,49 +78,49 @@
 
         combo_en_keep {
             bindings = <&kp LC(SPACE)>;
-            key-positions = <9 10>;
+            key-positions = <5 6>;
             layers = <4>;
         };
 
         combo_ru_keep {
             bindings = <&kp LC(SPACE)>;
-            key-positions = <10 11>;
+            key-positions = <6 7>;
             layers = <0 2>;
         };
 
         combo_en_switch {
             bindings = <&lg_tog_colemak>;
-            key-positions = <9 10>;
+            key-positions = <5 6>;
             layers = <0 2>;
         };
 
         combo_ru_switch {
             bindings = <&lg_tog_colemak>;
-            key-positions = <10 11>;
+            key-positions = <6 7>;
             layers = <4>;
         };
 
         combo_typing_keep {
             bindings = <&none>;
-            key-positions = <5 6>;
+            key-positions = <9 10>;
             layers = <0 2>;
         };
 
         combo_gaming_keep {
             bindings = <&none>;
-            key-positions = <6 7>;
+            key-positions = <10 11>;
             layers = <7>;
         };
 
         combo_typing_switch {
             bindings = <&tog 7>;
-            key-positions = <5 6>;
+            key-positions = <9 10>;
             layers = <7>;
         };
 
         combo_gaming_switch {
             bindings = <&tog 7>;
-            key-positions = <6 7>;
+            key-positions = <10 11>;
             layers = <0 2>;
         };
 
@@ -262,9 +262,9 @@
                       //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9                  //f10           //f11                         //f12
    &bootloader    &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LC(UP)                          &kp LG(SPACE)           &kp C_AC_SEARCH     &kp LG(LC(Q))   &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT            &kp C_MUTE  &kp C_VOLUME_DOWN        &kp C_VOLUME_UP      &trans
         &trans    &kp F1                  &kp F2                      &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9                &kp F10     &kp F11                  &kp F12              &trans
-        &trans    &kp BSPC                &kp LG(LS(LBKT))            &kp TAB                             &kp LG(LS(RBKT))        &kp LG(SPACE)       &kp LS(F10)     &kp LG(LEFT)    &kp UP              &kp LG(RIGHT)         &kp PG_UP   &none                    &none                &uc LG(LS(N3))
+        &trans    &kp BSPC                &kp LG(LS(LBKT))            &kp TAB                             &kp LG(LS(RBKT))        &kp LG(LS(N3))      &kp ESC         &kp LG(LEFT)    &kp UP              &kp LG(RIGHT)         &kp PG_UP   &none                    &none                &uc LG(LS(N3))
         &trans    &sk LCTRL               &sk LCMD                    &sk LALT                            &sk LSHFT               &kp LG(LS(N4))      &kp LA(SPACE)   &kp LEFT        &kp DOWN            &kp RIGHT             &kp PG_DN   &kp LC(LG(SPACE))                   &trans
-        &trans    &kp LG(Z)               &kp LG(X)                   &kp LG(C)                           &kp LG(V)               &kp LG(LS(Z))       &kp RET         &kp BSPC        &kp DEL             &kp LG(BSPC)          &kp ESC                                            &uc LC(LG(SPACE))
+        &trans    &kp LG(Z)               &kp LG(X)                   &kp LG(C)                           &kp LG(V)               &kp LG(LS(Z))       &kp RET         &kp BSPC        &kp LG(BSPC)        &kp DEL               &kp LS(F10)                                     &uc LC(LG(SPACE))
         &trans    &trans                  &trans                           &trans                                                                                                     &trans              &trans                &kp HOME    &kp PG_UP    &kp PG_DN   &kp END
         //
         &none     &none                   &none                       &none                               &none
@@ -277,9 +277,9 @@
                       //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9                  //f10           //f11                         //f12
    &bootloader    &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &uc LG(TAB)                         &uc C_AL_MY_COMPUTER    &kp C_AC_SEARCH     &uc LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT            &kp C_MUTE  &kp C_VOLUME_DOWN           &kp C_VOLUME_UP      &trans
         &trans    &kp F1                  &kp F2                      &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9                &kp F10     &kp F11                     &kp F12              &trans
-        &trans    &kp DEL                 &kp LC(LS(TAB))             &kp TAB                             &kp LC(TAB)             &kp LGUI            &kp LS(F10)     &kp HOME        &kp UP              &kp END               &kp PG_UP   &trans                      &trans               &uc PSCRN
-        &trans    &sk LGUI                &sk LALT                    &sk LCTRL                           &sk LSHFT               &kp PSCRN           &kp LS(LG(LC(LALT))) &kp LEFT   &kp DOWN            &kp RIGHT             &kp PG_DN   &kp LG(DOT)                         &trans
-        &trans    &kp LC(Z)               &kp LC(X)                   &kp LC(C)                           &kp LC(V)               &kp LS(LC(Z))       &kp RET         &kp BSPC        &kp DEL             &delete_to_row_start  &kp ESC                                         &uc LG(DOT)
+        &trans    &kp DEL                 &kp LC(PG_UP)               &kp TAB                             &kp LC(PG_DN)           &kp LG(PSCRN)       &kp ESC         &kp HOME        &kp UP              &kp END               &kp PG_UP   &trans                      &trans               &uc PSCRN
+        &trans    &sk LGUI                &sk LALT                    &sk LCTRL                           &sk LSHFT               &kp LG(LS(S))       &kp LS(LG(LC(LALT))) &kp LEFT   &kp DOWN            &kp RIGHT             &kp PG_DN   &kp LG(DOT)                         &trans
+        &trans    &kp LC(Z)               &kp LC(X)                   &kp LC(C)                           &kp LC(V)               &kp LC(Y)           &kp RET         &kp BSPC        &delete_to_row_start &kp DEL              &kp LS(F10)                                     &uc LG(DOT)
         &trans    &trans                  &trans                           &trans                                                                                                     &trans              &trans                &kp HOME    &kp PG_UP    &kp PG_DN   &kp END
         //
         &none     &none                   &none                       &none                               &none

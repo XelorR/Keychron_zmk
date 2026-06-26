@@ -37,7 +37,7 @@ cd zephyr-sdk-0.17.4 && \
 ### prepare
 
 ```bash
-git clone -b keychron_bpro https://github.com/keychron/zmk.git Keychron_ZMK
+git clone -b space-fn https://github.com/keychron/zmk.git Keychron_ZMK
 cd Keychron_ZMK
 west init -l app/
 west update

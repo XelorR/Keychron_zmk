@@ -48,6 +48,7 @@ west update
 ```bash
 cd zephyr
 git am ../0001-esb-nrf-fix.patch
+cd ..
 ```
 
 ### build firmware

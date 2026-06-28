@@ -6,7 +6,7 @@
 
 [ZMK Firmware](https://zmk.dev/) is an open source ([MIT](LICENSE)) keyboard firmware built on the [Zephyr™ Project](https://www.zephyrproject.org/) Real Time Operating System (RTOS). ZMK's goal is to provide a modern, wireless, and powerful firmware free of licensing issues.
 
-Check out the website to learn more: https://zmk.dev/.
+Check out the website to learn more: <https://zmk.dev/>.
 
 You can also come join our [ZMK Discord Server](https://zmk.dev/community/discord/invite).
 
@@ -16,7 +16,7 @@ To review features, check out the [feature overview](https://zmk.dev/docs/). ZMK
 
 To build the firmware ,for example: keychorn b1 pro
 
-install prerequisites:
+### install prerequisites
 
 - wget
 - cmake
@@ -24,7 +24,8 @@ install prerequisites:
 - `pipx install west`
 - `pipx inject west pyelftools`
 
-install SDK:
+### install SDK
+
 ```bash
 mkdir -p ~/.opt && cd ~/.opt && \
 wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.17.4/zephyr-sdk-0.17.4_linux-x86_64.tar.xz && \
@@ -33,19 +34,25 @@ cd zephyr-sdk-0.17.4 && \
 ./setup.sh -t all -h -c
 ```
 
-prepare:
+### prepare
+
 ```bash
-git clone -b keychron_bpro https://github.com/keychron/zmk.git Keychron_ZMK
+git clone -b starting-point https://github.com/XelorR/Keychron_zmk Keychron_ZMK
 cd Keychron_ZMK
 west init -l app/
 west update
 ```
-patch zephyr:
+
+### patch zephyr
+
 ```bash
 cd zephyr
 git am ../0001-esb-nrf-fix.patch
+cd ..
 ```
-build firmware:
+
+### build firmware
+
 ```bash
 cd app
 west build -b keychron -p -- -DSHIELD=keychron_b1_us

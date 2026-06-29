@@ -16,6 +16,23 @@ To review features, check out the [feature overview](https://zmk.dev/docs/). ZMK
 
 To build the firmware ,for example: keychorn b1 pro
 
+## navigation layer - my version of Extend
+
+![](./img/navi_win.ipg)
+
+- Popular, battle-tested IJKL navigation
+- Backspace and Delete on stronger fingers
+- GACS modifier order aligned with common HRM/mod-tap layouts
+- Left-hand Delete for efficient mouse + keyboard workflows
+- Tab left/right navigation
+- Consistent macOS behavior to preserve muscle memory
+
+## 1 binary available
+
+Please check releases
+
+## 2 how to build
+
 ### install prerequisites
 
 - wget

@@ -16,11 +16,11 @@ To review features, check out the [feature overview](https://zmk.dev/docs/). ZMK
 
 To build the firmware ,for example: keychorn b1 pro
 
-## navigation layer - my version of Extend
+## navigation layer - my version of [Extend](https://dreymar.colemak.org/layers-extend.html)
 
 ![](./img/navi_win.ipg)
 
-- Popular, battle-tested IJKL navigation
+- Popular, battle-tested [IJKL](http://xahlee.info/kbd/vi_hjkl_vs_inverted_t_ijkl_arrow_keys.html) navigation
 - Backspace and Delete on stronger fingers
 - **GACS** modifier order aligned with [popular HRM/mod-tap arrangement](https://precondition.github.io/home-row-mods)
 - Left-hand Delete for efficient mouse + One Shot Sticky Modifiers (**OSSM**)

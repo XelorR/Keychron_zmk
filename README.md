@@ -22,8 +22,8 @@ To build the firmware ,for example: keychorn b1 pro
 
 - Popular, battle-tested IJKL navigation
 - Backspace and Delete on stronger fingers
-- GACS modifier order aligned with common HRM/mod-tap layouts
-- Left-hand Delete for efficient mouse + keyboard workflows
+- **GACS** modifier order aligned with [popular HRM/mod-tap arrangement](https://precondition.github.io/home-row-mods)
+- Left-hand Delete for efficient mouse + One Shot Sticky Modifiers (**OSSM**)
 - Tab left/right navigation
 - Consistent macOS behavior to preserve muscle memory
 

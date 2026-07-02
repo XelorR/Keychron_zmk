@@ -126,6 +126,46 @@
 
     };
 
+    behaviors {
+   
+        home_mac: home_mac {
+            compatible = "zmk,behavior-mod-morph";
+            label = "HOME_MAC";
+            bindings = <&kp LG(LEFT)>, <&kp LG(UP)>;
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+            keep-mods = <0>;
+        };
+
+        end_mac: end_mac {
+            compatible = "zmk,behavior-mod-morph";
+            label = "END_MAC";
+            bindings = <&kp LG(RIGHT)>, <&kp LG(DOWN)>;
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+            keep-mods = <0>;
+        };
+
+        pgup_mac: pgup_mac {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PGUP_MAC";
+            bindings = <&kp PG_UP>, <&kp LG(LS(LBKT))>;
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+            keep-mods = <0>;
+        };
+
+        pgdn_mac: pgdn_mac {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PGDN_MAC";
+            bindings = <&kp PG_DN>, <&kp LG(LS(RBKT))>;
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+            keep-mods = <0>;
+        };
+
+    };
+
     td0 {
         compatible = "zmk,behavior-tap-dance";
         label = "TAPD_LAYER";
@@ -262,8 +302,8 @@
                       //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9                  //f10           //f11                         //f12
    &bootloader    &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &kp LC(UP)                          &kp LG(SPACE)           &kp C_AC_SEARCH     &kp LG(LC(Q))   &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT            &kp C_MUTE  &kp C_VOLUME_DOWN        &kp C_VOLUME_UP      &trans
         &kp ESC   &kp F1                  &kp F2                      &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9                &kp F10     &kp F11                  &kp F12              &trans
-        &kp LG(UP) &kp BSPC               &kp LG(LS(LBKT))            &kp TAB                             &kp LG(LS(RBKT))        &kp LG(LS(N3))      &kp INS         &kp LG(LEFT)    &kp UP              &kp LG(RIGHT)         &kp PG_UP   &kp C_VOLUME_DOWN        &kp C_VOLUME_UP      &kp C_MUTE
-        &kp LA(SPACE) &sk LCTRL           &sk LCMD                    &sk LALT                            &sk LSHFT               &kp LG(LS(N4))      &kp ESC         &kp LEFT        &kp DOWN            &kp RIGHT             &kp PG_DN   &kp LC(LG(SPACE))                   &trans
+        &kp LG(UP) &kp BSPC               &kp LG(LS(LBKT))            &kp TAB                             &kp LG(LS(RBKT))        &kp LG(LS(N3))      &kp INS         &home_mac       &kp UP              &end_mac              &pgup_mac   &kp C_VOLUME_DOWN        &kp C_VOLUME_UP      &kp C_MUTE
+        &kp LA(SPACE) &sk LCTRL           &sk LCMD                    &sk LALT                            &sk LSHFT               &kp LG(LS(N4))      &kp ESC         &kp LEFT        &kp DOWN            &kp RIGHT             &pgdn_mac   &kp LC(LG(SPACE))                   &trans
         &trans    &kp LG(Z)               &kp LG(X)                   &kp LG(C)                           &kp LG(V)               &kp LG(LS(Z))       &kp RET         &kp BSPC        &kp LG(BSPC)        &kp DEL               &kp LS(F10)                                     &uc LG(LS(N3))
         &trans    &trans                  &trans                           &trans                                                                                                     &trans              &trans                &kp HOME    &kp PG_UP    &kp PG_DN   &kp END
         //

@@ -241,7 +241,7 @@
         mac {
         bindings = <
         &kp ESC     &kp F1                  &kp F2                  &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9      &kp F10     &kp F11             &kp F12             &kp DEL
-        &kp GRAVE   &kp N1                  &kp N2                  &kp N3                              &kp N4                  &kp N5              &kp N6          &kp N7          &kp N8              &kp N9      &kp N0      &kp MINUS           &kp EQUAL           &kp BSPC
+        &kp GRAVE   &kp LS(N1)              &kp LS(N2)              &kp LS(N3)                          &kp LS(N4)              &kp LS(N5)          &kp LS(N6)      &kp LS(N7)      &kp LS(N8)          &kp LS(N9)  &kp LS(N0)  &kp MINUS           &kp EQUAL           &kp BSPC
         &kp TAB     &kp Q                   &kp W                   &kp E                               &kp R                   &kp T               &kp Y           &kp U           &kp I               &kp O       &kp P       &kp LBKT            &kp RBKT            &kp BSLH
         &kp ESC     &mt LCTRL A           &mt LALT S              &mt LGUI D                          &mt LSHFT F             &kp G               &kp H           &mt LSHFT J     &mt LGUI K          &mt LALT L  &mt LCTRL SEMI &kp SQT                      &kp RET
         &kp LSHFT   &kp Z                   &kp X                   &kp C                               &kp V                   &kp B               &kp N           &kp M           &kp COMMA           &kp DOT     &kp FSLH                                    &kp RSHFT
@@ -269,7 +269,7 @@
         win {
         bindings = <
         &kp ESC     &kp F1                  &kp F2                  &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9      &kp F10     &kp F11             &kp F12             &kp DEL
-        &kp GRAVE   &kp N1                  &kp N2                  &kp N3                              &kp N4                  &kp N5              &kp N6          &kp N7          &kp N8              &kp N9      &kp N0      &kp MINUS           &kp EQUAL           &kp BSPC
+        &kp GRAVE   &kp LS(N1)              &kp LS(N2)              &kp LS(N3)                          &kp LS(N4)              &kp LS(N5)          &kp LS(N6)      &kp LS(N7)      &kp LS(N8)          &kp LS(N9)  &kp LS(N0)  &kp MINUS           &kp EQUAL           &kp BSPC
         &kp TAB     &kp Q                   &kp W                   &kp E                               &kp R                   &kp T               &kp Y           &kp U           &kp I               &kp O       &kp P       &kp LBKT            &kp RBKT            &kp BSLH
         &kp ESC     &mt LGUI A              &mt LALT S              &mt LCTRL D                         &mt LSHFT F             &kp G               &kp H           &mt LSHFT J     &mt LCTRL K         &mt LALT L  &mt LGUI SEMI &kp SQT                       &kp RET
         &kp LSHFT   &kp Z                   &kp X                   &kp C                               &kp V                   &kp B               &kp N           &kp M           &kp COMMA           &kp DOT     &kp FSLH                                    &kp RSHFT
@@ -343,7 +343,7 @@
         bindings = <
                     //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9        //f10           //f11                         //f12
         &trans    &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans      &trans                      &trans               &trans
-        &trans    &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans      &trans                      &trans               &trans
+        &kp GRAVE &kp N1                  &kp N2                      &kp N3                              &kp N4                  &kp N5              &kp N6          &kp N7          &kp N8              &kp N9      &kp N0      &kp MINUS                   &kp EQUAL            &kp BSPC
         &kp TAB   &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans      &trans                      &trans               &trans
         &kp CAPS  &kp A                   &kp S                       &kp D                               &kp F                   &trans              &trans          &kp J           &kp K               &kp L       &kp SEMI    &trans                              &trans
         &kp LSHFT &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans                                          &trans

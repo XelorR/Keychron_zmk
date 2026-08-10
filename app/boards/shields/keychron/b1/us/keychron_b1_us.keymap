@@ -93,9 +93,9 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&macro_param_1to1 &key_on MACRO_PLACEHOLDER &layer_on 3>,
+                <&macro_param_1to1 &key_on MACRO_PLACEHOLDER &layer_on 2>,
                 <&macro_pause_for_release>,
-                <&macro_param_1to1 &key_off MACRO_PLACEHOLDER &layer_off 3>;
+                <&macro_param_1to1 &key_off MACRO_PLACEHOLDER &layer_off 2>;
 
             label = "ML";
             wait-ms = <0>;
@@ -165,13 +165,49 @@
 
         mac_lg1 {
             bindings = <&ctrl_space_lang1>;
-            key-positions = <57 59>;
+            key-positions = <28 38>;
             layers = <0 1>;
         };
 
         mac_lg2 {
             bindings = <&ctrl_space_lang2>;
-            key-positions = <62 64>;
+            key-positions = <30 33>;
+            layers = <0 1>;
+        };
+
+        undo {
+            bindings = <&kp LC(Z)>;
+            key-positions = <56 57>;
+            layers = <0 1>;
+        };
+
+        cut {
+            bindings = <&kp LC(X)>;
+            key-positions = <57 59>;
+            layers = <0 1>;
+        };
+
+        copy {
+            bindings = <&kp LC(INS)>;
+            key-positions = <57 58>;
+            layers = <0 1>;
+        };
+
+        paste {
+            bindings = <&kp LS(INS)>;
+            key-positions = <58 59>;
+            layers = <0 1>;
+        };
+
+        redo {
+            bindings = <&kp LC(Y)>;
+            key-positions = <56 58>;
+            layers = <0 1>;
+        };
+
+        select_all {
+            bindings = <&kp LC(Y)>;
+            key-positions = <56 59>;
             layers = <0 1>;
         };
 

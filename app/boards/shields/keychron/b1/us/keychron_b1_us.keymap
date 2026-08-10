@@ -239,7 +239,7 @@
         td_bootloader: td_bootloader {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_BOOTLOADER";
-            #binding-cells = <0>;
+            #binding-cells = <1>;
             bindings = <&none>, <&bootloader>;
         };
 
@@ -297,15 +297,6 @@
             mods = <(MOD_LSFT)>;
         };
 
-        u_ep_tog: u_ep_tog {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_EP_TOG";
-            bindings = <&ext_power EP_TOG>, <&ext_power EP_OFF>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
         u_caps_word: u_caps_word {
             compatible = "zmk,behavior-mod-morph";
             label = "U_CAPS_WORD";
@@ -324,34 +315,6 @@
             mods = <(MOD_LSFT)>;
         };
 
-        to_extra: to_extra {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TO_EXTRA";
-            #binding-cells = <0>;
-            bindings = <&none>, <&to 1>;
-        };
-
-        to_tap: to_tap {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TO_TAP";
-            #binding-cells = <0>;
-            bindings = <&none>, <&to 4>;
-        };
-
-        to_base: to_base {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TO_BASE";
-            #binding-cells = <0>;
-            bindings = <&none>, <&to 0>;
-        };
-
-        to_gam: to_gam {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TO_GAM";
-            #binding-cells = <0>;
-            bindings = <&none>, <&to 5>;
-        };
-
         layer_on: layer_on {
             compatible = "zmk,behavior-toggle-layer";
             label = "LAYER_ON";
@@ -362,7 +325,6 @@
             compatible = "zmk,behavior-toggle-layer";
             label = "LAYER_OFF";
             #binding-cells = <1>;
-            toggle-mode = "off";
         };
 
         key_on: key_on {
@@ -375,7 +337,6 @@
             compatible = "zmk,behavior-key-toggle";
             label = "KEY_OFF";
             #binding-cells = <1>;
-            toggle-mode = "off";
         };
 
         hrml: hrml {
@@ -440,11 +401,6 @@
         flavor = "tap-preferred";
         tapping-term-ms = <3000>;  // delay amount in ms
         bindings = <&bt_pair3>, <&bt_recon_3>;
-    };
-    uc:user_custom {
-        compatible = "zmk,behavior-key-press";
-        label ="user_custom";
-        #binding-cells =<1>;
     };
 
 	keymap {
@@ -513,11 +469,11 @@
         BUTTON {
         bindings = <
                     //f1                 //f2              //f3           //f4                     //f5         //f6        //f7            //f8           //f9        //f10           //f11                //f12
-   &bootloader  &kp C_BRIGHTNESS_DEC &kp C_BRIGHTNESS_INC  &uc LG(TAB)    &uc C_AL_MY_COMPUTER &kp C_AC_SEARCH  &uc LG(L) &kp C_PREVIOUS  &kp C_PLAY_PAUSE &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &trans
+   &bootloader  &kp C_BRIGHTNESS_DEC &kp C_BRIGHTNESS_INC  &kp LG(TAB)    &kp C_AL_MY_COMPUTER &kp C_AC_SEARCH  &kp LG(L) &kp C_PREVIOUS  &kp C_PLAY_PAUSE &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &trans
         &trans  &bt_pair_0 0 0       &bt_pair_1 0 0        &bt_pair_2 0 0 &bt_pair_3 0 0       &trans           &trans    &trans          &trans           &trans      &trans      &trans             &kp C_AL_CALC     &trans
-        &trans  &kp LC(Z)            &kp LC(X)             &kp LC(INS)    &kp LS(INS)          &kp LC(Y)        &kp LC(Y)  &kp LS(INS)    &kp LC(INS)      &kp LC(X)   &kp LC(Z)   &kp LC(PG_UP)      &kp LC(PG_DN)     &uc PSCRN
+        &trans  &kp LC(Z)            &kp LC(X)             &kp LC(INS)    &kp LS(INS)          &kp LC(Y)        &kp LC(Y)  &kp LS(INS)    &kp LC(INS)      &kp LC(X)   &kp LC(Z)   &kp LC(PG_UP)      &kp LC(PG_DN)     &kp PSCRN
         &trans  &kp LGUI             &kp LALT              &kp LCTRL      &kp LSHFT            &trans           &trans     &kp LSHFT      &kp LCTRL        &kp LALT    &kp LGUI    &trans             &trans
-        &trans  &kp LC(Z)            &kp LC(X)             &kp LC(INS)    &kp LS(INS)          &kp LC(Y)        &kp LC(Y)  &kp LS(INS)    &kp LC(INS)      &kp LC(X)   &kp LC(Z)   &uc LG(DOT)
+        &trans  &kp LC(Z)            &kp LC(X)             &kp LC(INS)    &kp LS(INS)          &kp LC(Y)        &kp LC(Y)  &kp LS(INS)    &kp LC(INS)      &kp LC(X)   &kp LC(Z)   &kp LG(DOT)
         &trans  &trans               &trans                     &trans                                                                    &kp RCTRL        &trans      &kp HOME    &kp PG_UP          &kp PG_DN         &kp END
         //
         &none   &none                &none                 &none          &none
@@ -528,11 +484,11 @@
         NUMNAV {
         bindings = <
                     //f1                 //f2              //f3           //f4                     //f5         //f6           //f7            //f8           //f9           //f10              //f11            //f12
-   &bootloader  &kp C_BRIGHTNESS_DEC &kp C_BRIGHTNESS_INC  &uc LG(TAB)    &uc C_AL_MY_COMPUTER &kp C_AC_SEARCH  &uc LG(L)    &kp C_PREVIOUS  &kp C_PLAY_PAUSE &kp C_NEXT     &kp C_MUTE     &kp C_VOLUME_DOWN  &kp C_VOLUME_UP      &trans
+   &bootloader  &kp C_BRIGHTNESS_DEC &kp C_BRIGHTNESS_INC  &kp LG(TAB)    &kp C_AL_MY_COMPUTER &kp C_AC_SEARCH  &kp LG(L)    &kp C_PREVIOUS  &kp C_PLAY_PAUSE &kp C_NEXT     &kp C_MUTE     &kp C_VOLUME_DOWN  &kp C_VOLUME_UP      &trans
         &trans  &kp F1               &kp F2                &kp F3         &kp F4               &kp F5           &kp F6       &kp F7          &kp F8           &kp F9         &kp F10        &kp F11            &kp F12              &trans
-        &trans  &kp FSLH             &kp N7                &kp N8         &kp N9               &kp MINUS        &kp LC(Y)    &kp LS(INS)     &kp LC(INS)      &kp LC(X)      &kp LC(Z)      &kp LC(PG_UP)      &kp LC(PG_DN)        &uc PIPE
+        &trans  &kp FSLH             &kp N7                &kp N8         &kp N9               &kp MINUS        &kp LC(Y)    &kp LS(INS)     &kp LC(INS)      &kp LC(X)      &kp LC(Z)      &kp LC(PG_UP)      &kp LC(PG_DN)        &kp PIPE
         &trans  &mt LGUI STAR        &mt LALT N4           &mt LCTRL N5   &mt LSHFT N6         &kp LS(EQUAL)    &u_caps_word &mt LSHFT LEFT  &mt LCTRL DOWN   &mt LALT UP    &mt LGUI RIGHT &trans             &trans
-        &trans  &kp N0               &mt RALT N1           &kp N2         &kp N3               &kp DOT          &kp INS      &kp HOME        &kp PG_DN        &mt RALT PG_UP &kp END        &uc LG(DOT)
+        &trans  &kp N0               &mt RALT N1           &kp N2         &kp N3               &kp DOT          &kp INS      &kp HOME        &kp PG_DN        &mt RALT PG_UP &kp END        &kp LG(DOT)
         &trans  &trans               &trans                     &trans                                                                       &kp RCTRL        &trans         &kp HOME       &kp PG_UP          &kp PG_DN            &kp END
         //
         &none   &none                &none                 &none          &none
@@ -543,11 +499,11 @@
         NUMNAV_EXTRA {
         bindings = <
                     //f1                 //f2              //f3           //f4                     //f5         //f6             //f7            //f8           //f9           //f10              //f11            //f12
-   &bootloader  &kp C_BRIGHTNESS_DEC &kp C_BRIGHTNESS_INC  &uc LG(TAB)    &uc C_AL_MY_COMPUTER &kp C_AC_SEARCH  &uc LG(L)      &kp C_PREVIOUS  &kp C_PLAY_PAUSE &kp C_NEXT     &kp C_MUTE     &kp C_VOLUME_DOWN  &kp C_VOLUME_UP      &trans
+   &bootloader  &kp C_BRIGHTNESS_DEC &kp C_BRIGHTNESS_INC  &kp LG(TAB)    &kp C_AL_MY_COMPUTER &kp C_AC_SEARCH  &kp LG(L)      &kp C_PREVIOUS  &kp C_PLAY_PAUSE &kp C_NEXT     &kp C_MUTE     &kp C_VOLUME_DOWN  &kp C_VOLUME_UP      &trans
         &trans  &bt_pair_0 0 0       &bt_pair_1 0 0        &bt_pair_2 0 0 &bt_pair_3 0 0       &trans           &trans         &trans          &trans           &trans         &trans         &trans             &kp C_AL_CALC        &trans
-        &trans  &kp PIPE             &kp N7                &kp N8         &kp N9               &kp MINUS        &kp LC(Y)      &kp LS(INS)     &kp LC(INS)      &kp LC(X)      &kp LC(Z)      &kp LC(PG_UP)      &kp LC(PG_DN)        &uc LS(NUBS)
+        &trans  &kp PIPE             &kp N7                &kp N8         &kp N9               &kp MINUS        &kp LC(Y)      &kp LS(INS)     &kp LC(INS)      &kp LC(X)      &kp LC(Z)      &kp LC(PG_UP)      &kp LC(PG_DN)        &kp LS(NUBS)
         &trans  &mt LGUI STAR        &mt LALT N4           &mt LCTRL N5   &mt LSHFT N6         &kp LS(EQUAL)    &lg2_caps_word &mt LSHFT LEFT  &mt LCTRL DOWN   &mt LALT UP    &mt LGUI RIGHT &trans             &trans
-        &trans  &kp N0               &mt RALT N1           &kp N2         &kp N3               &kp FSLH         &kp INS        &kp HOME        &kp PG_DN        &mt RALT PG_UP &kp END        &uc LG(DOT)
+        &trans  &kp N0               &mt RALT N1           &kp N2         &kp N3               &kp FSLH         &kp INS        &kp HOME        &kp PG_DN        &mt RALT PG_UP &kp END        &kp LG(DOT)
         &trans  &trans               &trans                     &trans                                                                         &kp RCTRL        &trans         &kp HOME       &kp PG_UP          &kp PG_DN            &kp END
         //
         &none   &none                &none                 &none          &none
@@ -557,13 +513,13 @@
         // 7
         FUNMED {
         bindings = <
-                    //f1                 //f2              //f3           //f4                     //f5         //f6              //f7             //f8              //f9              //f10                //f11              //f12
-   &bootloader  &kp C_BRIGHTNESS_DEC &kp C_BRIGHTNESS_INC  &uc LG(TAB)    &uc C_AL_MY_COMPUTER &kp C_AC_SEARCH  &uc LG(L)       &kp C_PREVIOUS   &kp C_PLAY_PAUSE    &kp C_NEXT        &kp C_MUTE       &kp C_VOLUME_DOWN &kp C_VOLUME_UP &trans
-        &trans  &bt_pair_0 0 0       &bt_pair_1 0 0        &bt_pair_2 0 0 &bt_pair_3 0 0       &trans           &trans          &trans           &trans              &trans            &trans           &trans            &kp C_AL_CALC   &trans
-        &trans  &kp F12              &kp F7                &kp F8         &kp F9               &kp PSCRN        &bt BT_CLR_ALL  &out OUT_BLE     &out OUT_USB        &none             &none            &kp LC(PG_UP)     &kp LC(PG_DN)   &uc PSCRN
-        &trans  &mt LGUI F11         &mt LALT F4           &mt LCTRL F5   &mt LSHFT F6         &kp SCROLLLOCK   &u_ep_tog       &mt LSHFT C_PREV &mt LCTRL C_VOL_DN  &mt LALT C_VOL_UP &mt LGUI C_NEXT  &trans            &trans
-        &trans  &kp F10              &mt RALT F1           &kp F2         &kp F3               &kp PAUSE_BREAK  &u_out_tog      &bt_0            &bt_1               &bt_2             &bt_3            &uc LG(DOT)
-        &trans  &trans               &trans                     &trans                                                                           &kp RCTRL           &trans            &kp HOME         &kp PG_UP         &kp PG_DN       &kp END
+                    //f1                 //f2              //f3           //f4                     //f5         //f6              //f7                 //f8              //f9              //f10                //f11              //f12
+   &bootloader  &kp C_BRIGHTNESS_DEC &kp C_BRIGHTNESS_INC  &kp LG(TAB)    &kp C_AL_MY_COMPUTER &kp C_AC_SEARCH  &kp LG(L)       &kp C_PREVIOUS       &kp C_PLAY_PAUSE    &kp C_NEXT        &kp C_MUTE       &kp C_VOLUME_DOWN &kp C_VOLUME_UP &trans
+        &trans  &bt_pair_0 0 0       &bt_pair_1 0 0        &bt_pair_2 0 0 &bt_pair_3 0 0       &trans           &trans          &trans               &trans              &trans            &trans           &trans            &kp C_AL_CALC   &trans
+        &trans  &kp F12              &kp F7                &kp F8         &kp F9               &kp PSCRN        &bt BT_CLR      &out OUT_BLE         &out OUT_USB        &none             &none            &kp LC(PG_UP)     &kp LC(PG_DN)   &kp PSCRN
+        &trans  &mt LGUI F11         &mt LALT F4           &mt LCTRL F5   &mt LSHFT F6         &kp SCROLLLOCK   &none           &mt LSHFT C_PREV     &mt LCTRL C_VOL_DN  &mt LALT C_VOL_UP &mt LGUI C_NEXT  &trans            &trans
+        &trans  &kp F10              &mt RALT F1           &kp F2         &kp F3               &kp PAUSE_BREAK  &u_out_tog      &bt_0                &bt_1               &bt_2             &bt_3            &kp LG(DOT)
+        &trans  &trans               &trans                     &trans                                                                               &kp RCTRL           &trans            &kp HOME         &kp PG_UP         &kp PG_DN       &kp END
         //
         &none   &none                &none                 &none          &none
             >;
@@ -571,5 +527,3 @@
         
 	};
 };
-
-

@@ -279,58 +279,59 @@
         // 0
         BASE {
         bindings = <
-        &kp ESC     &kp F1                  &kp F2                  &kp F3                              &kp F4                  &kp F5              &kp F6          &kp F7          &kp F8              &kp F9      &kp F10     &kp F11             &kp F12             &kp DEL
-        &kp GRAVE   &kp LS(N1)              &kp LS(N2)              &kp LS(N3)                          &kp LS(N4)              &kp LS(N5)          &kp LS(N6)      &kp LS(N7)      &kp LS(N8)          &kp LS(N9)  &kp LS(N0)  &kp MINUS           &kp EQUAL           &kp BSPC
-        &kp TAB     &kp Q                   &kp W                   &kp F                               &kp P                   &kp G               &kp J           &kp L           &kp U               &kp Y       &kp SEMI    &kp LBKT            &kp RBKT            &kp BSLH
-        &kp ESC     &mt LGUI A              &mt LALT R              &mt LCTRL S                         &mt LSHFT F             &kp D               &kp H           &mt LSHFT N     &mt LCTRL E         &mt LALT I  &mt LGUI O  &kp SQT                       &kp RET
-        &kp LSHFT   &kp Z                   &kp X                   &kp C                               &kp V                   &kp B               &kp K           &kp M           &kp COMMA           &kp DOT     &kp FSLH                                    &kp RSHFT
-        &kp LCTRL 	&kp LGUI                &kp LALT                      &lt 6 SPACE              		                                                                              &kp RALT  	        &mo 3 		  &kp LEFT 	 &kp UP      &kp DOWN 	&kp RIGHT
+        &kp ESC   &kp F1     &kp F2     &kp F3      &kp F4      &kp F5     &kp F6     &kp F7      &kp F8      &kp F9     &kp F10    &kp F11   &kp F12   &kp DEL
+        &kp GRAVE &kp LS(N1) &kp LS(N2) &kp LS(N3)  &kp LS(N4)  &kp LS(N5) &kp LS(N6) &kp LS(N7)  &kp LS(N8)  &kp LS(N9) &kp LS(N0) &kp MINUS &kp EQUAL &kp BSPC
+        &kp TAB   &kp Q      &kp W      &kp F       &kp P       &kp G      &kp J      &kp L       &kp U       &kp Y      &kp SEMI   &kp LBKT  &kp RBKT  &kp BSLH
+        &kp ESC   &mt LGUI A &mt LALT R &mt LCTRL S &mt LSHFT F &kp D      &kp H      &mt LSHFT N &mt LCTRL E &mt LALT I &mt LGUI O &kp SQT   &kp RET
+        &kp LSHFT &kp Z      &kp X      &kp C       &kp V       &kp B      &kp K      &kp M       &kp COMMA   &kp DOT    &kp FSLH   &kp RSHFT
+        &kp LCTRL &kp LGUI   &kp LALT         &lt 6 SPACE                                         &kp RALT    &mo 3 	   &kp LEFT   &kp UP    &kp DOWN 	&kp RIGHT
         //
-        &none       &out OUT_BLE           &out OUT_24G             &out OUT_CHG                        &out OUT_CHGD
+        &none     &out OUT_BLE  &out OUT_24G  &out OUT_CHG  &out OUT_CHGD
             >;
         };
 
         // 1
         EXTRA {
         bindings = <
-        &trans      &trans                  &trans                  &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans      &trans              &trans              &trans
-        &trans      &trans                  &trans                  &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans      &trans              &trans              &trans
-        &trans      &kp Q                   &kp W                   &kp F                               &kp P                   &kp G               &kp J           &kp L           &kp U               &kp Y       &kp SEMI    &kp LBKT            &kp RBKT            &kp BSLH
-        &trans      &mt LGUI A              &mt LALT R              &mt LCTRL S                         &mt LSHFT T             &kp D               &kp H           &mt LSHFT N     &mt LCTRL E         &mt LALT I  &mt LGUI O  &kp SQT                         &trans
-        &trans      &kp Z                   &kp X                   &kp C                               &kp V                   &kp B               &kp K           &kp M           &kp COMMA           &kp DOT     &kp FSLH                                    &trans
-        &trans      &trans                  &trans                         &trans                                                                                                   &trans              &trans      &trans      &trans              &trans      &trans
+                   //f1       //f2       //f3        //f4        //f5    //f6    //f7       //f8        //f9       //f10         //f11   //f12
+        &trans    &trans     &trans     &trans      &trans      &trans  &trans &trans      &trans      &trans     &trans        &trans  &trans  &trans
+        &kp GRAVE &trans     &trans     &trans      &trans      &trans  &trans &trans      &trans      &trans     &trans        &trans  &trans  &trans
+        &kp TAB   &kp Q      &kp W      &kp E       &kp R       &kp T   &kp Y  &kp U       &kp I       &kp O      &kp P         &trans  &trans  &trans
+        &kp CAPS  &kp LGUI A &kp LALT S &kp LCTRL D &kp LSHFT F &kp G   &kp H  &kp LSHFT J &kp LCTRL K &kp LALT L &kp LGUI SEMI &kp SQT &trans
+        &kp LSHFT &kp Z      &kp X      &kp C       &kp V       &kp B   &kp N  &kp M       &kp COMMA   &kp DOT    &kp FSLH      &trans
+        &kp LCTRL &trans     &trans           &lt 6 SPACE                                  &trans      &trans     &trans        &trans  &trans  &trans
         //
-        &trans      &trans                  &trans                      &trans                               &trans
+        &none     &out OUT_BLE  &out OUT_24G  &out OUT_CHG  &out OUT_CHGD
             >;
         };
 
         // 2
         SHORTCUT {
         bindings = <
-                    //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9        //f10           //f11                         //f12
-        &trans    &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans      &trans                      &trans               &trans
-        &kp GRAVE &kp N1                  &kp N2                      &kp N3                              &kp N4                  &kp N5              &kp N6          &kp N7          &kp N8              &kp N9      &kp N0      &kp MINUS                   &kp EQUAL            &kp BSPC
-        &kp TAB   &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans      &trans                      &trans               &trans
-        &kp CAPS  &kp A                   &kp S                       &kp D                               &kp F                   &trans              &trans          &kp J           &kp K               &kp L       &kp SEMI    &trans                              &trans
-        &kp LSHFT &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans                                          &trans
-        &kp LCTRL &trans                  &trans                           &kp SPACE                                                                                                  &trans              &trans      &trans      &trans       &trans      &trans
+                   //f1       //f2       //f3        //f4        //f5    //f6    //f7       //f8        //f9       //f10         //f11   //f12
+        &trans    &trans     &trans     &trans      &trans      &trans  &trans &trans      &trans      &trans     &trans        &trans  &trans  &trans
+        &kp GRAVE &trans     &trans     &trans      &trans      &trans  &trans &trans      &trans      &trans     &trans        &trans  &trans  &trans
+        &kp TAB   &kp Q      &kp W      &kp F       &kp P       &kp G   &kp J  &kp L       &kp U       &kp Y      &kp SEMI      &trans  &trans  &trans
+        &kp CAPS  &kp LGUI A &kp LALT R &kp LCTRL S &kp LSHFT T &kp D   &kp H  &kp LSHFT N &kp LCTRL E &kp LALT I &kp LGUI O    &kp SQT &trans
+        &kp LSHFT &kp Z      &kp X      &kp C       &kp V       &kp B   &kp K  &kp M       &kp COMMA   &kp DOT    &kp FSLH      &trans
+        &kp LCTRL &trans     &trans           &kp SPACE                                    &trans      &trans     &trans        &trans  &trans  &trans
         //
-        &none     &none                   &none                       &none                               &none
+        &none     &none   &none   &none  &none
             >;
         };
 
         // 3
         TAP {
         bindings = <
-                    //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9        //f10           //f11                         //f12
-   &bootloader  &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &uc LG(TAB)                         &uc C_AL_MY_COMPUTER    &kp C_AC_SEARCH     &uc LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN           &kp C_VOLUME_UP      &trans
-        &trans  &bt_pair_0 0 0          &bt_pair_1 0 0              &bt_pair_2 0 0                      &bt_pair_3 0 0          &trans              &trans          &trans          &trans              &trans      &trans      &trans                      &kp C_AL_CALC        &trans
-        &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &kp INS             &trans      &trans      &kp LC(PG_UP)               &kp LC(PG_DN)        &uc PSCRN
-        &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans      &trans                              &trans
-        &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans                                          &uc LG(DOT)
-        &trans  &trans                  &trans                           &trans                                                                                                     &kp RCTRL           &trans      &kp HOME    &kp PG_UP    &kp PG_DN   &kp END
+                    //f1    //f2    //f3    //f4    //f5    //f6    //f7    //f8    //f9    //f10     //f11   //f12
+        &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans   &trans  &trans  &trans
+        &kp GRAVE &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans   &trans  &trans  &trans
+        &kp TAB   &kp Q   &kp W   &kp F   &kp P   &kp G   &kp J   &kp L   &kp U     &kp Y   &kp SEMI &trans  &trans  &trans
+        &kp CAPS  &kp A   &kp R   &kp S   &kp T   &kp D   &kp H   &kp N   &kp E     &kp I   &kp O    &kp SQT &trans
+        &kp LSHFT &kp Z   &kp X   &kp C   &kp V   &kp B   &kp K   &kp M   &kp COMMA &kp DOT &kp FSLH &trans
+        &kp LCTRL &trans  &trans        &kp SPACE                         &trans    &trans  &trans   &trans  &trans  &trans
         //
-        &none   &none                   &none                       &none                               &none
+        &none     &out OUT_BLE  &out OUT_24G  &out OUT_CHG  &out OUT_CHGD
             >;
         };
         

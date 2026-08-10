@@ -26,80 +26,101 @@
     ZMK_MACRO1(MA,bindings=<&kp 0x770000>;)
 
     macro {
-
         cmd_space_lang1: cmd_space_lang1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LS(N7))>;
+            bindings = <&kp LC(LS(N7)) &to 0>;
             label = "CMD_SPACE_LANG1";
         };
 
         cmd_space_lang2: cmd_space_lang2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LS(N8))>;
+            bindings = <&kp LC(LS(N8)) &to 2>;
             label = "CMD_SPACE_LANG2";
         };
 
         ctrl_space_lang1: ctrl_space_lang1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(SPACE)>;
+            bindings = <&kp LC(SPACE) &to 0>;
             label = "CTRL_SPACE_LANG1";
         };
 
         ctrl_space_lang2: ctrl_space_lang2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(SPACE)>;
+            bindings = <&kp LC(SPACE) &to 2>;
             label = "CTRL_SPACE_LANG2";
         };
 
-        in_below: in_below {
+        bt_clear_2: bt_clear_2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp END &kp LS(RET)>;
-            label = "IN_BELOW";
+            bindings = <&bt BT_SEL 2 &bt BT_CLR>;
+            label = "BT_CLEAR_2";
         };
 
-        in_above: in_above {
+        bt_clear_3: bt_clear_3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp HOME &kp LS(RET) &kp UP>;
-            label = "IN_ABOVE";
+            bindings = <&bt BT_SEL 3 &bt BT_CLR>;
+            label = "BT_CLEAR_3";
+        };
+
+        bt_clear_4: bt_clear_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 4 &bt BT_CLR>;
+            label = "BT_CLEAR_4";
+        };
+
+        bt_clear_0: bt_clear_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &bt BT_CLR>;
+            label = "BT_CLEAR_0";
+        };
+
+        bt_clear_1: bt_clear_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &bt BT_CLR>;
+            label = "BT_CLEAR_1";
+        };
+
+        ml: ml {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_param_1to1 &key_on MACRO_PLACEHOLDER &layer_on 3>,
+                <&macro_pause_for_release>,
+                <&macro_param_1to1 &key_off MACRO_PLACEHOLDER &layer_off 3>;
+
+            label = "ML";
             wait-ms = <0>;
+            tap-ms = <0>;
         };
 
-        in_below_mac: in_below_mac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(RIGHT) &kp LS(RET)>;
-            label = "IN_BELOW_MAC";
-        };
-
-        in_above_mac: in_above_mac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(LEFT) &kp LS(RET) &kp UP>;
-            label = "IN_ABOVE_MAC";
+        ku: kp_unshift {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&key_off RSHFT &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "KP_UNSHIFT";
             wait-ms = <0>;
+            tap-ms = <0>;
         };
-
-        delete_to_row_start: delete_to_row_start {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(HOME) &kp BSPC>;
-            label = "DELETE_TO_ROW_START";
-        };
-
-        lg_tog_colemak: lg_tog_colemak {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&tog 4 &kp LC(SPACE)>;
-            label = "LG_TOG_COLEMAK";
-        };
-
     };
+
+    // LAYER INDEXES
+    //
+    // BASE     0
+    // EXTRA    1
+    // SHORTCUT 2
+    // TAP      3
+    // BUTTON   4
+    // NUMNAV   5
+    // FUNMED   6
 
     // MATRIX INDEXES
     //
@@ -118,83 +139,42 @@
     // lsft z   x   c   v   b   n   m   ,   .   /  rsft
     // 55  56  57  58  59  60  61  62  63  64  65  66
     //
-    // ctl win alt spc alt fn  lft up  dwn rght
-    // 67  68  69  70  71  72  73  74  75  76
+    // ctl win alt         spc         alt fn  lft up  dwn rght
+    // 67  68  69          70          71  72  73  74  75  76
 
-    combos1 {
+    combos {
         compatible = "zmk,combos";
 
-        combo_en_keep {
-            bindings = <&kp LC(SPACE)>;
-            key-positions = <5 6>;
-            layers = <4>;
-        };
-
-        combo_ru_keep {
-            bindings = <&kp LC(SPACE)>;
-            key-positions = <6 7>;
-            layers = <0 2>;
-        };
-
-        combo_en_switch {
-            bindings = <&lg_tog_colemak>;
-            key-positions = <5 6>;
-            layers = <0 2>;
-        };
-
-        combo_ru_switch {
-            bindings = <&lg_tog_colemak>;
-            key-positions = <6 7>;
-            layers = <4>;
-        };
-
-        combo_typing_keep {
-            bindings = <&none>;
-            key-positions = <9 10>;
-            layers = <0 2>;
-        };
-
-        combo_gaming_keep {
-            bindings = <&none>;
-            key-positions = <10 11>;
-            layers = <7>;
-        };
-
-        combo_typing_switch {
-            bindings = <&tog 7>;
-            key-positions = <9 10>;
-            layers = <7>;
-        };
-
-        combo_gaming_switch {
-            bindings = <&tog 7>;
-            key-positions = <10 11>;
-            layers = <0 2>;
+        un_tap {
+            bindings = <&to 0>;
+            key-positions = <29 38>;
+            layers = <3>;
         };
 
         win_lg1 {
             bindings = <&cmd_space_lang1>;
             key-positions = <30 32>;
-            layers = <0 2>;
+            layers = <0 1>;
         };
 
         win_lg2 {
             bindings = <&cmd_space_lang2>;
             key-positions = <35 37>;
-            layers = <0 2>;
+            layers = <0 1>;
         };
 
         mac_lg1 {
             bindings = <&ctrl_space_lang1>;
             key-positions = <57 59>;
-            layers = <0 2>;
+            layers = <0 1>;
         };
 
         mac_lg2 {
             bindings = <&ctrl_space_lang2>;
             key-positions = <62 64>;
-            layers = <0 2>;
+            layers = <0 1>;
         };
+
     };
 
     behaviors {

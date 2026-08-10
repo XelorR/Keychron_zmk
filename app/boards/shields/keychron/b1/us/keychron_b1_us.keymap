@@ -36,7 +36,7 @@
         cmd_space_lang2: cmd_space_lang2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LS(N8)) &to 2>;
+            bindings = <&kp LC(LS(N8)) &to 1>;
             label = "CMD_SPACE_LANG2";
         };
 
@@ -50,8 +50,22 @@
         ctrl_space_lang2: ctrl_space_lang2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(SPACE) &to 2>;
+            bindings = <&kp LC(SPACE) &to 1>;
             label = "CTRL_SPACE_LANG2";
+        };
+
+        bt_clear_0: bt_clear_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &bt BT_CLR>;
+            label = "BT_CLEAR_0";
+        };
+
+        bt_clear_1: bt_clear_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &bt BT_CLR>;
+            label = "BT_CLEAR_1";
         };
 
         bt_clear_2: bt_clear_2 {
@@ -73,20 +87,6 @@
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 4 &bt BT_CLR>;
             label = "BT_CLEAR_4";
-        };
-
-        bt_clear_0: bt_clear_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 0 &bt BT_CLR>;
-            label = "BT_CLEAR_0";
-        };
-
-        bt_clear_1: bt_clear_1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &bt BT_CLR>;
-            label = "BT_CLEAR_1";
         };
 
         ml: ml {
@@ -178,41 +178,320 @@
     };
 
     behaviors {
-   
-        home_mac: home_mac {
-            compatible = "zmk,behavior-mod-morph";
-            label = "HOME_MAC";
-            bindings = <&kp LG(LEFT)>, <&kp LG(UP)>;
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-            keep-mods = <0>;
+
+        mu: mt_unshift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_UNSHIFT";
+            bindings = <&kp>, <&ku>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
         };
 
-        end_mac: end_mac {
-            compatible = "zmk,behavior-mod-morph";
-            label = "END_MAC";
-            bindings = <&kp LG(RIGHT)>, <&kp LG(DOWN)>;
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-            keep-mods = <0>;
+        lu: lt_unshift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_UNSHIFT";
+            bindings = <&mo>, <&ku>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
         };
 
-        pgup_mac: pgup_mac {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PGUP_MAC";
-            bindings = <&kp PG_UP>, <&kp LG(LS(LBKT))>;
+        td_bootloader: td_bootloader {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_BOOTLOADER";
             #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-            keep-mods = <0>;
+            bindings = <&none>, <&bootloader>;
         };
 
-        pgdn_mac: pgdn_mac {
+        bt_0: bt_0 {
             compatible = "zmk,behavior-mod-morph";
-            label = "PGDN_MAC";
-            bindings = <&kp PG_DN>, <&kp LG(LS(RBKT))>;
+            label = "BT_0";
+            bindings = <&bt BT_SEL 0>, <&bt_clear_0>;
+
             #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-            keep-mods = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        bt_1: bt_1 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BT_1";
+            bindings = <&bt BT_SEL 1>, <&bt_clear_1>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        bt_2: bt_2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BT_2";
+            bindings = <&bt BT_SEL 2>, <&bt_clear_2>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        bt_3: bt_3 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BT_3";
+            bindings = <&bt BT_SEL 3>, <&bt_clear_3>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        bt_4: bt_4 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BT_4";
+            bindings = <&bt BT_SEL 4>, <&bt_clear_4>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        u_out_tog: u_out_tog {
+            compatible = "zmk,behavior-mod-morph";
+            label = "U_OUT_TOG";
+            bindings = <&out OUT_TOG>, <&out OUT_USB>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        u_ep_tog: u_ep_tog {
+            compatible = "zmk,behavior-mod-morph";
+            label = "U_EP_TOG";
+            bindings = <&ext_power EP_TOG>, <&ext_power EP_OFF>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        u_caps_word: u_caps_word {
+            compatible = "zmk,behavior-mod-morph";
+            label = "U_CAPS_WORD";
+            bindings = <&caps_word>, <&kp CAPS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        lg2_caps_word: lg2_caps_word {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LG2_CAPS_WORD";
+            bindings = <&key_on RSHFT>, <&kp CAPS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        to_extra: to_extra {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TO_EXTRA";
+            #binding-cells = <0>;
+            bindings = <&none>, <&to 1>;
+        };
+
+        to_tap: to_tap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TO_TAP";
+            #binding-cells = <0>;
+            bindings = <&none>, <&to 4>;
+        };
+
+        to_base: to_base {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TO_BASE";
+            #binding-cells = <0>;
+            bindings = <&none>, <&to 0>;
+        };
+
+        to_gam: to_gam {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TO_GAM";
+            #binding-cells = <0>;
+            bindings = <&none>, <&to 5>;
+        };
+
+        layer_on: layer_on {
+            compatible = "zmk,behavior-toggle-layer";
+            label = "LAYER_ON";
+            #binding-cells = <1>;
+        };
+
+        layer_off: layer_off {
+            compatible = "zmk,behavior-toggle-layer";
+            label = "LAYER_OFF";
+            #binding-cells = <1>;
+            toggle-mode = "off";
+        };
+
+        key_on: key_on {
+            compatible = "zmk,behavior-key-toggle";
+            label = "KEY_ON";
+            #binding-cells = <1>;
+        };
+
+        key_off: key_off {
+            compatible = "zmk,behavior-key-toggle";
+            label = "KEY_OFF";
+            #binding-cells = <1>;
+            toggle-mode = "off";
+        };
+
+        hrml: hrml {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRML";
+            bindings = <&ml>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <100>;
+        };
+
+        frz_nav: frz_nav {
+            compatible = "zmk,behavior-tap-dance";
+            label = "FRZ_NAV";
+            #binding-cells = <0>;
+            bindings = <&none>, <&tog 7>;
+        };
+
+        frz_mou: frz_mou {
+            compatible = "zmk,behavior-tap-dance";
+            label = "FRZ_MOU";
+            #binding-cells = <0>;
+            bindings = <&none>, <&tog 8>;
+        };
+
+        frz_med: frz_med {
+            compatible = "zmk,behavior-tap-dance";
+            label = "FRZ_MED";
+            #binding-cells = <0>;
+            bindings = <&none>, <&tog 15>;
+        };
+
+        frz_num: frz_num {
+            compatible = "zmk,behavior-tap-dance";
+            label = "FRZ_NUM";
+            #binding-cells = <0>;
+            bindings = <&none>, <&tog 9>;
+        };
+
+        frz_sym: frz_sym {
+            compatible = "zmk,behavior-tap-dance";
+            label = "FRZ_SYM";
+            #binding-cells = <0>;
+            bindings = <&none>, <&tog 10>;
+        };
+
+        frz_fun: frz_fun {
+            compatible = "zmk,behavior-tap-dance";
+            label = "FRZ_FUN";
+            #binding-cells = <0>;
+            bindings = <&none>, <&tog 16>;
+        };
+
+        frz_num2: frz_num2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "FRZ_NUM2";
+            #binding-cells = <0>;
+            bindings = <&none>, <&tog 13>;
+        };
+
+        frz_sym2: frz_sym2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "FRZ_SYM2";
+            #binding-cells = <0>;
+            bindings = <&none>, <&tog 14>;
+        };
+
+        frz_nav2: frz_nav2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "FRZ_NAV2";
+            #binding-cells = <0>;
+            bindings = <&none>, <&tog 11>;
+        };
+
+        frz_mou2: frz_mou2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "FRZ_MOU2";
+            #binding-cells = <0>;
+            bindings = <&none>, <&tog 12>;
+        };
+
+        u_left: u_left {
+            compatible = "zmk,behavior-mod-morph";
+            label = "U_LEFT";
+            bindings = <&kp LEFT>, <&kp LEFT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        u_down: u_down {
+            compatible = "zmk,behavior-mod-morph";
+            label = "U_DOWN";
+            bindings = <&kp DOWN>, <&kp DOWN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        u_up: u_up {
+            compatible = "zmk,behavior-mod-morph";
+            label = "U_UP";
+            bindings = <&kp UP>, <&kp UP>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        u_right: u_right {
+            compatible = "zmk,behavior-mod-morph";
+            label = "U_RIGHT";
+            bindings = <&kp RIGHT>, <&kp RIGHT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        u_home: u_home {
+            compatible = "zmk,behavior-mod-morph";
+            label = "U_HOME";
+            bindings = <&kp HOME>, <&kp HOME>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        u_end: u_end {
+            compatible = "zmk,behavior-mod-morph";
+            label = "U_END";
+            bindings = <&kp END>, <&kp END>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        u_pgdn: u_pgdn {
+            compatible = "zmk,behavior-mod-morph";
+            label = "U_PGDN";
+            bindings = <&kp PG_DN>, <&kp PG_DN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        u_pgup: u_pgup {
+            compatible = "zmk,behavior-mod-morph";
+            label = "U_PGUP";
+            bindings = <&kp PG_UP>, <&kp PG_UP>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
         };
 
     };

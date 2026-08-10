@@ -27,6 +27,34 @@
 
     macro {
 
+        cmd_space_lang1: cmd_space_lang1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(N7))>;
+            label = "CMD_SPACE_LANG1";
+        };
+
+        cmd_space_lang2: cmd_space_lang2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(N8))>;
+            label = "CMD_SPACE_LANG2";
+        };
+
+        ctrl_space_lang1: ctrl_space_lang1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(SPACE)>;
+            label = "CTRL_SPACE_LANG1";
+        };
+
+        ctrl_space_lang2: ctrl_space_lang2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(SPACE)>;
+            label = "CTRL_SPACE_LANG2";
+        };
+
         in_below: in_below {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -136,6 +164,29 @@
             layers = <0 2>;
         };
 
+        win_lg1 {
+            bindings = <&cmd_space_lang1>;
+            key-positions = <30 32>;
+            layers = <0 2>;
+        };
+
+        win_lg2 {
+            bindings = <&cmd_space_lang2>;
+            key-positions = <35 37>;
+            layers = <0 2>;
+        };
+
+        mac_lg1 {
+            bindings = <&ctrl_space_lang1>;
+            key-positions = <57 59>;
+            layers = <0 2>;
+        };
+
+        mac_lg2 {
+            bindings = <&ctrl_space_lang2>;
+            key-positions = <62 24>;
+            layers = <0 2>;
+        };
     };
 
     behaviors {

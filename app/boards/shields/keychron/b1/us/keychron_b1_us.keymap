@@ -426,13 +426,13 @@
         // 1
         EXTRA {
         bindings = <
-                   //f1       //f2       //f3        //f4        //f5    //f6    //f7       //f8        //f9         //f10         //f11   //f12
-        &trans    &trans     &trans     &trans      &trans      &trans  &trans &trans      &trans      &trans       &trans        &trans  &trans  &trans
-        &kp GRAVE &trans     &trans     &trans      &trans      &trans  &trans &trans      &trans      &trans       &trans        &trans  &trans  &trans
-        &kp TAB   &kp Q      &kp W      &kp E       &kp R       &kp T   &kp Y  &kp U       &kp I       &kp O        &kp P         &trans  &trans  &trans
-        &kp CAPS  &mt LGUI A &mt LALT S &mt LCTRL D &mt LSHFT F &kp G   &kp H  &mt LSHFT J &mt LCTRL K &mt LALT L   &mt LGUI SEMI &kp SQT &trans
-        &kp LSHFT &lt 4 Z    &mt RALT X &kp C       &kp V       &kp B   &kp N  &kp M       &kp COMMA   &mt RALT DOT &lt 4 FSLH    &trans
-        &kp LCTRL &trans     &trans           &lt 6 SPACE                                  &trans      &trans       &trans        &trans  &trans  &trans
+                   //f1       //f2       //f3        //f4        //f5       //f6        //f7       //f8        //f9         //f10         //f11     //f12
+        &trans    &trans     &trans     &trans      &trans      &trans     &trans     &trans      &trans      &trans       &trans        &trans    &trans  &trans
+        &ku GRAVE &ku LS(N1) &ku LS(N2) &ku LS(N3)  &ku LS(N4)  &ku LS(N5) &ku LS(N6) &ku LS(N7)  &ku LS(N8)  &ku LS(N9)   &ku LS(N0)    &ku MINUS &ku EQUAL  &trans
+        &kp TAB   &kp Q      &kp W      &kp E       &kp R       &kp T      &kp Y      &kp U       &kp I       &kp O        &kp P         &trans    &trans  &ku BSLH
+        &kp CAPS  &mt LGUI A &mt LALT S &mt LCTRL D &mt LSHFT F &kp G      &kp H      &mt LSHFT J &mt LCTRL K &mt LALT L   &mt LGUI SEMI &kp SQT   &trans
+        &kp LSHFT &lt 4 Z    &mt RALT X &kp C       &kp V       &kp B      &kp N      &kp M       &kp COMMA   &mt RALT DOT &lu 4 FSLH    &trans
+        &kp LCTRL &trans     &trans           &lt 6 SPACE                                         &trans      &trans       &trans        &trans    &trans  &trans
         //
         &none     &out OUT_BLE  &out OUT_24G  &out OUT_CHG  &out OUT_CHGD
             >;
@@ -504,9 +504,9 @@
                     //f1                 //f2              //f3           //f4                     //f5         //f6             //f7            //f8           //f9           //f10              //f11            //f12
    &bootloader  &kp C_BRIGHTNESS_DEC &kp C_BRIGHTNESS_INC  &kp LG(TAB)    &kp C_AL_MY_COMPUTER &kp C_AC_SEARCH  &kp LG(L)      &kp C_PREVIOUS  &kp C_PLAY_PAUSE &kp C_NEXT     &kp C_MUTE     &kp C_VOLUME_DOWN  &kp C_VOLUME_UP      &trans
         &trans  &bt_pair_0 0 0       &bt_pair_1 0 0        &bt_pair_2 0 0 &bt_pair_3 0 0       &trans           &trans         &trans          &trans           &trans         &trans         &trans             &kp C_AL_CALC        &trans
-        &trans  &kp PIPE             &kp N7                &kp N8         &kp N9               &kp MINUS        &kp LC(Y)      &kp LS(INS)     &kp LC(INS)      &kp LC(X)      &kp LC(Z)      &kp LC(PG_UP)      &kp LC(PG_DN)        &kp LS(NUBS)
-        &trans  &mt LGUI STAR        &mt LALT N4           &mt LCTRL N5   &mt LSHFT N6         &kp LS(EQUAL)    &lg2_caps_word &mt LSHFT LEFT  &mt LCTRL DOWN   &mt LALT UP    &mt LGUI RIGHT &trans             &trans
-        &trans  &kp N0               &mt RALT N1           &kp N2         &kp N3               &kp FSLH         &kp INS        &kp HOME        &kp PG_DN        &mt RALT PG_UP &kp END        &kp LG(DOT)
+        &trans  &ku PIPE             &ku N7                &ku N8         &ku N9               &ku MINUS        &kp LC(Y)      &kp LS(INS)     &kp LC(INS)      &kp LC(X)      &kp LC(Z)      &kp LC(PG_UP)      &kp LC(PG_DN)        &kp LS(NUBS)
+        &trans  &mu LGUI STAR        &mu LALT N4           &mu LCTRL N5   &mu LSHFT N6         &ku LS(EQUAL)    &lg2_caps_word &mt LSHFT LEFT  &mt LCTRL DOWN   &mt LALT UP    &mt LGUI RIGHT &trans             &trans
+        &trans  &ku N0               &mt RALT N1           &ku N2         &ku N3               &ku FSLH         &kp INS        &kp HOME        &kp PG_DN        &mt RALT PG_UP &kp END        &ku LG(DOT)
         &trans  &trans               &trans                     &trans                                                                         &kp RCTRL        &trans         &kp HOME       &kp PG_UP          &kp PG_DN            &kp END
         //
         &none   &none                &none                 &none          &none

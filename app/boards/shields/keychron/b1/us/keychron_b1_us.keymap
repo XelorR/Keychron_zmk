@@ -311,7 +311,7 @@
         lg2_caps_word: lg2_caps_word {
             compatible = "zmk,behavior-mod-morph";
             label = "LG2_CAPS_WORD";
-            bindings = <&key_on RSHFT>, <&kp CAPS>;
+            bindings = <&macro_press &kp RSHFT>, <&kp CAPS>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;

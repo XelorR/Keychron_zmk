@@ -152,18 +152,6 @@
             layers = <0 2>;
         };
 
-        combo_software_lg1 {
-            bindings = <&kp LC(LS(N7))>;
-            key-positions = <30 32>;
-            layers = <0 2>;
-        };
-
-        combo_software_lg2 {
-            bindings = <&kp LC(LS(N8))>;
-            key-positions = <35 37>;
-            layers = <0 2>;
-        };
-
         win_lg1 {
             bindings = <&cmd_space_lang1>;
             key-positions = <30 32>;

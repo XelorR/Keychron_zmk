@@ -101,6 +101,26 @@
 
     };
 
+    // MATRIX INDEXES
+    //
+    // esc f1  f2  f3  f4  f5  f6  f7  f8  f9 f10 f11  f12 del
+    //  0   1   2   3   4   5   6   7   8   9  10  11  12  13
+    //
+    // grv n1  n2  n3  n4  n5  n6  n7  n8  n9  n0   -   +  bspc
+    // 14  15  16  17  18  19  20  21  22  23  24  25  26  27
+    //
+    // tab  q   w   e   r   t   y   u   i   o   p   [   ]   \
+    // 28  29  30  31  32  33  34  35  36  37  38  39  40  41
+    //
+    // caps a   s   d   f   g   h   j   k   l   ;   '  ret
+    // 42  43  44  45  46  47  48  49  50  51  52  53  54
+    // 
+    // lsft z   x   c   v   b   n   m   ,   .   /  rsft
+    // 55  56  57  58  59  60  61  62  63  64  65  66
+    //
+    // ctl win alt spc alt fn  lft up  dwn rght
+    // 67  68  69  70  71  72  73  74  75  76
+
     combos1 {
         compatible = "zmk,combos";
 
@@ -172,7 +192,7 @@
 
         mac_lg2 {
             bindings = <&ctrl_space_lang2>;
-            key-positions = <62 24>;
+            key-positions = <62 64>;
             layers = <0 2>;
         };
     };

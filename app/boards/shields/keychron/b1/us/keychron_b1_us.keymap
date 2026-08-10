@@ -173,13 +173,13 @@
         };
 
         combo_typing_switch {
-            bindings = <&tog 7>;
+            bindings = <&tog 3>;
             key-positions = <9 10>;
             layers = <3>;
         };
 
         combo_gaming_switch {
-            bindings = <&tog 7>;
+            bindings = <&tog 3>;
             key-positions = <10 11>;
             layers = <0 1>;
         };

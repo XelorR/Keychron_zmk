@@ -338,15 +338,15 @@
         // 4
         BUTTON {
         bindings = <
-                    //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9        //f10           //f11                         //f12
-   &bootloader  &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC        &uc LG(TAB)                         &uc C_AL_MY_COMPUTER    &kp C_AC_SEARCH     &uc LG(L)       &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN           &kp C_VOLUME_UP      &trans
-        &trans  &bt_pair_0 0 0          &bt_pair_1 0 0              &bt_pair_2 0 0                      &bt_pair_3 0 0          &trans              &trans          &trans          &trans              &trans      &trans      &trans                      &kp C_AL_CALC        &trans
-        &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &kp INS             &trans      &trans      &kp LC(PG_UP)               &kp LC(PG_DN)        &uc PSCRN
-        &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans      &trans                              &trans
-        &trans  &trans                  &trans                      &trans                              &trans                  &trans              &trans          &trans          &trans              &trans      &trans                                          &uc LG(DOT)
-        &trans  &trans                  &trans                           &trans                                                                                                     &kp RCTRL           &trans      &kp HOME    &kp PG_UP    &kp PG_DN   &kp END
+                    //f1                 //f2              //f3           //f4                     //f5         //f6        //f7            //f8           //f9        //f10           //f11                //f12
+   &bootloader  &kp C_BRIGHTNESS_DEC &kp C_BRIGHTNESS_INC  &uc LG(TAB)    &uc C_AL_MY_COMPUTER &kp C_AC_SEARCH  &uc LG(L) &kp C_PREVIOUS  &kp C_PLAY_PAUSE &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &trans
+        &trans  &bt_pair_0 0 0       &bt_pair_1 0 0        &bt_pair_2 0 0 &bt_pair_3 0 0       &trans           &trans    &trans          &trans           &trans      &trans      &trans             &kp C_AL_CALC     &trans
+        &trans  &kp LC(Z)            &kp LC(X)             &kp LC(INS)    &kp LS(INS)          &kp LC(Y)        &kp LC(Y)  &kp LS(INS)    &kp LC(INS)      &kp LC(X)   &kp LC(Z)   &kp LC(PG_UP)      &kp LC(PG_DN)     &uc PSCRN
+        &trans  &kp LGUI             &kp LALT              &kp LCTRL      &kp LSHFT            &trans           &trans     &kp LSHFT      &kp LCTRL        &kp LALT    &kp LGUI    &trans             &trans
+        &trans  &kp LC(Z)            &kp LC(X)             &kp LC(INS)    &kp LS(INS)          &kp LC(Y)        &kp LC(Y)  &kp LS(INS)    &kp LC(INS)      &kp LC(X)   &kp LC(Z)   &uc LG(DOT)
+        &trans  &trans               &trans                     &trans                                                                    &kp RCTRL        &trans      &kp HOME    &kp PG_UP          &kp PG_DN         &kp END
         //
-        &none   &none                   &none                       &none                               &none
+        &none   &none                &none                 &none          &none
             >;
         };
         

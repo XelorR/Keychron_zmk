@@ -106,7 +106,8 @@
         ku: kp_unshift {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&key_off RSHFT &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&macro_release &kp RSHFT>,
+                       <&macro_tap &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "KP_UNSHIFT";
             wait-ms = <0>;
             tap-ms = <0>;

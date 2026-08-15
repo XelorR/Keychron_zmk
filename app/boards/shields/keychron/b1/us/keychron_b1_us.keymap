@@ -562,7 +562,7 @@
         &trans  &bt_pair_0 0 0       &bt_pair_1 0 0        &bt_pair_2 0 0 &bt_pair_3 0 0       &trans           &trans          &trans               &trans              &trans            &trans           &trans            &kp C_AL_CALC   &trans
         &trans  &kp F12              &kp F7                &kp F8         &kp F9               &kp PSCRN        &bt_4           &bt_0                &bt_1               &bt_2             &bt_3            &kp LC(PG_UP)     &kp LC(PG_DN)   &kp PSCRN
         &trans  &mt LGUI F11         &mt LALT F4           &mt LCTRL F5   &mt LSHFT F6         &kp SCROLLLOCK   &kp C_PP        &mt LSHFT C_PREV     &mt LCTRL C_VOL_DN  &mt LALT C_VOL_UP &mt LGUI C_NEXT  &trans            &trans
-        &trans  &kp F10              &mt RALT F1           &kp F2         &kp F3               &kp PAUSE_BREAK  &kp C_STOP      &kp K_MUTE           &out OUT_BLE        &out OUT_USB      &bt BT_CLR_ALL   &kp LG(DOT)
+        &trans  &kp F10              &mt RALT F1           &kp F2         &kp F3               &kp PAUSE_BREAK  &kp C_STOP      &kp K_MUTE           &kp C_AC_BACK       &kp C_AC_FORWARD  &bt BT_CLR_ALL   &kp LG(DOT)
         &trans  &trans               &trans                     &trans                                                                               &kp RCTRL           &trans            &kp HOME         &kp PG_UP         &kp PG_DN       &kp END
         //
         &none   &none                &none                 &none          &none

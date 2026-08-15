@@ -456,9 +456,9 @@
         &kp ESC   &kp F1     &kp F2     &kp F3      &kp F4      &kp F5     &kp F6     &kp F7      &kp F8      &kp F9       &kp F10       &kp F11   &kp F12   &kp DEL
         &kp GRAVE &kp LS(N1) &kp LS(N2) &kp LS(N3)  &kp LS(N4)  &kp LS(N5) &kp LS(N6) &kp LS(N7)  &kp LS(N8)  &kp LS(N9)   &kp LS(N0)    &kp MINUS &kp EQUAL &kp BSPC
         &kp TAB   &kp Q      &kp W      &kp E       &kp R       &kp T      &kp Y      &kp U       &kp I       &kp O        &kp P         &kp LBKT  &kp RBKT  &kp BSLH
-        &lt 6 ESC &mt LGUI A &mt LALT S &mt LCTRL D &mt LSHFT F &kp G      &kp H      &mt LSHFT J &mt LCTRL K &mt LALT L   &mt LGUI SEMI &kp SQT   &kp RET
-        &kp LSHFT &lt 4 Z    &mt RALT X &kp C       &kp V       &kp B      &kp N      &kp M       &kp COMMA   &mt RALT DOT &lt 4 FSLH    &kp RSHFT
-        &kp LCTRL &kp LGUI   &kp LALT         &lt 4 SPACE                                         &kp RALT    &lt 6 K_APP  &kp LEFT      &kp UP    &kp DOWN 	&kp RIGHT
+        &lt 5 ESC &mt LGUI A &mt LALT S &mt LCTRL D &mt LSHFT F &kp G      &kp H      &mt LSHFT J &mt LCTRL K &mt LALT L   &mt LGUI SEMI &kp SQT   &kp RET
+        &kp LSHFT &kp Z      &mt RALT X &kp C       &kp V       &kp B      &kp N      &kp M       &kp COMMA   &mt RALT DOT &kp FSLH      &kp RSHFT
+        &kp LCTRL &kp LGUI   &kp LALT         &lt 3 SPACE                                         &kp RALT    &lt 5 K_APP  &kp LEFT      &kp UP    &kp DOWN 	&kp RIGHT
         //
         &none     &out OUT_BLE  &out OUT_24G  &out OUT_CHG  &out OUT_CHGD
             >;
@@ -472,8 +472,8 @@
         &ku GRAVE &ku LS(N1)   &ku LS(N2)   &ku LS(N3)    &ku LS(N4)  &ku LS(N5) &ku LS(N6) &ku LS(N7)  &ku LS(N8)    &ku LS(N9)   &ku LS(N0)      &ku MINUS &ku EQUAL  &trans
         &kp TAB   &kp Q        &kp W        &kp E         &kp R       &kp T      &kp Y      &kp U       &kp I         &kp O        &kp P           &trans    &trans  &ku BSLH
         &trans    &mt LGUI A   &mt LALT S   &mt LCTRL D   &mt LSHFT F &kp G      &kp H      &mt LSHFT J &mt LCTRL K   &mt LALT L   &mt LGUI SEMI   &kp SQT   &trans
-        &kp LSHFT &lt 4 Z      &mt RALT X   &kp C         &kp V       &kp B      &kp N      &kp M       &kp COMMA     &mt RALT DOT &lu 4 FSLH      &trans
-        &kp LCTRL &trans       &trans             &lt 5 SPACE                                           &trans        &trans       &trans          &trans    &trans  &trans
+        &kp LSHFT &kp Z        &mt RALT X   &kp C         &kp V       &kp B      &kp N      &kp M       &kp COMMA     &mt RALT DOT &ku FSLH        &trans
+        &kp LCTRL &trans       &trans             &lt 4 SPACE                                           &trans        &trans       &trans          &trans    &trans  &trans
         //
         &none     &out OUT_BLE  &out OUT_24G  &out OUT_CHG  &out OUT_CHGD
             >;
@@ -495,21 +495,6 @@
         };
         
         // 3
-        BUTTON {
-        bindings = <
-                    //f1                 //f2              //f3           //f4                     //f5         //f6        //f7            //f8           //f9        //f10           //f11                //f12
-   &bootloader  &kp C_BRIGHTNESS_DEC &kp C_BRIGHTNESS_INC  &kp LG(TAB)    &kp C_AL_MY_COMPUTER &kp C_AC_SEARCH  &kp LG(L) &kp C_PREVIOUS  &kp C_PLAY_PAUSE &kp C_NEXT  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &trans
-        &trans  &bt_pair_0 0 0       &bt_pair_1 0 0        &bt_pair_2 0 0 &bt_pair_3 0 0       &trans           &trans    &trans          &trans           &trans      &trans      &trans             &kp C_AL_CALC     &trans
-        &trans  &kp LC(Z)            &kp LC(X)             &kp LC(INS)    &kp LS(INS)          &kp LC(Y)        &kp LC(Y)  &kp LS(INS)    &kp LC(INS)      &kp LC(X)   &kp LC(Z)   &kp LC(PG_UP)      &kp LC(PG_DN)     &kp PSCRN
-        &trans  &kp LGUI             &kp LALT              &kp LCTRL      &kp LSHFT            &trans           &trans     &kp LSHFT      &kp LCTRL        &kp LALT    &kp LGUI    &trans             &trans
-        &trans  &kp LC(Z)            &kp LC(X)             &kp LC(INS)    &kp LS(INS)          &kp LC(Y)        &kp LC(Y)  &kp LS(INS)    &kp LC(INS)      &kp LC(X)   &kp LC(Z)   &kp LG(DOT)
-        &trans  &trans               &trans                     &trans                                                                    &kp RCTRL        &trans      &kp HOME    &kp PG_UP          &kp PG_DN         &kp END
-        //
-        &none   &none                &none                 &none          &none
-            >;
-        };
-        
-        // 4
         NUMNAV {
         bindings = <
                       //f1                 //f2              //f3           //f4                     //f5          //f6             //f7            //f8           //f9               //f10             //f11            //f12
@@ -524,7 +509,7 @@
             >;
         };
         
-        // 5
+        // 4
         NUMNAV_EXTRA {
         bindings = <
                       //f1                 //f2              //f3           //f4                     //f 5         //f6             //f7            //f8           //f9               //f10              //f11            //f12
@@ -539,7 +524,7 @@
             >;
         };
         
-        // 6
+        // 5
         FUNMED {
         bindings = <
                     //f1                 //f2              //f3           //f4                     //f5         //f6              //f7                 //f8              //f9              //f10                //f11              //f12

@@ -460,7 +460,7 @@
         &kp LSHFT &kp Z      &mt RALT X &kp C       &kp V       &kp B      &kp N      &kp M       &kp COMMA   &mt RALT DOT &kp FSLH      &kp RSHFT
         &kp LCTRL &kp LGUI   &kp LALT         &lt 3 SPACE                                         &kp RALT    &lt 5 K_APP  &kp LEFT      &kp UP    &kp DOWN 	&kp RIGHT
         //
-        &none     &out OUT_BLE  &out OUT_24G  &out OUT_CHG  &out OUT_CHGD
+        &mo 2     &out OUT_BLE  &out OUT_24G  &out OUT_CHG  &out OUT_CHGD
             >;
         };
 

@@ -64,10 +64,24 @@ win-layer only, Mac layers stay factory.
 - Full feature list: [`app/boards/shields/keychron/b1/us/README.md`](app/boards/shields/keychron/b1/us/README.md)
 - Build: `./build.sh` (board `keychron` + shield `keychron_b1_us`)
 
-Highlights: bottom-row remap (Caps→Ctrl, Alt keys→RCtrl "command" key);
-`RCtrl+Tab` / `Shift+Tab` window cycling with hold; `RCtrl+Q` closes window;
-`LGUI+RCtrl+Q` locks; `RCtrl+Shift+3/4` screenshots; `RCtrl+C/V` copy/paste;
-`RCtrl+[`/`]` browser nav, `+Shift` tab switching; `RCtrl+arrows` Home/End,
-`+Up/Down` doc start/end; `LAlt+arrows` word jump, `LAlt+BSPC/Del` word
-delete; `RCtrl+BSPC/Del` delete to line start/end; Caps-Ctrl + `N/P/F/B/G/H/A/E`
-mac-style nav; `RCtrl+Space` window menu; `Fn+Esc` bootloader.
+Bottom-row remap: Caps→LCtrl, LCtrl→Win, LGUI→Alt, both Alt keys→RCtrl
+(the "command" key). `Fn+Esc` enters the UF2 bootloader.
+
+| Shortcut | Action |
+|---|---|
+| `RCtrl+Tab` / `RCtrl+Shift+Tab` | Next / previous window (hold RCtrl keeps the switcher open) |
+| `LAlt+Tab` | Stock native Alt+Tab (untouched) |
+| `RCtrl+Q` | `Alt+F4` (close window) |
+| `LGUI+RCtrl+Q` | `Win+L` (lock screen) |
+| `RCtrl+Space` | `Alt+Space` (window menu) |
+| `RCtrl+Shift+3` | `PrintScreen` |
+| `RCtrl+Shift+4` | `Win+Shift+S` (snipping tool) |
+| `RCtrl+C` / `RCtrl+V` | Copy (`Ctrl+Ins`) / paste (`Shift+Ins`) |
+| `RCtrl+[` / `RCtrl+]` | Browser back / forward |
+| `RCtrl+Shift+[` / `RCtrl+Shift+]` | Previous / next browser tab |
+| `RCtrl+Left` / `RCtrl+Right` | `Home` / `End` |
+| `RCtrl+Up` / `RCtrl+Down` | `Ctrl+Home` / `Ctrl+End` (doc start / end) |
+| `LAlt+Left` / `LAlt+Right` | Word jump left / right |
+| `LAlt+BSPC` / `LAlt+Del` | Delete word backward / forward |
+| `RCtrl+BSPC` / `RCtrl+Del` | Delete to line start / line end |
+| CapsCtrl + `N`/`P`/`F`/`B`/`G`/`H`/`A`/`E` | `Down`/`Up`/`Right`/`Left`/`Del`/`Backspace`/`Home`/`End` |

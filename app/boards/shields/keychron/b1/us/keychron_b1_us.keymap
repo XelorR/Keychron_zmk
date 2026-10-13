@@ -65,7 +65,7 @@
         label = "LBKT_NAV";
         #binding-cells = <0>;
         bindings = <&kp LBKT>, <&lbkt_nav_inner>;
-        mods = <(MOD_LALT)>;
+        mods = <(MOD_RCTL)>;
     };
     rbkt_nav_inner: rbkt_nav_inner {
         compatible = "zmk,behavior-mod-morph";
@@ -79,21 +79,21 @@
         label = "RBKT_NAV";
         #binding-cells = <0>;
         bindings = <&kp RBKT>, <&rbkt_nav_inner>;
-        mods = <(MOD_LALT)>;
+        mods = <(MOD_RCTL)>;
     };
     c_copy: c_copy {
         compatible = "zmk,behavior-mod-morph";
         label = "C_COPY";
         #binding-cells = <0>;
         bindings = <&kp C>, <&kp LC(INS)>;
-        mods = <(MOD_LALT)>;
+        mods = <(MOD_RCTL)>;
     };
     v_paste: v_paste {
         compatible = "zmk,behavior-mod-morph";
         label = "V_PASTE";
         #binding-cells = <0>;
         bindings = <&kp V>, <&kp LS(INS)>;
-        mods = <(MOD_LALT)>;
+        mods = <(MOD_RCTL)>;
     };
 
     combos1 {

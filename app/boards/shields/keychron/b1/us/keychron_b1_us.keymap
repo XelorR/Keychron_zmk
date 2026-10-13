@@ -183,7 +183,7 @@
         compatible = "zmk,behavior-mod-morph";
         label = "BS_MACDEL";
         #binding-cells = <0>;
-        bindings = <&kp BSPC>, <&bs_line>;
+        bindings = <&lalt_bs>, <&bs_line>;
         mods = <(MOD_RCTL)>;
     };
     del_line: del_line {
@@ -196,8 +196,22 @@
         compatible = "zmk,behavior-mod-morph";
         label = "DEL_MACDEL";
         #binding-cells = <0>;
-        bindings = <&kp DEL>, <&del_line>;
+        bindings = <&lalt_del>, <&del_line>;
         mods = <(MOD_RCTL)>;
+    };
+    lalt_bs: lalt_bs {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LALT_BSPC";
+        #binding-cells = <0>;
+        bindings = <&kp BSPC>, <&kp LC(BSPC)>;
+        mods = <(MOD_LALT)>;
+    };
+    lalt_del: lalt_del {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LALT_DEL";
+        #binding-cells = <0>;
+        bindings = <&kp DEL>, <&kp LC(DEL)>;
+        mods = <(MOD_LALT)>;
     };
     combos1 {
         compatible = "zmk,combos";

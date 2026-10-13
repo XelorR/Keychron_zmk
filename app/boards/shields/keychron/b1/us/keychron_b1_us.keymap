@@ -213,6 +213,20 @@
         bindings = <&kp DEL>, <&kp LC(DEL)>;
         mods = <(MOD_LALT)>;
     };
+    left_nav: left_nav {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LEFT_NAV";
+        #binding-cells = <0>;
+        bindings = <&lalt_left>, <&kp HOME>;
+        mods = <(MOD_RCTL)>;
+    };
+    right_nav: right_nav {
+        compatible = "zmk,behavior-mod-morph";
+        label = "RIGHT_NAV";
+        #binding-cells = <0>;
+        bindings = <&lalt_right>, <&kp END>;
+        mods = <(MOD_RCTL)>;
+    };
     combos1 {
         compatible = "zmk,combos";
         combo_jz {
@@ -386,7 +400,7 @@
         &kp TAB 	&q_close 	               &kp W                    &em_e 	                            &kp R 	                &kp T               &kp Y 	        &kp U 	        &kp I 	            &kp O 	     &em_p 		&lbkt_nav 	         &rbkt_nav 	         &kp BSLH 	 	
         &kp LCTRL 	&em_a 	               &kp S 	                &kp D 	                            &em_f 	                &em_g 	            &em_h 	        &kp J 	        &kp K 	            &kp L 	     &kp SEMI 	&kp SQT                      &kp RET
         &kp LSHFT   &kp Z 	               &kp X 	                &c_copy 	                            &v_paste 	                &em_b 	            &em_n 	        &kp M 	        &kp COMMA           &kp DOT      &kp FSLH                                &kp RSHFT				
-        &kp LGUI 	&kp LALT               &kp RCTRL                      &kp SPACE              		                                                                            &kp RCTRL 	        &mo 3 		  &lalt_left 	 &kp UP      &kp DOWN 	&lalt_right 	
+        &kp LGUI 	&kp LALT               &kp RCTRL                      &kp SPACE              		                                                                            &kp RCTRL 	        &mo 3 		  &left_nav 	 &kp UP      &kp DOWN 	&right_nav 	
         //
         &none       &out OUT_BLE           &out OUT_24G             &out OUT_CHG                        &out OUT_CHGD 
             >;

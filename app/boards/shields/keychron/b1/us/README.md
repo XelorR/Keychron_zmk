@@ -40,7 +40,7 @@ Build: `./build.sh` from repo root (board `keychron` + shield
   line end + delete (macros).
 - `RCtrl+Shift+3` — `PrintScreen`.
 - `RCtrl+Shift+4` — `Win+Shift+S` (snipping tool).
-- Caps-Ctrl (the ex-CapsLock key) + `N/P/F/B/G/H/A/E` — `Down/Up/Right/
+- Caps-Ctrl (the ex-CapsLock key) + `N/P/F/B/D/H/A/E` — `Down/Up/Right/
   Left/Delete/Backspace/Home/End` (macOS readline style). Plain Ctrl
   combos for all other keys are native.
 

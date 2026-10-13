@@ -234,14 +234,12 @@
         bindings = <&kp SPACE>, <&kp LA(SPACE)>;
         mods = <(MOD_RCTL)>;
     };
-    win_tab: win_tab {
-        compatible = "zmk,behavior-win-tab";
-        label = "WIN_TAB";
+    tab_next: tab_next {
+        compatible = "zmk,behavior-mod-morph";
+        label = "TAB_NEXT";
         #binding-cells = <0>;
-        /* Logical positions of the physical Right Ctrl keys (win bottom
-         * row, ex-LALT at 69 and ex-RALT at 71): releasing all of them
-         * releases the held Alt and commits the switcher selection. */
-        hold-positions = <69 71>;
+        bindings = <&kp TAB>, <&kp LA(TAB)>;
+        mods = <(MOD_RCTL)>;
     };
     combos1 {
         compatible = "zmk,combos";
@@ -413,7 +411,7 @@
  		bindings = <
         &kp ESC    &kp F1        &kp F2        &kp F3        &kp F4         &kp F5  &kp F6     &kp F7  &kp F8     &kp F9      &kp F10   &kp F11    &kp F12    &del_macdel
         &kp GRAVE  &kp N1        &kp N2        &kp N3        &kp N4         &kp N5  &kp N6     &kp N7  &kp N8     &kp N9      &kp N0    &kp MINUS  &kp EQUAL  &bs_macdel
-        &win_tab   &q_close      &kp W         &em_e         &kp R          &kp T   &kp Y      &kp U   &kp I      &kp O       &em_p     &lbkt_nav  &rbkt_nav  &kp BSLH
+        &tab_next   &q_close      &kp W         &em_e         &kp R          &kp T   &kp Y      &kp U   &kp I      &kp O       &em_p     &lbkt_nav  &rbkt_nav  &kp BSLH
         &kp LCTRL  &em_a         &kp S         &kp D         &em_f          &em_g   &em_h      &kp J   &kp K      &kp L       &kp SEMI  &kp SQT    &kp RET
         &kp LSHFT  &kp Z         &kp X         &c_copy       &v_paste       &em_b   &em_n      &kp M   &kp COMMA  &kp DOT     &kp FSLH  &kp RSHFT
         &kp LGUI   &kp LALT      &kp RCTRL     &space_alt    &kp RCTRL      &mo 3   &left_nav  &kp UP  &kp DOWN   &right_nav

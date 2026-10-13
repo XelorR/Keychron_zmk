@@ -264,6 +264,20 @@
         bindings = <&kp N3>, <&n3_pscrn_in>;
         mods = <(MOD_RCTL)>;
     };
+    n4_snip_in: n4_snip_in {
+        compatible = "zmk,behavior-mod-morph";
+        label = "N4_SNIP_IN";
+        #binding-cells = <0>;
+        bindings = <&kp RC(N4)>, <&kp LG(LS(S))>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    n4_snip: n4_snip {
+        compatible = "zmk,behavior-mod-morph";
+        label = "N4_SNIP";
+        #binding-cells = <0>;
+        bindings = <&kp N4>, <&n4_snip_in>;
+        mods = <(MOD_RCTL)>;
+    };
     combos1 {
         compatible = "zmk,combos";
         combo_jz {
@@ -433,7 +447,7 @@
         layer_two {
  		bindings = <
         &kp ESC    &kp F1        &kp F2        &kp F3        &kp F4         &kp F5  &kp F6     &kp F7  &kp F8     &kp F9      &kp F10   &kp F11    &kp F12    &del_macdel
-        &kp GRAVE  &kp N1        &kp N2        &n3_pscrn        &kp N4         &kp N5  &kp N6     &kp N7  &kp N8     &kp N9      &kp N0    &kp MINUS  &kp EQUAL  &bs_macdel
+        &kp GRAVE  &kp N1        &kp N2        &n3_pscrn        &n4_snip         &kp N5  &kp N6     &kp N7  &kp N8     &kp N9      &kp N0    &kp MINUS  &kp EQUAL  &bs_macdel
         &win_tab   &q_close      &kp W         &em_e         &kp R          &kp T   &kp Y      &kp U   &kp I      &kp O       &em_p     &lbkt_nav  &rbkt_nav  &kp BSLH
         &kp LCTRL  &em_a         &kp S         &kp D         &em_f          &em_g   &em_h      &kp J   &kp K      &kp L       &kp SEMI  &kp SQT    &kp RET
         &kp LSHFT  &kp Z         &kp X         &c_copy       &v_paste       &em_b   &em_n      &kp M   &kp COMMA  &kp DOT     &kp FSLH  &kp RSHFT

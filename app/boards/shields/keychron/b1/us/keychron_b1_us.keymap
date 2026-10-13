@@ -227,11 +227,11 @@
         bindings = <&lalt_right>, <&kp END>;
         mods = <(MOD_RCTL)>;
     };
-    space_alt: space_alt {
+    space_win: space_win {
         compatible = "zmk,behavior-mod-morph";
-        label = "SPACE_ALT";
+        label = "SPACE_WIN";
         #binding-cells = <0>;
-        bindings = <&kp SPACE>, <&kp LA(SPACE)>;
+        bindings = <&kp SPACE>, <&kp LGUI>;
         mods = <(MOD_RCTL)>;
     };
     win_tab: win_tab {
@@ -498,7 +498,7 @@
         &win_tab   &q_close      &kp W         &em_e         &kp R          &kp T   &em_y      &kp U   &kp I      &em_o       &em_p     &lbkt_nav  &rbkt_nav  &kp BSLH
         &kp LCTRL  &em_a         &kp S         &em_d         &em_f          &kp G   &em_h      &kp J   &em_k      &kp L       &kp SEMI  &kp SQT    &kp RET
         &kp LSHFT  &kp Z         &kp X         &c_copy       &v_paste       &em_b   &em_n      &kp M   &kp COMMA  &kp DOT     &kp FSLH  &kp RSHFT
-        &kp LGUI   &kp LALT      &kp RCTRL     &space_alt    &kp RCTRL      &mo 3   &left_nav  &up_nav  &down_nav   &right_nav
+        &kp LGUI   &kp LALT      &kp RCTRL     &space_win    &kp RCTRL      &mo 3   &left_nav  &up_nav  &down_nav   &right_nav
         //
         &none      &out OUT_BLE  &out OUT_24G  &out OUT_CHG  &out OUT_CHGD
             >;

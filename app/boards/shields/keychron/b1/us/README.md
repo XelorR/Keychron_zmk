@@ -24,6 +24,7 @@ Build: `./build.sh` from repo root (board `keychron` + shield
   so `RCtrl+letters` stay native everywhere else.
 - `LAlt+Tab` — stock native Alt+Tab (untouched).
 - `RCtrl+Q` — `Alt+F4` (close window).
+- `LGUI+RCtrl+Q` — `Win+L` (lock screen).
 - `RCtrl+Space` — `Alt+Space` (window menu).
 
 ## Navigation & editing (win)
@@ -36,6 +37,8 @@ Build: `./build.sh` from repo root (board `keychron` + shield
 - `LAlt+BSPC/Del` — `Ctrl+BSPC/Del` (delete word back/forward).
 - `RCtrl+BSPC` — select to line start + delete; `RCtrl+Del` — select to
   line end + delete (macros).
+- `RCtrl+Shift+3` — `PrintScreen`.
+- `RCtrl+Shift+4` — `Win+Shift+S` (snipping tool).
 - Caps-Ctrl (the ex-CapsLock key) + `N/P/F/B/G/H/A/E` — `Down/Up/Right/
   Left/Delete/Backspace/Home/End` (macOS readline style). Plain Ctrl
   combos for all other keys are native.

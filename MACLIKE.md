@@ -3,7 +3,7 @@
 This document precisely describes a mac-like keyboard layout for Windows,
 with enough detail to **reimplement it anywhere**: software remappers
 (Kanata, Xremap) or firmware (QMK, RMK, ZMK). It is not tied to any API —
-only logic: what is held physically, what goes over USB, and when.
+only logic: what is held physically, what goes into the HID report, and when.
 Reference ZMK implementation: branch `maclike-win-max`, keymap
 [`app/boards/shields/keychron/b1/us/keychron_b1_us.keymap`](app/boards/shields/keychron/b1/us/keychron_b1_us.keymap).
 
@@ -28,7 +28,7 @@ to scancodes, not to keycap labels.
 
 ### 1.2. Three kinds of key behavior
 
-1. **Native** — the key goes to USB as-is (with held modifiers). Everything
+1. **Native** — the key goes into the HID report as-is (with held modifiers). Everything
    not listed below works this way: letters, digits, `Shift+3` → `#`,
    `Ctrl+3`, bare arrows, etc.
 2. **Mod-morph** — on press, the held mods are checked; on match, something
@@ -36,13 +36,16 @@ to scancodes, not to keycap labels.
    **masked** (removed from the report while held).
 3. **Macro** — a tap sequence: `Shift+Home`, release, `Backspace`.
 
-### 1.3. USB report
+### 1.3. HID report
 
 `report = (explicit − masked) + implicit`, where `explicit` = physically
 held mods (refcounted: one press = +1, release = −1, the bit clears at
 zero), `implicit` = mods from the key definition (live only while the key
 is held), `masked` = temporarily suppressed. The morph trigger is evaluated
 **at press time** against `explicit`.
+
+Transport-agnostic: identical over wired USB and BLE — ZMK composes
+the same HID report either way, only the endpoint differs.
 
 ### 1.4. Shift leak-through
 
@@ -56,7 +59,7 @@ masked.
 
 The "Output" column is what the OS sees: held mods minus the mask.
 
-| # | Held + key | USB output | Note |
+| # | Held + key | HID report | Note |
 |---|---|---|---|
 | 2.1 | `RCtrl+Tab` | `Alt+Tab` (RCtrl masked) | Forward through windows |
 | 2.2 | `RCtrl+Shift+Tab` | `Alt+Shift+Tab` | Backward (Shift leaks through) |
@@ -135,9 +138,9 @@ cannot mean both "words" and "navigation" without stateful code. In the
 RCtrl switcher (§3.2), ↑/↓ navigate for free (`Alt+Up/Down` conflicts with
 nothing).
 
-## 4. "Physics → USB" matrix (porting cheat sheet)
+## 4. "Physics → HID report" matrix (porting cheat sheet)
 
-| Physically held | Plus key | USB sees |
+| Physically held | Plus key | Report contains |
 |---|---|---|
 | RCtrl | Tab (tap) | `Alt+Tab`, RCtrl hidden by mask |
 | RCtrl (held) | — (pause) | RCtrl + our Alt |

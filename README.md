@@ -73,7 +73,7 @@ Bottom-row remap: Caps→LCtrl, LCtrl→Win, LGUI→Alt, both Alt keys→RCtrl
 | `LAlt+Tab` | Stock native Alt+Tab (untouched) |
 | `RCtrl+Q` | `Alt+F4` (close window) |
 | `LGUI+RCtrl+Q` | `Win+L` (lock screen) |
-| `RCtrl+Space` | `Alt+Space` (window menu) |
+| `RCtrl+Space` | `Alt+Space` (KDE Plasma and Windows PowerToys app launcher) |
 | `RCtrl+Shift+3` | `PrintScreen` |
 | `RCtrl+Shift+4` | `Win+Shift+S` (snipping tool) |
 | `RCtrl+C` / `RCtrl+V` | Copy (`Ctrl+Ins`) / paste (`Shift+Ins`) |

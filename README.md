@@ -85,3 +85,7 @@ Bottom-row remap: Caps→LCtrl, LCtrl→Win, LGUI→Alt, both Alt keys→RCtrl
 | `LAlt+BSPC` / `LAlt+Del` | Delete word backward / forward |
 | `RCtrl+BSPC` / `RCtrl+Del` | Delete to line start / line end |
 | CapsCtrl + `N`/`P`/`F`/`B`/`G`/`H`/`A`/`E` | `Down`/`Up`/`Right`/`Left`/`Del`/`Backspace`/`Home`/`End` |
+
+Детальная спецификация поведения для переноса на Kanata / Xremap / QMK /
+RMK / ZMK (логика, таблицы триггеров, машина холда свитчера):
+[`MACLIKE.md`](MACLIKE.md).

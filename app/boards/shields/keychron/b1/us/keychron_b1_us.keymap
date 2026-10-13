@@ -100,7 +100,7 @@
         compatible = "zmk,behavior-mod-morph";
         label = "Q_CLOSE";
         #binding-cells = <0>;
-        bindings = <&kp Q>, <&kp LA(F4)>;
+        bindings = <&kp Q>, <&q_lock>;
         mods = <(MOD_RCTL)>;
     };
     em_n: em_n {
@@ -242,6 +242,13 @@
          * row, ex-LALT at 69 and ex-RALT at 71): releasing all of them
          * releases the held Alt and commits the switcher selection. */
         hold-positions = <69 71>;
+    };
+    q_lock: q_lock {
+        compatible = "zmk,behavior-mod-morph";
+        label = "Q_LOCK";
+        #binding-cells = <0>;
+        bindings = <&kp LA(F4)>, <&kp LG(L)>;
+        mods = <(MOD_LGUI)>;
     };
     combos1 {
         compatible = "zmk,combos";

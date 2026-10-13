@@ -254,7 +254,7 @@
         compatible = "zmk,behavior-mod-morph";
         label = "N3_PSCRN_IN";
         #binding-cells = <0>;
-        bindings = <&kp RC(N3)>, <&kp PSCRN>;
+        bindings = <&kp LC(N3)>, <&kp PSCRN>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     n3_pscrn: n3_pscrn {
@@ -268,7 +268,7 @@
         compatible = "zmk,behavior-mod-morph";
         label = "N4_SNIP_IN";
         #binding-cells = <0>;
-        bindings = <&kp RC(N4)>, <&kp LG(LS(S))>;
+        bindings = <&kp LC(N4)>, <&kp LG(LS(S))>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     n4_snip: n4_snip {

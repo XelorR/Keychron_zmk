@@ -278,6 +278,20 @@
         bindings = <&kp N4>, <&n4_snip_in>;
         mods = <(MOD_RCTL)>;
     };
+    up_nav: up_nav {
+        compatible = "zmk,behavior-mod-morph";
+        label = "UP_NAV";
+        #binding-cells = <0>;
+        bindings = <&kp UP>, <&kp LC(HOME)>;
+        mods = <(MOD_RCTL)>;
+    };
+    down_nav: down_nav {
+        compatible = "zmk,behavior-mod-morph";
+        label = "DOWN_NAV";
+        #binding-cells = <0>;
+        bindings = <&kp DOWN>, <&kp LC(END)>;
+        mods = <(MOD_RCTL)>;
+    };
     combos1 {
         compatible = "zmk,combos";
         combo_jz {
@@ -451,7 +465,7 @@
         &win_tab   &q_close      &kp W         &em_e         &kp R          &kp T   &kp Y      &kp U   &kp I      &kp O       &em_p     &lbkt_nav  &rbkt_nav  &kp BSLH
         &kp LCTRL  &em_a         &kp S         &kp D         &em_f          &em_g   &em_h      &kp J   &kp K      &kp L       &kp SEMI  &kp SQT    &kp RET
         &kp LSHFT  &kp Z         &kp X         &c_copy       &v_paste       &em_b   &em_n      &kp M   &kp COMMA  &kp DOT     &kp FSLH  &kp RSHFT
-        &kp LGUI   &kp LALT      &kp RCTRL     &space_alt    &kp RCTRL      &mo 3   &left_nav  &kp UP  &kp DOWN   &right_nav
+        &kp LGUI   &kp LALT      &kp RCTRL     &space_alt    &kp RCTRL      &mo 3   &left_nav  &up_nav  &down_nav   &right_nav
         //
         &none      &out OUT_BLE  &out OUT_24G  &out OUT_CHG  &out OUT_CHGD
             >;

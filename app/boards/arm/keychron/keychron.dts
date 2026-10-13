@@ -53,7 +53,7 @@
         //label = "KSCAN";
         diode-direction = "col2row";
         debounce-scan-period-ms =<4>;
-        debounce-press-ms =<8>;
+        debounce-press-ms =<5>;
         debounce-release-ms=<8>;
  
         row-gpios

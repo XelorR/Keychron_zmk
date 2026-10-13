@@ -25,7 +25,7 @@ Build: `./build.sh` from repo root (board `keychron` + shield
 - `LAlt+Tab` — stock native Alt+Tab (untouched).
 - `RCtrl+Q` — `Alt+F4` (close window).
 - `LGUI+RCtrl+Q` — `Win+L` (lock screen).
-- `RCtrl+Space` — `Win` alone (universal app launcher: Start menu, KDE, GNOME).
+- `RCtrl+Space` — `Alt+Space` (window menu).
 
 ## Navigation & editing (win)
 

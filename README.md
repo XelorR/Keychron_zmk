@@ -85,6 +85,7 @@ Bottom-row remap: Caps→LCtrl, LCtrl→Win, LGUI→Alt, both Alt keys→RCtrl
 | `LAlt+BSPC` / `LAlt+Del` | Delete word backward / forward |
 | `RCtrl+BSPC` / `RCtrl+Del` | Delete to line start / line end |
 | CapsCtrl + `N`/`P`/`F`/`B`/`D`/`H`/`A`/`E` | `Down`/`Up`/`Right`/`Left`/`Del`/`Backspace`/`Home`/`End` |
+| CapsCtrl + `K` / `Y` | Kill line (`Shift+Home`, `Ctrl+X`) / paste (`Shift+Ins`) |
 
 Detailed behavior specification for porting to Kanata / Xremap / QMK /
 RMK / ZMK (logic, trigger tables, switcher hold machine):

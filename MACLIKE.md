@@ -80,6 +80,8 @@ The "Output" column is what the OS sees: held mods minus the mask.
 | 2.17 | `RCtrl+BSPC` | tap `Shift+Home`, tap `BSPC` | To line start |
 | 2.18 | `RCtrl+Del` | tap `Shift+End`, tap `Del` | To line end |
 | 2.19 | CapsCtrl + `N/P/F/B/D/H/A/E` | `Down/Up/Right/Left/Del/BSPC/Home/End` | Left Ctrl only; RCtrl+N etc. stay native |
+| 2.19b | CapsCtrl+K | tap `Shift+Home`, tap `Ctrl+X` (kill line) |
+| 2.19c | CapsCtrl+Y | `Shift+Ins` (paste) |
 | 2.20 | `Fn+Esc` | bootloader (UF2) | |
 | 2.21 | everything else | native | Including `Shift+3`→`#`, `Ctrl+3/4`, bare arrows, `LAlt+Up/Down` |
 

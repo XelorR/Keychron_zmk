@@ -292,6 +292,26 @@
         bindings = <&kp DOWN>, <&kp LC(END)>;
         mods = <(MOD_RCTL)>;
     };
+    kill_line: kill_line {
+        compatible = "zmk,behavior-macro";
+        label = "KILL_LINE";
+        #binding-cells = <0>;
+        bindings = <&kp LS(HOME)>, <&kp LC(X)>;
+    };
+    em_k: em_k {
+        compatible = "zmk,behavior-mod-morph";
+        label = "EM_K_KILL";
+        #binding-cells = <0>;
+        bindings = <&kp K>, <&kill_line>;
+        mods = <(MOD_LCTL)>;
+    };
+    em_y: em_y {
+        compatible = "zmk,behavior-mod-morph";
+        label = "EM_Y_PASTE";
+        #binding-cells = <0>;
+        bindings = <&kp Y>, <&kp LS(INS)>;
+        mods = <(MOD_LCTL)>;
+    };
     combos1 {
         compatible = "zmk,combos";
         combo_jz {
@@ -462,8 +482,8 @@
  		bindings = <
         &kp ESC    &kp F1        &kp F2        &kp F3        &kp F4         &kp F5  &kp F6     &kp F7  &kp F8     &kp F9      &kp F10   &kp F11    &kp F12    &del_macdel
         &kp GRAVE  &kp N1        &kp N2        &n3_pscrn        &n4_snip         &kp N5  &kp N6     &kp N7  &kp N8     &kp N9      &kp N0    &kp MINUS  &kp EQUAL  &bs_macdel
-        &win_tab   &q_close      &kp W         &em_e         &kp R          &kp T   &kp Y      &kp U   &kp I      &kp O       &em_p     &lbkt_nav  &rbkt_nav  &kp BSLH
-        &kp LCTRL  &em_a         &kp S         &em_d         &em_f          &kp G   &em_h      &kp J   &kp K      &kp L       &kp SEMI  &kp SQT    &kp RET
+        &win_tab   &q_close      &kp W         &em_e         &kp R          &kp T   &em_y      &kp U   &kp I      &kp O       &em_p     &lbkt_nav  &rbkt_nav  &kp BSLH
+        &kp LCTRL  &em_a         &kp S         &em_d         &em_f          &kp G   &em_h      &kp J   &em_k      &kp L       &kp SEMI  &kp SQT    &kp RET
         &kp LSHFT  &kp Z         &kp X         &c_copy       &v_paste       &em_b   &em_n      &kp M   &kp COMMA  &kp DOT     &kp FSLH  &kp RSHFT
         &kp LGUI   &kp LALT      &kp RCTRL     &space_alt    &kp RCTRL      &mo 3   &left_nav  &up_nav  &down_nav   &right_nav
         //

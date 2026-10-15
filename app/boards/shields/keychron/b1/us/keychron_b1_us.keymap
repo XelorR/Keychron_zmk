@@ -322,8 +322,21 @@
         compatible = "zmk,behavior-mod-morph";
         label = "EM_O_OPEN";
         #binding-cells = <0>;
-        bindings = <&kp O>, <&open_line>;
+        bindings = <&kp O>, <&em_o_shift>;
         mods = <(MOD_LCTL)>;
+    };
+    open_line_up: open_line_up {
+        compatible = "zmk,behavior-macro";
+        label = "OPEN_LINE_UP";
+        #binding-cells = <0>;
+        bindings = <&kp HOME>, <&kp LS(ENTER)>, <&kp UP>;
+    };
+    em_o_shift: em_o_shift {
+        compatible = "zmk,behavior-mod-morph";
+        label = "EM_O_SHIFT";
+        #binding-cells = <0>;
+        bindings = <&open_line>, <&open_line_up>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     combos1 {
         compatible = "zmk,combos";

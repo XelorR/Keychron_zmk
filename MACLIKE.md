@@ -91,6 +91,7 @@ The "Output" column is what the OS sees: held mods minus the mask.
 | 2.19i | CapsCtrl+K | tap `Shift+Home`, tap `Ctrl+X` (kill line) | | `Ctrl+K` |
 | 2.19j | CapsCtrl+Y | `Shift+Ins` (paste) | | `Ctrl+Y` |
 | 2.19k | CapsCtrl+O | tap `End`, tap `Shift+Enter` (open line below) | | `Ctrl+O` |
+| 2.19l | CapsCtrl+Shift+O | tap `Home`, tap `Shift+Enter`, tap `Up` (open line above) | | `Cmd+Shift+Enter` (VS Code) |
 | 2.20 | `Fn+Esc` | bootloader (UF2) | | — (firmware) |
 | 2.21 | everything else | native | Including `Shift+3`→`#`, `Ctrl+3/4`, bare arrows, `LAlt+Up/Down` | — |
 

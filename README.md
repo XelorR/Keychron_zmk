@@ -96,6 +96,7 @@ Bottom-row remap: Caps→LCtrl, LCtrl→Win, LGUI→Alt, both Alt keys→RCtrl
 | CapsCtrl + `K` | Kill line (`Shift+Home`, `Ctrl+X`) | `Ctrl+K` |
 | CapsCtrl + `Y` | Paste (`Shift+Ins`) | `Ctrl+Y` |
 | CapsCtrl + `O` | New line below (`End`, `Shift+Enter`) | `Ctrl+O` |
+| CapsCtrl + `Shift+O` | New line above (`Home`, `Shift+Enter`, `Up`) | `Cmd+Shift+Enter` (VS Code) |
 
 Detailed behavior specification for porting to Kanata / Xremap / QMK /
 RMK / ZMK (logic, trigger tables, switcher hold machine):

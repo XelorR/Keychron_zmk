@@ -79,7 +79,7 @@ The "Output" column is what the OS sees: held mods minus the mask.
 | 2.15 | `LAlt+Left/Right` | `Ctrl+Left/Right` | Word jump (LAlt masked) | `Option+Left` / `Option+Right` |
 | 2.16 | `LAlt+BSPC/Del` | `Ctrl+BSPC/Del` | Delete word backward/forward | `Option+Backspace` / fwd word delete |
 | 2.17 | `RCtrl+BSPC` | tap `Shift+Home`, tap `BSPC` | To line start | `Cmd+Backspace` |
-| 2.18 | `RCtrl+Del` | tap `Shift+End`, tap `Del` | To line end | `Ctrl+K` |
+| 2.18 | `RCtrl+Del` | tap `Shift+End`, tap `Del` | To line end | `Cmd-Del` |
 | 2.19a | CapsCtrl+N | `Down` | Left Ctrl only (same for 2.19a–k); RCtrl+letter stays native | `Ctrl+N` |
 | 2.19b | CapsCtrl+P | `Up` | | `Ctrl+P` |
 | 2.19c | CapsCtrl+F | `Right` | | `Ctrl+F` |

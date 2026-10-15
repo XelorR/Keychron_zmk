@@ -84,8 +84,16 @@ Bottom-row remap: Caps→LCtrl, LCtrl→Win, LGUI→Alt, both Alt keys→RCtrl
 | `LAlt+Left` / `LAlt+Right` | Word jump left / right | `Option+Left` / `Option+Right` |
 | `LAlt+BSPC` / `LAlt+Del` | Delete word backward / forward | `Option+Backspace` / forward word delete |
 | `RCtrl+BSPC` / `RCtrl+Del` | Delete to line start / line end | `Cmd+Backspace` / `Ctrl+K` |
-| CapsCtrl + `N`/`P`/`F`/`B`/`D`/`H`/`A`/`E` | `Down`/`Up`/`Right`/`Left`/`Del`/`Backspace`/`Home`/`End` | Same `Ctrl+…` on Mac (readline) |
-| CapsCtrl + `K` / `Y` | Kill line (`Shift+Home`, `Ctrl+X`) / paste (`Shift+Ins`) | `Ctrl+K` / `Ctrl+Y` |
+| CapsCtrl + `N` | `Down` | `Ctrl+N` |
+| CapsCtrl + `P` | `Up` | `Ctrl+P` |
+| CapsCtrl + `F` | `Right` | `Ctrl+F` |
+| CapsCtrl + `B` | `Left` | `Ctrl+B` |
+| CapsCtrl + `D` | `Del` (forward delete) | `Ctrl+D` |
+| CapsCtrl + `H` | `Backspace` | `Ctrl+H` |
+| CapsCtrl + `A` | `Home` | `Ctrl+A` |
+| CapsCtrl + `E` | `End` | `Ctrl+E` |
+| CapsCtrl + `K` | Kill line (`Shift+Home`, `Ctrl+X`) | `Ctrl+K` |
+| CapsCtrl + `Y` | Paste (`Shift+Ins`) | `Ctrl+Y` |
 | CapsCtrl + `O` | New line below (`End`, `Shift+Enter`) | `Ctrl+O` |
 
 Detailed behavior specification for porting to Kanata / Xremap / QMK /

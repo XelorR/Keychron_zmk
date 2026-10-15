@@ -17,7 +17,7 @@ it needs is `[` `]` `Q` `Space` `3` `4` `C` `V` `BSPC` `Del` `Tab`, arrows,
 
 | Physical key | Scancode sent |
 |---|---|
-| CapsLock | Left Ctrl (the "Ctrl for emacs bindings", §2.19) |
+| CapsLock | Left Ctrl (the "Ctrl for emacs bindings", §2.19a–k) |
 | ex-Left Ctrl | Left GUI / Win |
 | ex-Left GUI | Left Alt |
 | ex-Left Alt **and** ex-Right Alt | Right Ctrl (the "command" key of the whole scheme) |
@@ -79,10 +79,17 @@ The "Output" column is what the OS sees: held mods minus the mask.
 | 2.16 | `LAlt+BSPC/Del` | `Ctrl+BSPC/Del` | Delete word backward/forward | `Option+Backspace` / fwd word delete |
 | 2.17 | `RCtrl+BSPC` | tap `Shift+Home`, tap `BSPC` | To line start | `Cmd+Backspace` |
 | 2.18 | `RCtrl+Del` | tap `Shift+End`, tap `Del` | To line end | `Ctrl+K` |
-| 2.19 | CapsCtrl + `N/P/F/B/D/H/A/E` | `Down/Up/Right/Left/Del/BSPC/Home/End` | Left Ctrl only; RCtrl+N etc. stay native | Same `Ctrl+…` on Mac |
-| 2.19b | CapsCtrl+K | tap `Shift+Home`, tap `Ctrl+X` (kill line) | | `Ctrl+K` |
-| 2.19c | CapsCtrl+Y | `Shift+Ins` (paste) | | `Ctrl+Y` |
-| 2.19d | CapsCtrl+O | tap `End`, tap `Shift+Enter` (open line below) | | `Ctrl+O` |
+| 2.19a | CapsCtrl+N | `Down` | Left Ctrl only (same for 2.19a–k); RCtrl+letter stays native | `Ctrl+N` |
+| 2.19b | CapsCtrl+P | `Up` | | `Ctrl+P` |
+| 2.19c | CapsCtrl+F | `Right` | | `Ctrl+F` |
+| 2.19d | CapsCtrl+B | `Left` | | `Ctrl+B` |
+| 2.19e | CapsCtrl+D | `Del` (forward delete) | | `Ctrl+D` |
+| 2.19f | CapsCtrl+H | `BSPC` | | `Ctrl+H` |
+| 2.19g | CapsCtrl+A | `Home` | | `Ctrl+A` |
+| 2.19h | CapsCtrl+E | `End` | | `Ctrl+E` |
+| 2.19i | CapsCtrl+K | tap `Shift+Home`, tap `Ctrl+X` (kill line) | | `Ctrl+K` |
+| 2.19j | CapsCtrl+Y | `Shift+Ins` (paste) | | `Ctrl+Y` |
+| 2.19k | CapsCtrl+O | tap `End`, tap `Shift+Enter` (open line below) | | `Ctrl+O` |
 | 2.20 | `Fn+Esc` | bootloader (UF2) | | — (firmware) |
 | 2.21 | everything else | native | Including `Shift+3`→`#`, `Ctrl+3/4`, bare arrows, `LAlt+Up/Down` | — |
 
@@ -152,7 +159,7 @@ nothing).
 | RCtrl + Shift | 3 / 4 | `PrintScreen` / `Win+Shift+S` (everything eaten) |
 | LAlt | arrows / BSPC / Del | `Ctrl+…` (LAlt eaten) |
 | LAlt | Tab | native `Alt+Tab` |
-| CapsCtrl | §2.19 letters | bare nav codes (Ctrl eaten) |
+| CapsCtrl | §2.19a–k | bare nav codes (Ctrl eaten) |
 | Win + RCtrl | Q | `Win+L` (both eaten) |
 
 ## 5. Porting per platform

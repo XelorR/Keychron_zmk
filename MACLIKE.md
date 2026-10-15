@@ -15,13 +15,13 @@ it needs is `[` `]` `Q` `Space` `3` `4` `C` `V` `BSPC` `Del` `Tab`, arrows,
 
 ### 1.1. Bottom row and Caps (win layer; Mac layers are factory, untouched)
 
-| Physical key | Scancode sent |
-|---|---|
-| CapsLock | Left Ctrl (the "Ctrl for emacs bindings", §2.19a–k) |
-| ex-Left Ctrl | Left GUI / Win |
-| ex-Left GUI | Left Alt |
-| ex-Left Alt **and** ex-Right Alt | Right Ctrl (the "command" key of the whole scheme) |
-| Fn | Fn layer (momentary), `Fn+Esc` — bootloader |
+| Physical key | Scancode sent | Meaning (macOS role) |
+|---|---|---|
+| CapsLock | Left Ctrl (the "Ctrl for emacs bindings", §2.19a–k) | Emacs-Control |
+| ex-Left Ctrl | Left GUI / Win | System-Control |
+| ex-Left GUI | Left Alt | Opt |
+| ex-Left Alt **and** ex-Right Alt | Right Ctrl (the "command" key of the whole scheme) | Command |
+| Fn | Fn layer (momentary), `Fn+Esc` — bootloader | — |
 
 Everything below is about the **win layer**. Names like "LALT"/"RCTRL" refer
 to scancodes, not to keycap labels.

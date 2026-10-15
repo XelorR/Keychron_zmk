@@ -72,7 +72,7 @@ The "Output" column is what the OS sees: held mods minus the mask.
 | 2.9 | `RCtrl+C` | `Ctrl+Ins` (copy) | RCtrl masked | `Cmd+C` |
 | 2.10 | `RCtrl+V` | `Shift+Ins` (paste) | RCtrl masked | `Cmd+V` |
 | 2.11 | `RCtrl+[` / `]` | `Alt+Left` / `Alt+Right` | Back/forward | `Cmd+[` / `Cmd+]` |
-| 2.12 | `RCtrl+Shift+[` / `]` | `Ctrl+PgUp` / `Ctrl+PgDn` | Browser tabs (nested morph, both mods masked) | `Ctrl+Tab` / `Ctrl+Shift+Tab` |
+| 2.12 | `RCtrl+Shift+[` / `]` | `Ctrl+PgUp` / `Ctrl+PgDn` | Browser tabs (nested morph, both mods masked) | `Cmd+Shift+[` / `Cmd+Shift+]` |
 | 2.13 | `RCtrl+Left/Right` | `Home` / `End` | | `Cmd+Left` / `Cmd+Right` |
 | 2.14 | `RCtrl+Up/Down` | `Ctrl+Home` / `Ctrl+End` | | `Cmd+Up` / `Cmd+Down` |
 | 2.15 | `LAlt+Left/Right` | `Ctrl+Left/Right` | Word jump (LAlt masked) | `Option+Left` / `Option+Right` |

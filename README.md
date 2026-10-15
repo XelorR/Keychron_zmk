@@ -78,7 +78,7 @@ Bottom-row remap: Caps→LCtrl, LCtrl→Win, LGUI→Alt, both Alt keys→RCtrl
 | `RCtrl+Shift+4` | `Win+Shift+S` (snipping tool) | `Cmd+Shift+4` |
 | `RCtrl+C` / `RCtrl+V` | Copy (`Ctrl+Ins`) / paste (`Shift+Ins`) | `Cmd+C` / `Cmd+V` |
 | `RCtrl+[` / `RCtrl+]` | Browser back / forward | `Cmd+[` / `Cmd+]` |
-| `RCtrl+Shift+[` / `RCtrl+Shift+]` | Previous / next browser tab | `Ctrl+Tab` / `Ctrl+Shift+Tab` |
+| `RCtrl+Shift+[` / `RCtrl+Shift+]` | Previous / next browser tab | `Cmd+Shift+[` / `Cmd+Shift+]` |
 | `RCtrl+Left` / `RCtrl+Right` | `Home` / `End` | `Cmd+Left` / `Cmd+Right` |
 | `RCtrl+Up` / `RCtrl+Down` | `Ctrl+Home` / `Ctrl+End` (doc start / end) | `Cmd+Up` / `Cmd+Down` |
 | `LAlt+Left` / `LAlt+Right` | Word jump left / right | `Option+Left` / `Option+Right` |

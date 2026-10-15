@@ -84,7 +84,7 @@ Bottom-row remap: Caps→LCtrl, LCtrl→Win, LGUI→Alt, both Alt keys→RCtrl
 | `RCtrl+Up` / `RCtrl+Down` | `Ctrl+Home` / `Ctrl+End` (doc start / end) | `Cmd+Up` / `Cmd+Down` |
 | `LAlt+Left` / `LAlt+Right` | Word jump left / right | `Option+Left` / `Option+Right` |
 | `LAlt+BSPC` / `LAlt+Del` | Delete word backward / forward | `Option+Backspace` / forward word delete |
-| `RCtrl+BSPC` / `RCtrl+Del` | Delete to line start / line end | `Cmd+Backspace` / `Ctrl+K` |
+| `RCtrl+BSPC` / `RCtrl+Del` | Delete to line start / line end | `Cmd+Backspace` / `Cmd-Del` |
 | CapsCtrl + `N` | `Down` | `Ctrl+N` |
 | CapsCtrl + `P` | `Up` | `Ctrl+P` |
 | CapsCtrl + `F` | `Right` | `Ctrl+F` |

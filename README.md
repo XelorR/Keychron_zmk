@@ -67,26 +67,26 @@ win-layer only, Mac layers stay factory.
 Bottom-row remap: Caps→LCtrl, LCtrl→Win, LGUI→Alt, both Alt keys→RCtrl
 (the "command" key). `Fn+Esc` enters the UF2 bootloader.
 
-| Shortcut | Action |
-|---|---|
-| `RCtrl+Tab` / `RCtrl+Shift+Tab` | Next / previous window (hold RCtrl keeps the switcher open) |
-| `LAlt+Tab` | Stock native Alt+Tab (untouched) |
-| `RCtrl+Q` | `Alt+F4` (close window) |
-| `LGUI+RCtrl+Q` | `Win+L` (lock screen) |
-| `RCtrl+Space` | `Alt+Space` (KDE Plasma and Windows PowerToys app launcher) |
-| `RCtrl+Shift+3` | `PrintScreen` |
-| `RCtrl+Shift+4` | `Win+Shift+S` (snipping tool) |
-| `RCtrl+C` / `RCtrl+V` | Copy (`Ctrl+Ins`) / paste (`Shift+Ins`) |
-| `RCtrl+[` / `RCtrl+]` | Browser back / forward |
-| `RCtrl+Shift+[` / `RCtrl+Shift+]` | Previous / next browser tab |
-| `RCtrl+Left` / `RCtrl+Right` | `Home` / `End` |
-| `RCtrl+Up` / `RCtrl+Down` | `Ctrl+Home` / `Ctrl+End` (doc start / end) |
-| `LAlt+Left` / `LAlt+Right` | Word jump left / right |
-| `LAlt+BSPC` / `LAlt+Del` | Delete word backward / forward |
-| `RCtrl+BSPC` / `RCtrl+Del` | Delete to line start / line end |
-| CapsCtrl + `N`/`P`/`F`/`B`/`D`/`H`/`A`/`E` | `Down`/`Up`/`Right`/`Left`/`Del`/`Backspace`/`Home`/`End` |
-| CapsCtrl + `K` / `Y` | Kill line (`Shift+Home`, `Ctrl+X`) / paste (`Shift+Ins`) |
-| CapsCtrl + `O` | New line below (`End`, `Shift+Enter`) |
+| Shortcut | Action | macOS equivalent |
+|---|---|---|
+| `RCtrl+Tab` / `RCtrl+Shift+Tab` | Next / previous window (hold RCtrl keeps the switcher open) | `Cmd+Tab` / `Cmd+Shift+Tab` |
+| `LAlt+Tab` | Stock native Alt+Tab (untouched) | — (Windows-only, no macOS equivalent) |
+| `RCtrl+Q` | `Alt+F4` (close window) | `Cmd+Q` |
+| `LGUI+RCtrl+Q` | `Win+L` (lock screen) | `Ctrl+Cmd+Q` |
+| `RCtrl+Space` | `Alt+Space` (KDE Plasma and Windows PowerToys app launcher) | — (cf. `Cmd+Space` for launcher) |
+| `RCtrl+Shift+3` | `PrintScreen` | `Cmd+Shift+3` |
+| `RCtrl+Shift+4` | `Win+Shift+S` (snipping tool) | `Cmd+Shift+4` |
+| `RCtrl+C` / `RCtrl+V` | Copy (`Ctrl+Ins`) / paste (`Shift+Ins`) | `Cmd+C` / `Cmd+V` |
+| `RCtrl+[` / `RCtrl+]` | Browser back / forward | `Cmd+[` / `Cmd+]` |
+| `RCtrl+Shift+[` / `RCtrl+Shift+]` | Previous / next browser tab | `Ctrl+Tab` / `Ctrl+Shift+Tab` |
+| `RCtrl+Left` / `RCtrl+Right` | `Home` / `End` | `Cmd+Left` / `Cmd+Right` |
+| `RCtrl+Up` / `RCtrl+Down` | `Ctrl+Home` / `Ctrl+End` (doc start / end) | `Cmd+Up` / `Cmd+Down` |
+| `LAlt+Left` / `LAlt+Right` | Word jump left / right | `Option+Left` / `Option+Right` |
+| `LAlt+BSPC` / `LAlt+Del` | Delete word backward / forward | `Option+Backspace` / forward word delete |
+| `RCtrl+BSPC` / `RCtrl+Del` | Delete to line start / line end | `Cmd+Backspace` / `Ctrl+K` |
+| CapsCtrl + `N`/`P`/`F`/`B`/`D`/`H`/`A`/`E` | `Down`/`Up`/`Right`/`Left`/`Del`/`Backspace`/`Home`/`End` | Same `Ctrl+…` on Mac (readline) |
+| CapsCtrl + `K` / `Y` | Kill line (`Shift+Home`, `Ctrl+X`) / paste (`Shift+Ins`) | `Ctrl+K` / `Ctrl+Y` |
+| CapsCtrl + `O` | New line below (`End`, `Shift+Enter`) | `Ctrl+O` |
 
 Detailed behavior specification for porting to Kanata / Xremap / QMK /
 RMK / ZMK (logic, trigger tables, switcher hold machine):

@@ -17,7 +17,7 @@ it needs is `[` `]` `Q` `Space` `3` `4` `C` `V` `BSPC` `Del` `Tab`, arrows,
 
 | Physical key | Scancode sent |
 |---|---|
-| CapsLock | Left Ctrl (the "Ctrl for emacs bindings", §3.8) |
+| CapsLock | Left Ctrl (the "Ctrl for emacs bindings", §2.19) |
 | ex-Left Ctrl | Left GUI / Win |
 | ex-Left GUI | Left Alt |
 | ex-Left Alt **and** ex-Right Alt | Right Ctrl (the "command" key of the whole scheme) |
@@ -59,32 +59,32 @@ masked.
 
 The "Output" column is what the OS sees: held mods minus the mask.
 
-| # | Held + key | HID report | Note |
-|---|---|---|---|
-| 2.1 | `RCtrl+Tab` | `Alt+Tab` (RCtrl masked) | Forward through windows |
-| 2.2 | `RCtrl+Shift+Tab` | `Alt+Shift+Tab` | Backward (Shift leaks through) |
-| 2.3 | `LAlt+Tab` | default: bare Tab under held Alt | Native OS hold |
-| 2.4 | `RCtrl+Q` | `Alt+F4` | Close window |
-| 2.5 | `Win+RCtrl+Q` | `Win+L` | Lock (nested morph) |
-| 2.6 | `RCtrl+Space` | `Alt+Space` | Window menu |
-| 2.7 | `RCtrl+Shift+3` | `PrintScreen` (bare, mods eaten) | Both mods masked |
-| 2.8 | `RCtrl+Shift+4` | `Win+Shift+S` | Both mods masked |
-| 2.9 | `RCtrl+C` | `Ctrl+Ins` (copy) | RCtrl masked |
-| 2.10 | `RCtrl+V` | `Shift+Ins` (paste) | RCtrl masked |
-| 2.11 | `RCtrl+[` / `]` | `Alt+Left` / `Alt+Right` | Back/forward |
-| 2.12 | `RCtrl+Shift+[` / `]` | `Ctrl+PgUp` / `Ctrl+PgDn` | Browser tabs (nested morph, both mods masked) |
-| 2.13 | `RCtrl+Left/Right` | `Home` / `End` | |
-| 2.14 | `RCtrl+Up/Down` | `Ctrl+Home` / `Ctrl+End` | |
-| 2.15 | `LAlt+Left/Right` | `Ctrl+Left/Right` | Word jump (LAlt masked) |
-| 2.16 | `LAlt+BSPC/Del` | `Ctrl+BSPC/Del` | Delete word backward/forward |
-| 2.17 | `RCtrl+BSPC` | tap `Shift+Home`, tap `BSPC` | To line start |
-| 2.18 | `RCtrl+Del` | tap `Shift+End`, tap `Del` | To line end |
-| 2.19 | CapsCtrl + `N/P/F/B/D/H/A/E` | `Down/Up/Right/Left/Del/BSPC/Home/End` | Left Ctrl only; RCtrl+N etc. stay native |
-| 2.19b | CapsCtrl+K | tap `Shift+Home`, tap `Ctrl+X` (kill line) |
-| 2.19c | CapsCtrl+Y | `Shift+Ins` (paste) |
-| 2.19d | CapsCtrl+O | tap `End`, tap `Shift+Enter` (open line below) |
-| 2.20 | `Fn+Esc` | bootloader (UF2) | |
-| 2.21 | everything else | native | Including `Shift+3`→`#`, `Ctrl+3/4`, bare arrows, `LAlt+Up/Down` |
+| # | Held + key | HID report | Note | macOS equivalent |
+|---|---|---|---|---|
+| 2.1 | `RCtrl+Tab` | `Alt+Tab` (RCtrl masked) | Forward; hold RCtrl keeps switcher open (custom hold, §3.2) | `Cmd+Tab` |
+| 2.2 | `RCtrl+Shift+Tab` | `Alt+Shift+Tab` | Backward (Shift leaks through); hold works like 2.1 | `Cmd+Shift+Tab` |
+| 2.3 | `LAlt+Tab` | default: bare Tab under held Alt | Native OS hold | — (Windows-only) |
+| 2.4 | `RCtrl+Q` | `Alt+F4` | Close window | `Cmd+Q` |
+| 2.5 | `Win+RCtrl+Q` | `Win+L` | Lock (nested morph) | `Ctrl+Cmd+Q` |
+| 2.6 | `RCtrl+Space` | `Alt+Space` | Window menu | — (cf. `Cmd+Space`) |
+| 2.7 | `RCtrl+Shift+3` | `PrintScreen` (bare, mods eaten) | Both mods masked | `Cmd+Shift+3` |
+| 2.8 | `RCtrl+Shift+4` | `Win+Shift+S` | Both mods masked | `Cmd+Shift+4` |
+| 2.9 | `RCtrl+C` | `Ctrl+Ins` (copy) | RCtrl masked | `Cmd+C` |
+| 2.10 | `RCtrl+V` | `Shift+Ins` (paste) | RCtrl masked | `Cmd+V` |
+| 2.11 | `RCtrl+[` / `]` | `Alt+Left` / `Alt+Right` | Back/forward | `Cmd+[` / `Cmd+]` |
+| 2.12 | `RCtrl+Shift+[` / `]` | `Ctrl+PgUp` / `Ctrl+PgDn` | Browser tabs (nested morph, both mods masked) | `Ctrl+Tab` / `Ctrl+Shift+Tab` |
+| 2.13 | `RCtrl+Left/Right` | `Home` / `End` | | `Cmd+Left` / `Cmd+Right` |
+| 2.14 | `RCtrl+Up/Down` | `Ctrl+Home` / `Ctrl+End` | | `Cmd+Up` / `Cmd+Down` |
+| 2.15 | `LAlt+Left/Right` | `Ctrl+Left/Right` | Word jump (LAlt masked) | `Option+Left` / `Option+Right` |
+| 2.16 | `LAlt+BSPC/Del` | `Ctrl+BSPC/Del` | Delete word backward/forward | `Option+Backspace` / fwd word delete |
+| 2.17 | `RCtrl+BSPC` | tap `Shift+Home`, tap `BSPC` | To line start | `Cmd+Backspace` |
+| 2.18 | `RCtrl+Del` | tap `Shift+End`, tap `Del` | To line end | `Ctrl+K` |
+| 2.19 | CapsCtrl + `N/P/F/B/D/H/A/E` | `Down/Up/Right/Left/Del/BSPC/Home/End` | Left Ctrl only; RCtrl+N etc. stay native | Same `Ctrl+…` on Mac |
+| 2.19b | CapsCtrl+K | tap `Shift+Home`, tap `Ctrl+X` (kill line) | | `Ctrl+K` |
+| 2.19c | CapsCtrl+Y | `Shift+Ins` (paste) | | `Ctrl+Y` |
+| 2.19d | CapsCtrl+O | tap `End`, tap `Shift+Enter` (open line below) | | `Ctrl+O` |
+| 2.20 | `Fn+Esc` | bootloader (UF2) | | — (firmware) |
+| 2.21 | everything else | native | Including `Shift+3`→`#`, `Ctrl+3/4`, bare arrows, `LAlt+Up/Down` | — |
 
 Nesting (2.5, 2.12): outer morph on the first mod, inner morph on the
 second; masks **accumulate** (see §5.2). A single morph with an `A|B`

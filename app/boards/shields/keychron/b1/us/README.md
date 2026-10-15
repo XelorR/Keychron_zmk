@@ -25,7 +25,8 @@ Build: `./build.sh` from repo root (board `keychron` + shield
 - `LAlt+Tab` — stock native Alt+Tab (untouched).
 - `RCtrl+Q` — `Alt+F4` (close window).
 - `LGUI+RCtrl+Q` — `Win+L` (lock screen).
-- `RCtrl+Space` — `Alt+Space` (window menu).
+- `RCtrl+Space` — `Alt+Space` (application launcher; on Windows use PowerToys Run, `Alt+Space` is its default).
+- `LGUI+Space` — native `Win+Space`, switches input language (mac-like position of `Ctrl+Space`).
 
 ## Navigation & editing (win)
 

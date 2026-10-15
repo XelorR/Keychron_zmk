@@ -73,7 +73,8 @@ Bottom-row remap: Caps→LCtrl, LCtrl→Win, LGUI→Alt, both Alt keys→RCtrl
 | `LAlt+Tab` | Stock native Alt+Tab (untouched) | — (Windows-only, no macOS equivalent) |
 | `RCtrl+Q` | `Alt+F4` (close window) | `Cmd+Q` |
 | `LGUI+RCtrl+Q` | `Win+L` (lock screen) | `Ctrl+Cmd+Q` |
-| `RCtrl+Space` | `Alt+Space` (KDE Plasma and Windows PowerToys app launcher) | — (cf. `Cmd+Space` for launcher) |
+| `RCtrl+Space` | `Alt+Space` → application launcher (on Windows use PowerToys Run — `Alt+Space` is its default shortcut) | `Cmd+Space` |
+| `LGUI+Space` | native `Win+Space` → input language switch | `Ctrl+Space` (input sources) |
 | `RCtrl+Shift+3` | `PrintScreen` | `Cmd+Shift+3` |
 | `RCtrl+Shift+4` | `Win+Shift+S` (snipping tool) | `Cmd+Shift+4` |
 | `RCtrl+C` / `RCtrl+V` | Copy (`Ctrl+Ins`) / paste (`Shift+Ins`) | `Cmd+C` / `Cmd+V` |

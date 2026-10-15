@@ -66,7 +66,8 @@ The "Output" column is what the OS sees: held mods minus the mask.
 | 2.3 | `LAlt+Tab` | default: bare Tab under held Alt | Native OS hold | — (Windows-only) |
 | 2.4 | `RCtrl+Q` | `Alt+F4` | Close window | `Cmd+Q` |
 | 2.5 | `Win+RCtrl+Q` | `Win+L` | Lock (nested morph) | `Ctrl+Cmd+Q` |
-| 2.6 | `RCtrl+Space` | `Alt+Space` | Window menu | — (cf. `Cmd+Space`) |
+| 2.6 | `RCtrl+Space` | `Alt+Space` | Application launcher: PowerToys Run (default shortcut) on Windows | `Cmd+Space` |
+| 2.6b | `LGUI+Space` | native `Win+Space` | Input language switch, same position as macOS Ctrl+Space | `Ctrl+Space` (input sources) |
 | 2.7 | `RCtrl+Shift+3` | `PrintScreen` (bare, mods eaten) | Both mods masked | `Cmd+Shift+3` |
 | 2.8 | `RCtrl+Shift+4` | `Win+Shift+S` | Both mods masked | `Cmd+Shift+4` |
 | 2.9 | `RCtrl+C` | `Ctrl+Ins` (copy) | RCtrl masked | `Cmd+C` |
@@ -161,6 +162,7 @@ nothing).
 | LAlt | Tab | native `Alt+Tab` |
 | CapsCtrl | §2.19a–k | bare nav codes (Ctrl eaten) |
 | Win + RCtrl | Q | `Win+L` (both eaten) |
+| LGUI | Space | native `Win+Space` (language switch) |
 
 ## 5. Porting per platform
 

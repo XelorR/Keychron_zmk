@@ -36,6 +36,7 @@ Build: `./build.sh` from repo root (board `keychron` + shield
 - `RCtrl+↑/↓` — `Ctrl+Home` / `Ctrl+End`.
 - `LAlt+←/→` — `Ctrl+←/→` (word jump).
 - `LAlt+BSPC/Del` — `Ctrl+BSPC/Del` (delete word back/forward).
+- В Outlook/Office Alt уводит фокус в ленту, поэтому там слова — через CapsCtrl+стрелки/BSPC (чистый Ctrl без Alt, работает везде).
 - `RCtrl+BSPC` — select to line start + delete; `RCtrl+Del` — select to
   line end + delete (macros).
 - `RCtrl+Shift+3` — `PrintScreen`.

@@ -204,6 +204,10 @@ or native-only path.
    (§1.4), don't fight it.
 6. Lost scan events = stuck states: any hold protocol needs self-healing
    (§3.2, last item).
+7. Office/Outlook grabs physical Alt itself (ribbon/keytips focus on
+   Alt press), so subsequent Ctrl+arrows go to the ribbon, not the text —
+   no morph design can prevent that while keeping a real Alt key. Use
+   CapsCtrl+arrows/BSPC there (pure Ctrl, no Alt involved).
 
 ## 7. Acceptance (checklist)
 

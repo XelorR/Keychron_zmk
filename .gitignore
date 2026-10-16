@@ -8,3 +8,4 @@
 *.DS_Store
 __pycache__
 /app/.cache/clangd/index
+/app/.cache/zephyr/ToolchainCapabilityDatabase

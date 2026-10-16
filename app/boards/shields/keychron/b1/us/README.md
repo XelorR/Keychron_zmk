@@ -32,7 +32,8 @@ Build: `./build.sh` from repo root (board `keychron` + shield
 
 - `RCtrl+[` / `]` — `Alt+Left` / `Alt+Right` (back/forward).
 - `RCtrl+Shift+[` / `]` — `Ctrl+PgUp` / `Ctrl+PgDn` (prev/next tab).
-- `RCtrl+C` — `Ctrl+Ins` (copy), `RCtrl+V` — `Shift+Ins` (paste).
+- `RCtrl+C` / `RCtrl+V` — native `Ctrl+C` / `Ctrl+V` (plain letters).
+- `Fn+C` / `Fn+V` (win Fn layer) — `Ctrl+Ins` / `Shift+Ins` for terminals.
 - `RCtrl+←/→` — `Home` / `End`.
 - `RCtrl+↑/↓` — `Ctrl+Home` / `Ctrl+End`.
 - `LAlt+←/→` — `Ctrl+←/→` (word jump).

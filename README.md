@@ -77,7 +77,8 @@ Bottom-row remap: Caps→LCtrl, LCtrl→Win, LGUI→Alt, both Alt keys→RCtrl
 | `LGUI+Space` | native `Win+Space` → input language switch | `Ctrl+Space` (input sources) |
 | `RCtrl+Shift+3` | `PrintScreen` | `Cmd+Shift+3` |
 | `RCtrl+Shift+4` | `Win+Shift+S` (snipping tool) | `Cmd+Shift+4` |
-| `RCtrl+C` / `RCtrl+V` | Copy (`Ctrl+Ins`) / paste (`Shift+Ins`) | `Cmd+C` / `Cmd+V` |
+| `RCtrl+C` / `RCtrl+V` | Native `Ctrl+C` / `Ctrl+V` | `Cmd+C` / `Cmd+V` |
+| `Fn+C` / `Fn+V` (win Fn) | `Ctrl+Ins` / `Shift+Ins` (terminal copy/paste) | `Cmd+C` / `Cmd+V` |
 | `RCtrl+[` / `RCtrl+]` | Browser back / forward | `Cmd+[` / `Cmd+]` |
 | `RCtrl+Shift+[` / `RCtrl+Shift+]` | Previous / next browser tab | `Cmd+Shift+[` / `Cmd+Shift+]` |
 | `RCtrl+Left` / `RCtrl+Right` | `Home` / `End` | `Cmd+Left` / `Cmd+Right` |

@@ -81,20 +81,6 @@
         bindings = <&kp RBKT>, <&rbkt_nav_inner>;
         mods = <(MOD_RCTL)>;
     };
-    c_copy: c_copy {
-        compatible = "zmk,behavior-mod-morph";
-        label = "C_COPY";
-        #binding-cells = <0>;
-        bindings = <&kp C>, <&kp LC(INS)>;
-        mods = <(MOD_RCTL)>;
-    };
-    v_paste: v_paste {
-        compatible = "zmk,behavior-mod-morph";
-        label = "V_PASTE";
-        #binding-cells = <0>;
-        bindings = <&kp V>, <&kp LS(INS)>;
-        mods = <(MOD_RCTL)>;
-    };
 
     q_close: q_close {
         compatible = "zmk,behavior-mod-morph";
@@ -534,7 +520,7 @@
         &kp GRAVE  &kp N1        &kp N2        &n3_pscrn     &n4_snip       &kp N5  &kp N6     &kp N7   &kp N8     &kp N9      &kp N0    &kp MINUS  &kp EQUAL  &bs_macdel
         &win_tab   &q_close      &kp W         &em_e         &kp R          &kp T   &em_y      &kp U    &kp I      &em_o       &em_p     &lbkt_nav  &rbkt_nav  &kp BSLH
         &kp LCTRL  &em_a         &kp S         &em_d         &em_f          &kp G   &em_h      &kp J    &em_k      &kp L       &kp SEMI  &kp SQT    &kp RET
-        &kp LSHFT  &kp Z         &kp X         &c_copy       &v_paste       &em_b   &em_n      &kp M    &kp COMMA  &kp DOT     &kp FSLH  &kp RSHFT
+        &kp LSHFT  &kp Z         &kp X         &kp C         &kp V          &em_b   &em_n      &kp M    &kp COMMA  &kp DOT     &kp FSLH  &kp RSHFT
         &kp LGUI   &kp LALT      &kp RCTRL     &space_alt    &kp RCTRL      &mo 3   &left_nav  &up_nav  &down_nav  &right_nav
         //
         &none      &out OUT_BLE  &out OUT_24G  &out OUT_CHG  &out OUT_CHGD
@@ -548,7 +534,7 @@
         &trans       &bt_pair_0 0 0        &bt_pair_1 0 0        &bt_pair_2 0 0  &bt_pair_3 0 0  &trans           &trans     &trans          &trans            &trans      &trans      &trans             &kp C_AL_CALC    &kp LC(LS(ESC))
         &trans       &trans                &trans                &trans          &trans          &trans           &trans     &trans          &kp INS           &trans      &trans      &trans             &trans           &uc LG(LS(S))
         &trans       &trans                &trans                &trans          &trans          &trans           &trans     &trans          &trans            &trans      &trans      &trans             &trans
-        &trans       &trans                &trans                &trans          &trans          &trans           &trans     &trans          &trans            &trans      &trans      &uc LG(DOT)
+        &trans       &trans                &trans                &kp LC(INS)     &kp LS(INS)     &trans           &trans     &trans          &trans            &trans      &trans      &uc LG(DOT)
         &trans       &trans                &trans                &trans          &kp RCTRL       &trans           &kp HOME   &kp PG_UP       &kp PG_DN         &kp END
         //
         &none        &none                 &none                 &none           &none

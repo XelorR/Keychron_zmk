@@ -282,7 +282,7 @@
         compatible = "zmk,behavior-macro";
         label = "KILL_LINE";
         #binding-cells = <0>;
-        bindings = <&kp LS(HOME)>, <&kp LC(X)>;
+        bindings = <&kp HOME>, <&kp LS(DOWN)>, <&kp LC(X)>;
     };
     em_k: em_k {
         compatible = "zmk,behavior-mod-morph";

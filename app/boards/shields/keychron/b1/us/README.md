@@ -44,7 +44,7 @@ Build: `./build.sh` from repo root (board `keychron` + shield
 - `RCtrl+Shift+3` — `PrintScreen`.
 - `RCtrl+Shift+4` — `Win+Shift+S` (snipping tool).
 - Caps-Ctrl (the ex-CapsLock key) + `N/P/F/B/D/H/A/E` — `Down/Up/Right/
-  Left/Delete/Backspace/Home/End`, `K` — kill line (`Shift+Home`, `Ctrl+X`), `Y` — paste (`Shift+Ins`), `O` — new line below (`End`, `Shift+Enter`), `Shift+O` — new line above (`Home`, `Shift+Enter`, `Up`) (macOS style). Plain Ctrl
+  Left/Delete/Backspace/Home/End`, `K` — kill whole line (`Home`, `Shift+Down`, `Ctrl+X`), `Y` — paste (`Shift+Ins`), `O` — new line below (`End`, `Shift+Enter`), `Shift+O` — new line above (`Home`, `Shift+Enter`, `Up`) (macOS style). Plain Ctrl
   combos for all other keys are native.
 
 ## Misc

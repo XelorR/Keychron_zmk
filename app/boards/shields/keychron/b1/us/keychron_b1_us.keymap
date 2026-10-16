@@ -13,7 +13,7 @@
 #define PINKY_TAP_MS 150
 #define RING_TAP_MS 140
 #define MIDDLE_TAP_MS 140
-#define INDEX_TAP_MS 110
+#define INDEX_TAP_MS 100
 #define LT_TAP_MS 150
 
 &lt {

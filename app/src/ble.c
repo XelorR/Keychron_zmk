@@ -139,7 +139,7 @@ static uint8_t adv_bt_id;
 
 BUILD_ASSERT(DEVICE_NAME_LEN <= 16, "ERROR: BLE device name is too long. Max length: 16");
 
-static const struct bt_data zmk_ble_ad[] = {
+static struct bt_data zmk_ble_ad[] = {
     BT_DATA(BT_DATA_NAME_COMPLETE, DEVICE_NAME, DEVICE_NAME_LEN),
     BT_DATA_BYTES(BT_DATA_GAP_APPEARANCE, 0xC1, 0x03),
     BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
@@ -148,7 +148,7 @@ static const struct bt_data zmk_ble_ad[] = {
                   ),
 };
 //add swift pair
-static const struct bt_data zmk_ble_ad_win[] = {
+static struct bt_data zmk_ble_ad_win[] = {
     BT_DATA_BYTES(BT_DATA_GAP_APPEARANCE, 0xC1, 0x03),
     BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
     BT_DATA_BYTES(BT_DATA_UUID16_SOME, 0x12, 0x18, /* HID Service */
@@ -158,14 +158,46 @@ static const struct bt_data zmk_ble_ad_win[] = {
     BT_DATA_BYTES(BT_DATA_MANUFACTURER_DATA,0x06,0x00, 0x03,0x00,0x80, 'K','e','y','c','h','r','o','n',' ','K','B')
 
 };
-static const struct bt_data zmk_ble_ad_sr[] = {
+static struct bt_data zmk_ble_ad_sr[] = {
     BT_DATA(BT_DATA_NAME_COMPLETE, DEVICE_NAME, DEVICE_NAME_LEN),
 };
 
-static const struct bt_data zmk_ble_reconn_ad[] = {
+static struct bt_data zmk_ble_reconn_ad[] = {
     BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
     BT_DATA(BT_DATA_NAME_COMPLETE, DEVICE_NAME, DEVICE_NAME_LEN),
 };
+
+#if IS_ENABLED(CONFIG_SHIELD_KEYCHRON_B1_US)
+#define KEYCHRON_B1_BT_NAME_MAX 16
+static char keychron_b1_bt_name[KEYCHRON_B1_BT_NAME_MAX + 1];
+
+static void keychron_b1_update_bt_name(void) {
+    int name_len;
+
+    /* Bluetooth profile indices 0, 1, and 2 are BT1, BT2, and BT3. */
+    name_len = snprintf(keychron_b1_bt_name, sizeof(keychron_b1_bt_name),
+                        "b1-%s-%u", CONFIG_KEYCHRON_B1_COLOR, active_profile + 1);
+    if (name_len < 0) {
+        return;
+    }
+
+    if (name_len > KEYCHRON_B1_BT_NAME_MAX) {
+        LOG_ERR("Bluetooth name is too long (%d, max %d)", name_len,
+                KEYCHRON_B1_BT_NAME_MAX);
+        name_len = KEYCHRON_B1_BT_NAME_MAX;
+        keychron_b1_bt_name[name_len] = '\0';
+    }
+
+    zmk_ble_ad[0].data = (const uint8_t *)keychron_b1_bt_name;
+    zmk_ble_ad[0].data_len = name_len;
+    zmk_ble_ad_sr[0].data = (const uint8_t *)keychron_b1_bt_name;
+    zmk_ble_ad_sr[0].data_len = name_len;
+    zmk_ble_reconn_ad[1].data = (const uint8_t *)keychron_b1_bt_name;
+    zmk_ble_reconn_ad[1].data_len = name_len;
+}
+#else
+static void keychron_b1_update_bt_name(void) {}
+#endif
 
 void adv_timeout_work_callback(struct k_work *work) {
     int err = bt_le_adv_stop();
@@ -448,6 +480,7 @@ void checked_adv_stop(void) {
 }
 
 void checked_dir_adv(void) {
+    keychron_b1_update_bt_name();
     char addr_buf[BT_ADDR_LE_STR_LEN];
     bt_addr_le_t *addr = zmk_ble_active_profile_addr();
     struct bt_le_adv_param adv_param;
@@ -473,6 +506,7 @@ void checked_dir_adv(void) {
 }
 
 void checked_open_adv(void) {
+    keychron_b1_update_bt_name();
     struct bt_le_adv_param adv_param;
     adv_param = *ZMK_ADV_CONN_NAME;
     adv_param.id = adv_bt_id;

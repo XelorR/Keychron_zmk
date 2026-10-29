@@ -10,6 +10,12 @@ menu "Basic Keyboard Setup"
 config ZMK_KEYBOARD_NAME
     string "Keyboard Name"
 
+config KEYCHRON_B1_COLOR
+    string "Keychron B1 color/identity"
+    default "blue"
+    help
+      Color or identity used in the Keychron B1 Bluetooth advertising aliases.
+
 config USB_DEVICE_PRODUCT
     default ZMK_KEYBOARD_NAME
 

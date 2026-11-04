@@ -3,13 +3,14 @@
 # Commands taken from the space-fn branch README ("how to build").
 #
 # Matrix revision (SKU):
-#   B1P-K11 (2023) -> original matrix wiring (default)
-#   B1P-K13 (2025) -> 2025 revision matrix wiring
+#   B1P-K11 (2023) -> original matrix wiring (default), default colour: grey
+#   B1P-K13 (2025) -> 2025 revision matrix wiring, default colour: red
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 export PATH="$HOME/.local/bin:$PATH"
-KEYBOARD_ID="blue"
+KEYBOARD_ID=""
+KEYBOARD_ID_SET=0
 MATRIX_REV="B1P-K11"
 
 ACTION=""
@@ -52,7 +53,8 @@ usage() {
 Usage: $0 [build options] [dependency options]
 
 Build options:
-  --id/-i ID           keyboard ID (default: blue)
+  --id/-i ID           keyboard colour ID (default: grey for B1P-K11,
+                       red for B1P-K13); examples: blue, grey, red, green
   --matrix/-m/--rev SKU
                        matrix SKU: B1P-K11 (2023, default) or B1P-K13 (2025)
                        years 2023 and 2025 are also accepted
@@ -71,7 +73,8 @@ Dependency options:
 Supported distributions: Arch Linux, CachyOS, Ubuntu, Debian, Fedora.
 
 Output: ~/Downloads/b1_<branch>_<SKU>_<ID>.uf2
-Example: $0 --id red --matrix B1P-K13
+Example: $0 --matrix B1P-K13
+Example: $0 --id green --matrix B1P-K13
 EOF
 }
 
@@ -91,10 +94,12 @@ while (($# > 0)); do
                 exit 2
             fi
             KEYBOARD_ID="$2"
+            KEYBOARD_ID_SET=1
             shift 2
             ;;
         --id=*)
             KEYBOARD_ID="${1#*=}"
+            KEYBOARD_ID_SET=1
             shift
             ;;
         --matrix|-m|--rev)
@@ -148,12 +153,6 @@ while (($# > 0)); do
     esac
 done
 
-if [[ ! "$KEYBOARD_ID" =~ ^[[:alnum:]_-]+$ ]]; then
-    echo "Invalid keyboard ID: '$KEYBOARD_ID'" >&2
-    echo "Use only letters, numbers, '_' and '-'." >&2
-    exit 2
-fi
-
 case "${MATRIX_REV^^}" in
     B1P-K11|2023)
         MATRIX_REV="2023"
@@ -169,6 +168,23 @@ case "${MATRIX_REV^^}" in
         exit 2
         ;;
 esac
+
+if ((!KEYBOARD_ID_SET)); then
+    case "$MATRIX_SKU" in
+        B1P-K11)
+            KEYBOARD_ID="grey"
+            ;;
+        B1P-K13)
+            KEYBOARD_ID="red"
+            ;;
+    esac
+fi
+
+if [[ ! "$KEYBOARD_ID" =~ ^[[:alnum:]_-]+$ ]]; then
+    echo "Invalid keyboard ID: '$KEYBOARD_ID'" >&2
+    echo "Use only letters, numbers, '_' and '-'." >&2
+    exit 2
+fi
 
 # ---------------------------------------------------------------------------
 # Dependency detection

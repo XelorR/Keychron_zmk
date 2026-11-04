@@ -17,6 +17,7 @@ usage() {
     echo "  --matrix/-m/--rev matrix SKU: B1P-K11 (2023, default) or B1P-K13 (2025)" >&2
     echo "                    years 2023 and 2025 are also accepted" >&2
     echo "  --new-matrix      shorthand for --matrix B1P-K13" >&2
+    echo "Output: ~/Downloads/b1_<branch>_<SKU>_<ID>.uf2" >&2
     echo "Example: $0 --id red --matrix B1P-K13" >&2
 }
 
@@ -70,9 +71,11 @@ fi
 case "${MATRIX_REV^^}" in
     B1P-K11|2023)
         MATRIX_REV="2023"
+        MATRIX_SKU="B1P-K11"
         ;;
     B1P-K13|2025)
         MATRIX_REV="2025"
+        MATRIX_SKU="B1P-K13"
         ;;
     *)
         echo "Invalid matrix revision/SKU: '$MATRIX_REV'" >&2
@@ -160,9 +163,5 @@ export ZEPHYR_SDK_INSTALL_DIR="$HOME/.opt/zephyr-sdk-0.17.4"
 west build -b keychron -p always -- -DSHIELD=keychron_b1_us
 
 BRANCH_NAME="$(git branch --show-current)"
-if [[ "$MATRIX_REV" == "2025" ]]; then
-    UF2_NAME="b1_${BRANCH_NAME}_2025_${KEYBOARD_ID}.uf2"
-else
-    UF2_NAME="b1_${BRANCH_NAME}_${KEYBOARD_ID}.uf2"
-fi
+UF2_NAME="b1_${BRANCH_NAME}_${MATRIX_SKU}_${KEYBOARD_ID}.uf2"
 cp ./build/zephyr/zmk.uf2 "$HOME/Downloads/$UF2_NAME"

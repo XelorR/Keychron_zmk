@@ -2,21 +2,22 @@
 # Build Keychron B1 Pro firmware: board `keychron` + shield `keychron_b1_us`.
 # Commands taken from the space-fn branch README ("how to build").
 #
-# Matrix revision:
-#   default 2023  -> original matrix wiring
-#   --matrix 2025 -> 2025 revision matrix wiring
+# Matrix revision (SKU):
+#   B1P-K11 (2023) -> original matrix wiring (default)
+#   B1P-K13 (2025) -> 2025 revision matrix wiring
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 KEYBOARD_ID="blue"
-MATRIX_REV="2023"
+MATRIX_REV="B1P-K11"
 
 usage() {
-    echo "Usage: $0 [--id ID|-i ID] [--matrix REV|-m REV] [--rev REV] [--new-matrix]" >&2
+    echo "Usage: $0 [--id ID|-i ID] [--matrix SKU|-m SKU] [--rev SKU] [--new-matrix]" >&2
     echo "  --id/-i ID        keyboard ID (default: blue)" >&2
-    echo "  --matrix/-m/--rev matrix revision: 2023 or 2025 (default: 2023)" >&2
-    echo "  --new-matrix      shorthand for --matrix 2025" >&2
-    echo "Example: $0 --id red --matrix 2025" >&2
+    echo "  --matrix/-m/--rev matrix SKU: B1P-K11 (2023, default) or B1P-K13 (2025)" >&2
+    echo "                    years 2023 and 2025 are also accepted" >&2
+    echo "  --new-matrix      shorthand for --matrix B1P-K13" >&2
+    echo "Example: $0 --id red --matrix B1P-K13" >&2
 }
 
 while (($# > 0)); do
@@ -46,7 +47,7 @@ while (($# > 0)); do
             shift
             ;;
         --new-matrix)
-            MATRIX_REV="2025"
+            MATRIX_REV="B1P-K13"
             shift
             ;;
         --help|-h)
@@ -66,12 +67,16 @@ if [[ ! "$KEYBOARD_ID" =~ ^[[:alnum:]_-]+$ ]]; then
     exit 2
 fi
 
-case "$MATRIX_REV" in
-    2023|2025)
+case "${MATRIX_REV^^}" in
+    B1P-K11|2023)
+        MATRIX_REV="2023"
+        ;;
+    B1P-K13|2025)
+        MATRIX_REV="2025"
         ;;
     *)
-        echo "Invalid matrix revision: '$MATRIX_REV'" >&2
-        echo "Allowed values: 2023, 2025" >&2
+        echo "Invalid matrix revision/SKU: '$MATRIX_REV'" >&2
+        echo "Allowed values: B1P-K11 (2023), B1P-K13 (2025), 2023, 2025" >&2
         exit 2
         ;;
 esac

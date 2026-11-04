@@ -342,7 +342,7 @@
         &kp ESC        &kp F1                &kp F2                &kp F3      &kp F4            &kp F5           &kp F6         &kp F7          &kp F8            &kp F9      &kp F10      &kp F11            &kp F12          &trans
         &kp LG(UP)     &kp BSPC              &kp LG(LS(LBKT))      &kp TAB     &kp LG(LS(RBKT))  &kp LG(LS(N3))   &kp INS        &kp BSPC        &kp LG(BSPC)      &kp LS(F10) &kp DEL      &kp LC(LS(TAB))    &kp LC(TAB)      &kp LG(LS(N4))
         &kp LA(SPACE)  &sk LCTRL             &sk LCMD              &sk LALT    &sk LSHFT         &kp LG(LS(N4))   &kp ESC        &kp LEFT        &kp DOWN          &kp UP      &kp RIGHT    &kp LC(LG(SPACE))  &trans
-        &trans         &kp LG(Z)             &kp LG(X)             &kp LG(C)   &kp LG(V)         &kp LG(LS(Z))    &kp RET        &kp LG(LEFT)    &kp PG_DN         &kp PG_UP   &kp LG(RIGHT)  &uc LG(LS(N3))
+        &trans         &kp LG(Z)             &kp LG(X)             &kp LG(C)   &kp LG(V)         &kp LG(LS(Z))    &kp RET        &home_mac       &pgdn_mac         &pgup_mac   &end_mac      &uc LG(LS(N3))
         &trans         &trans                &trans                &trans      &trans            &trans           &kp HOME       &kp PG_UP       &kp PG_DN         &kp END
         //
         &none          &none                 &none                 &none       &none

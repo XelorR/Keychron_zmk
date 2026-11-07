@@ -135,6 +135,18 @@
             layers = <0 2>;
         };
 
+        combo_lang_en {
+            bindings = <&kp LC(LS(N7))>;
+            key-positions = <30 32>;
+            layers = <0 2>;
+        };
+
+        combo_lang_ru {
+            bindings = <&kp LC(LS(N8))>;
+            key-positions = <35 37>;
+            layers = <0 2>;
+        };
+
     };
 
     behaviors {

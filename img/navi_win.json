@@ -1,0 +1,148 @@
+[
+  [
+    {
+      "c": "#9c9c9c"
+    },
+    "Esc",
+    {
+      "c": "#ffeaa6"
+    },
+    "F1",
+    "F2",
+    "F3",
+    "F4",
+    "F5",
+    "F6",
+    {
+      "c": "#4eccc4"
+    },
+    "Scroll left",
+    "Scroll down",
+    "Scroll up",
+    "Scroll right",
+    {
+      "c": "#ffeaa6"
+    },
+    "F11",
+    "F12",
+    {
+      "c": "#9c9c9c",
+      "w": 2
+    },
+    "Backspace"
+  ],
+  [
+    {
+      "w": 1.5
+    },
+    "Tab",
+    {
+      "c": "#b7e887"
+    },
+    "Del",
+    {
+      "c": "#45b7d1"
+    },
+    "Tab left",
+    "Tab",
+    "Tab right",
+    {
+      "c": "#4eccc4"
+    },
+    "Mouse click",
+    {
+      "c": "#b7e887"
+    },
+    "Esc",
+    {
+      "c": "#4eccc4"
+    },
+    "Mouse left",
+    "Mouse down",
+    "Mouse up",
+    "Mouse right",
+    {
+      "c": "#f7e51b"
+    },
+    "Volume down",
+    "Volume up\n]",
+    {
+      "w": 1.5
+    },
+    "Mute"
+  ],
+  [
+    {
+      "c": "#b7e887",
+      "w": 1.75
+    },
+    "Caps Lock",
+    {
+      "c": "#4b92e3"
+    },
+    "Super",
+    "Alt",
+    "Ctrl",
+    "Shift",
+    {
+      "c": "#b7e887"
+    },
+    "Print",
+    "BSPC",
+    {
+      "c": "#45b7d1"
+    },
+    "Left",
+    "Down",
+    "Up",
+    "Right",
+    {
+      "c": "#b7e887"
+    },
+    "Emoji",
+    {
+      "c": "#9c9c9c",
+      "w": 2.25
+    },
+    "Enter"
+  ],
+  [
+    {
+      "w": 2.25
+    },
+    "Shift",
+    {
+      "c": "#4fe3c3"
+    },
+    "Undo",
+    "Cut",
+    "Copy",
+    "Paste",
+    "Redo",
+    {
+      "c": "#b7e887"
+    },
+    "Enter",
+    {
+      "c": "#45b7d1"
+    },
+    "Home",
+    "Page Down",
+    "Page Up",
+    "End",
+    {
+      "c": "#9c9c9c",
+      "w": 2.75
+    },
+    "Shift"
+  ],
+  [
+    {
+      "x": 3.75,
+      "c": "#f5a422",
+      "a": 7,
+      "w": 6.25
+    },
+    "Space-Fn"
+  ]
+]

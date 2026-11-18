@@ -18,7 +18,7 @@ To build the firmware ,for example: keychorn b1 pro
 
 ## navigation layer - my version of [Extend](https://dreymar.colemak.org/layers-extend.html)
 
-![](./img/navi_win.ipg)
+![](./img/navi_win.png)
 [keymap file](./app/boards/shields/keychron/b1/us/keychron_b1_us.keymap)
 
 - Popular, battle-tested [IJKL](http://xahlee.info/kbd/vi_hjkl_vs_inverted_t_ijkl_arrow_keys.html) navigation

@@ -12,6 +12,7 @@ export PATH="$HOME/.local/bin:$PATH"
 KEYBOARD_ID=""
 KEYBOARD_ID_SET=0
 MATRIX_REV="B1P-K11"
+DEFAULT_GAMING=0
 
 ACTION=""
 ASSUME_YES=0
@@ -59,6 +60,8 @@ Build options:
                        matrix SKU: B1P-K11 (2023, default) or B1P-K13 (2025)
                        years 2023 and 2025 are also accepted
   --new-matrix         shorthand for --matrix B1P-K13
+  --gaming             personal build: gaming layer is active at boot
+                       (toggle it off/on with the usual gaming combos)
   --skip-deps-check    do not check/install build dependencies before build
 
 Dependency options:
@@ -73,8 +76,10 @@ Dependency options:
 Supported distributions: Arch Linux, CachyOS, Ubuntu, Debian, Fedora.
 
 Output: ~/Downloads/b1_<branch>_<SKU>_<ID>.uf2
+        (~/Downloads/b1_<branch>_<SKU>_<ID>_gaming.uf2 with --gaming)
 Example: $0 --matrix B1P-K13
 Example: $0 --id green --matrix B1P-K13
+Example: $0 --id blue --gaming
 EOF
 }
 
@@ -116,6 +121,10 @@ while (($# > 0)); do
             ;;
         --new-matrix)
             MATRIX_REV="B1P-K13"
+            shift
+            ;;
+        --gaming|--personal)
+            DEFAULT_GAMING=1
             shift
             ;;
         --install-deps|--deps-install)
@@ -1351,6 +1360,10 @@ if [[ "$KEYBOARD_ID" != "blue" ]]; then
         "$CONFIG_FILE"
 fi
 
+if ((DEFAULT_GAMING)); then
+    echo "CONFIG_KEYCHRON_B1_DEFAULT_GAMING_LAYER=y" >>"$CONFIG_FILE"
+fi
+
 if [[ "$MATRIX_REV" == "2025" ]]; then
     python3 - "$OVERLAY_FILE" <<'PY'
 import re
@@ -1405,5 +1418,10 @@ export ZEPHYR_SDK_INSTALL_DIR="$ZEPHYR_SDK_DIR"
 west build -b keychron -p always -- -DSHIELD=keychron_b1_us
 
 BRANCH_NAME="$(git branch --show-current)"
-UF2_NAME="b1_${BRANCH_NAME}_${MATRIX_SKU}_${KEYBOARD_ID}.uf2"
+UF2_SUFFIX=""
+if ((DEFAULT_GAMING)); then
+    UF2_SUFFIX="_gaming"
+fi
+UF2_NAME="b1_${BRANCH_NAME}_${MATRIX_SKU}_${KEYBOARD_ID}${UF2_SUFFIX}.uf2"
 cp ./build/zephyr/zmk.uf2 "$HOME/Downloads/$UF2_NAME"
+echo "Firmware written to $HOME/Downloads/$UF2_NAME"

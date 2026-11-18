@@ -20,6 +20,7 @@ LOG_MODULE_REGISTER(zmk, CONFIG_ZMK_LOG_LEVEL);
 #include <zmk/activity.h>
 #include <zmk/usb.h>
 #include <zmk/endpoints.h>
+#include <zmk/keymap.h>
 
 void f1_f13_fn_exchange_start_check(void);
 bool bat_is_shutdown(void);
@@ -31,6 +32,12 @@ void main(void) {
     LOG_INF("Welcome to ZMK!\n");
     
 
+#if IS_ENABLED(CONFIG_KEYCHRON_B1_DEFAULT_GAMING_LAYER)
+    // 7 = gaming layer; same state as toggling it with the gaming combo.
+    // Activate before the matrix starts scanning so that keys already held
+    // at boot (e.g. the mac/win switch) are resolved with the layer active.
+    zmk_keymap_layer_activate(7);
+#endif
     if (zmk_kscan_init(DEVICE_DT_GET(ZMK_MATRIX_NODE_ID)) != 0) {
         return;
     }

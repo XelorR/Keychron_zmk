@@ -16,6 +16,13 @@ config KEYCHRON_B1_COLOR
     help
       Color or identity used in the Keychron B1 Bluetooth advertising aliases.
 
+config KEYCHRON_B1_DEFAULT_GAMING_LAYER
+    bool "Enable gaming layer at boot"
+    default n
+    help
+      Activates keymap layer 7 (gaming) on startup, as if the gaming combo had
+      been toggled. The gaming combos still turn the layer off and on.
+
 config USB_DEVICE_PRODUCT
     default ZMK_KEYBOARD_NAME
 

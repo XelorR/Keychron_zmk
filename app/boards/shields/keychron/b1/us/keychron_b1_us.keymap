@@ -398,7 +398,8 @@
         &kp LSHFT  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans
         &kp LCTRL  &trans  &trans  &kp SPACE  &trans  &trans  &trans  &trans  &trans  &trans
         //
-        &none      &none   &none   &none      &none
+        // mac/win, bt, 24g and charge switches must keep working while gaming is latched
+        &trans     &trans  &trans  &trans      &trans
             >;
         };
 

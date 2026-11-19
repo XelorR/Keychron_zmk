@@ -1,0 +1,5 @@
+description: Mouse jiggler behavior
+
+compatible: "zmk,behavior-mouse-jiggler"
+
+include: zero_param.yaml

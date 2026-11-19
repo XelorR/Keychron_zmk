@@ -10,11 +10,11 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define PINKY_TAP_MS 150
-#define RING_TAP_MS 140
-#define MIDDLE_TAP_MS 140
-#define INDEX_TAP_MS 100
-#define LT_TAP_MS 150
+#define PINKY_TAP_MS 140
+#define RING_TAP_MS 130
+#define MIDDLE_TAP_MS 130
+#define INDEX_TAP_MS 90
+#define LT_TAP_MS 140
 
 // Mouse usages encoded for behavior_key_press: (HID_USAGE_GEN_BUTTON << 16) | usage
 #define MS_LEFT  0x000900CF

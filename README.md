@@ -21,12 +21,14 @@ To build the firmware ,for example: keychorn b1 pro
 ![](./img/navi_win.png)
 [keymap file](./app/boards/shields/keychron/b1/us/keychron_b1_us.keymap)
 
-- Popular, battle-tested [IJKL](http://xahlee.info/kbd/vi_hjkl_vs_inverted_t_ijkl_arrow_keys.html) navigation
-- Backspace and Delete on stronger fingers
 - **GACS** modifier order aligned with [popular HRM/mod-tap arrangement](https://precondition.github.io/home-row-mods)
-- Left-hand Delete for efficient mouse + One Shot Sticky Modifiers (**OSSM**)
-- Tab left/right navigation
 - Consistent macOS behavior to preserve muscle memory
+- Space-fn, NAVI: Most convenient navigation layer activator: Space button
+- NAVI: Arrows on home row
+- NAVI: Mouse and scroll control
+- NAVI: Backspace on stronger finger
+- NAVI: Left-hand Delete for efficient mouse + One Shot Sticky Modifiers (**OSSM**)
+- NAVI: Tab left/right navigation
 
 ## 1 binary available
 

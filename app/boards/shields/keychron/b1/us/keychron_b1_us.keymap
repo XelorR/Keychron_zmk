@@ -100,13 +100,13 @@
         combo_ru_keep {
             bindings = <&kp LC(SPACE)>;
             key-positions = <6 7>;
-            layers = <0 2>;
+            layers = <0 1>;
         };
 
         combo_en_switch {
             bindings = <&lg_tog_colemak>;
             key-positions = <5 6>;
-            layers = <0 2>;
+            layers = <0 1>;
         };
 
         combo_ru_switch {
@@ -118,7 +118,7 @@
         combo_typing_keep {
             bindings = <&none>;
             key-positions = <9 10>;
-            layers = <0 2>;
+            layers = <0 1>;
         };
 
         combo_gaming_keep {
@@ -136,19 +136,19 @@
         combo_gaming_switch {
             bindings = <&tog 7>;
             key-positions = <10 11>;
-            layers = <0 2>;
+            layers = <0 1>;
         };
 
         combo_lang_en {
             bindings = <&kp LC(LS(N8))>;
             key-positions = <30 32>;
-            layers = <0 2>;
+            layers = <0 1>;
         };
 
         combo_lang_ru {
             bindings = <&kp LC(LS(N7))>;
             key-positions = <35 37>;
-            layers = <0 2>;
+            layers = <0 1>;
         };
 
     };
@@ -296,12 +296,26 @@
         &kp TAB        &kp Q              &kp W            &kp E              &kp R              &kp T   &kp Y     &kp U              &kp I              &kp O            &kp P                 &kp LBKT   &kp RBKT   &kp BSLH
         &kp ESC        &mt_pinky LCTRL A  &mt_ring LALT S  &mt_middle LGUI D  &mt_index LSHFT F  &kp G   &kp H     &mt_index LSHFT J  &mt_middle LGUI K  &mt_ring LALT L  &mt_pinky LCTRL SEMI  &kp SQT    &kp RET
         &kp LSHFT      &kp Z              &kp X            &kp C              &kp V              &kp B   &kp N     &kp M              &kp COMMA          &kp DOT          &kp FSLH              &kp RSHFT
-        &kp LCTRL      &uc LALT           &uc LCMD         &lt 5 SPACE        &kp RALT           &mo 1   &kp LEFT  &kp UP             &kp DOWN           &kp RIGHT
-        &mo 2          &out OUT_BLE       &out OUT_24G     &out OUT_CHG       &out OUT_CHGD
+        &kp LCTRL      &uc LALT           &uc LCMD         &lt 5 SPACE        &kp RALT           &mo 2   &kp LEFT  &kp UP             &kp DOWN           &kp RIGHT
+        &mo 1          &out OUT_BLE       &out OUT_24G     &out OUT_CHG       &out OUT_CHGD
             >;
         };
 
        // 1
+        win {
+        bindings = <
+        &kp ESC        &kp F1            &kp F2           &kp F3              &kp F4             &kp F5  &kp F6    &kp F7             &kp F8              &kp F9           &kp F10              &kp F11    &kp F12    &kp DEL
+        &kp GRAVE      &kp N1            &kp N2           &kp N3              &kp N4             &kp N5  &kp N6    &kp N7             &kp N8              &kp N9           &kp N0               &kp MINUS  &kp EQUAL  &kp BSPC
+        &kp TAB        &kp Q             &kp W            &kp E               &kp R              &kp T   &kp Y     &kp U              &kp I               &kp O            &kp P                &kp LBKT   &kp RBKT   &kp BSLH
+        &kp ESC        &mt_pinky LGUI A  &mt_ring LALT S  &mt_middle LCTRL D  &mt_index LSHFT F  &kp G   &kp H     &mt_index LSHFT J  &mt_middle LCTRL K  &mt_ring LALT L  &mt_pinky LGUI SEMI  &kp SQT    &kp RET
+        &kp LSHFT      &kp Z             &kp X            &kp C               &kp V              &kp B   &kp N     &kp M              &kp COMMA           &kp DOT          &kp FSLH             &kp RSHFT
+        &kp LCTRL      &kp LGUI          &kp LALT         &lt 6 SPACE         &kp RALT           &mo 3   &kp LEFT  &kp UP             &kp DOWN            &kp RIGHT
+        //
+        &none          &out OUT_BLE      &out OUT_24G     &out OUT_CHG        &out OUT_CHGD
+            >;
+        };
+
+        // 2
         mac_fn  {
         bindings = <
           //ESC         //f1                    //f2                //f3                                    //f4                //f5                //f6            //f7            //f8                //f9        //f10       //f11               //f12               //DEL
@@ -313,20 +327,6 @@
         &trans         &trans                &trans                &trans          &kp RCTRL       &trans           &kp HOME       &kp PG_UP       &kp PG_DN         &kp END
         //
         &none          &none                 &none                 &none           &none
-            >;
-        };
-
-        // 2
-        win {
-        bindings = <
-        &kp ESC        &kp F1            &kp F2           &kp F3              &kp F4             &kp F5  &kp F6    &kp F7             &kp F8              &kp F9           &kp F10              &kp F11    &kp F12    &kp DEL
-        &kp GRAVE      &kp N1            &kp N2           &kp N3              &kp N4             &kp N5  &kp N6    &kp N7             &kp N8              &kp N9           &kp N0               &kp MINUS  &kp EQUAL  &kp BSPC
-        &kp TAB        &kp Q             &kp W            &kp E               &kp R              &kp T   &kp Y     &kp U              &kp I               &kp O            &kp P                &kp LBKT   &kp RBKT   &kp BSLH
-        &kp ESC        &mt_pinky LGUI A  &mt_ring LALT S  &mt_middle LCTRL D  &mt_index LSHFT F  &kp G   &kp H     &mt_index LSHFT J  &mt_middle LCTRL K  &mt_ring LALT L  &mt_pinky LGUI SEMI  &kp SQT    &kp RET
-        &kp LSHFT      &kp Z             &kp X            &kp C               &kp V              &kp B   &kp N     &kp M              &kp COMMA           &kp DOT          &kp FSLH             &kp RSHFT
-        &kp LCTRL      &kp LGUI          &kp LALT         &lt 6 SPACE         &kp RALT           &mo 3   &kp LEFT  &kp UP             &kp DOWN            &kp RIGHT
-        //
-        &none          &out OUT_BLE      &out OUT_24G     &out OUT_CHG        &out OUT_CHGD
             >;
         };
 

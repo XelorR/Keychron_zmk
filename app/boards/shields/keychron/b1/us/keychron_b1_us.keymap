@@ -82,7 +82,7 @@
         lg_tog_colemak: lg_tog_colemak {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 4 &kp LC(SPACE)>;
+            bindings = <&tog 2 &kp LC(SPACE)>;
             label = "LG_TOG_COLEMAK";
         };
 
@@ -94,7 +94,7 @@
         combo_en_keep {
             bindings = <&kp LC(SPACE)>;
             key-positions = <5 6>;
-            layers = <4>;
+            layers = <2>;
         };
 
         combo_ru_keep {
@@ -112,7 +112,7 @@
         combo_ru_switch {
             bindings = <&lg_tog_colemak>;
             key-positions = <6 7>;
-            layers = <4>;
+            layers = <2>;
         };
 
         combo_typing_keep {
@@ -296,7 +296,7 @@
         &kp TAB        &kp Q              &kp W            &kp E              &kp R              &kp T   &kp Y     &kp U              &kp I              &kp O            &kp P                 &kp LBKT   &kp RBKT   &kp BSLH
         &kp ESC        &mt_pinky LCTRL A  &mt_ring LALT S  &mt_middle LGUI D  &mt_index LSHFT F  &kp G   &kp H     &mt_index LSHFT J  &mt_middle LGUI K  &mt_ring LALT L  &mt_pinky LCTRL SEMI  &kp SQT    &kp RET
         &kp LSHFT      &kp Z              &kp X            &kp C              &kp V              &kp B   &kp N     &kp M              &kp COMMA          &kp DOT          &kp FSLH              &kp RSHFT
-        &kp LCTRL      &uc LALT           &uc LCMD         &lt 5 SPACE        &kp RALT           &mo 2   &kp LEFT  &kp UP             &kp DOWN           &kp RIGHT
+        &kp LCTRL      &uc LALT           &uc LCMD         &lt 5 SPACE        &kp RALT           &mo 3   &kp LEFT  &kp UP             &kp DOWN           &kp RIGHT
         &mo 1          &out OUT_BLE       &out OUT_24G     &out OUT_CHG       &out OUT_CHGD
             >;
         };
@@ -309,13 +309,27 @@
         &kp TAB        &kp Q             &kp W            &kp E               &kp R              &kp T   &kp Y     &kp U              &kp I               &kp O            &kp P                &kp LBKT   &kp RBKT   &kp BSLH
         &kp ESC        &mt_pinky LGUI A  &mt_ring LALT S  &mt_middle LCTRL D  &mt_index LSHFT F  &kp G   &kp H     &mt_index LSHFT J  &mt_middle LCTRL K  &mt_ring LALT L  &mt_pinky LGUI SEMI  &kp SQT    &kp RET
         &kp LSHFT      &kp Z             &kp X            &kp C               &kp V              &kp B   &kp N     &kp M              &kp COMMA           &kp DOT          &kp FSLH             &kp RSHFT
-        &kp LCTRL      &kp LGUI          &kp LALT         &lt 6 SPACE         &kp RALT           &mo 3   &kp LEFT  &kp UP             &kp DOWN            &kp RIGHT
+        &kp LCTRL      &kp LGUI          &kp LALT         &lt 6 SPACE         &kp RALT           &mo 4   &kp LEFT  &kp UP             &kp DOWN            &kp RIGHT
         //
         &none          &out OUT_BLE      &out OUT_24G     &out OUT_CHG        &out OUT_CHGD
             >;
         };
 
         // 2
+        alt_layout {
+        bindings = <
+        &trans  &trans            &trans           &trans              &trans             &trans  &trans  &trans             &trans              &trans           &trans            &trans    &trans    &trans
+        &trans  &trans            &trans           &trans              &trans             &trans  &trans  &trans             &trans              &trans           &trans            &trans    &trans    &trans
+        &trans  &kp Q             &kp W            &kp F               &kp P              &kp G   &kp J   &kp L              &kp U               &kp Y            &kp SEMI          &kp LBKT  &kp RBKT  &kp BSLH
+        &trans  &mt_pinky LGUI A  &mt_ring LALT R  &mt_middle LCTRL S  &mt_index LSHFT T  &kp D   &kp H   &mt_index LSHFT N  &mt_middle LCTRL E  &mt_ring LALT I  &mt_pinky LGUI O  &kp SQT   &trans
+        &trans  &kp Z             &kp X            &kp C               &kp V              &kp B   &kp K   &kp M              &kp COMMA           &kp DOT          &kp FSLH          &trans
+        &trans  &trans            &trans           &trans              &trans             &trans  &trans  &trans             &trans              &trans
+        //
+        &trans  &trans            &trans           &trans              &trans
+            >;
+        };
+
+        // 3
         mac_fn  {
         bindings = <
           //ESC         //f1                    //f2                //f3                                    //f4                //f5                //f6            //f7            //f8                //f9        //f10       //f11               //f12               //DEL
@@ -330,7 +344,7 @@
             >;
         };
 
-        // 3
+        // 4
         win_fn {
         bindings = <
                               //f1                    //f2                    //f3                                //f4                        //f5            //f6              //f7            //f8              //f9        //f10           //f11                         //f12
@@ -345,20 +359,6 @@
             >;
         };
         
-        // 4
-        colemak {
-        bindings = <
-        &trans  &trans            &trans           &trans              &trans             &trans  &trans  &trans             &trans              &trans           &trans            &trans    &trans    &trans
-        &trans  &trans            &trans           &trans              &trans             &trans  &trans  &trans             &trans              &trans           &trans            &trans    &trans    &trans
-        &trans  &kp Q             &kp W            &kp F               &kp P              &kp G   &kp J   &kp L              &kp U               &kp Y            &kp SEMI          &kp LBKT  &kp RBKT  &kp BSLH
-        &trans  &mt_pinky LGUI A  &mt_ring LALT R  &mt_middle LCTRL S  &mt_index LSHFT T  &kp D   &kp H   &mt_index LSHFT N  &mt_middle LCTRL E  &mt_ring LALT I  &mt_pinky LGUI O  &kp SQT   &trans
-        &trans  &kp Z             &kp X            &kp C               &kp V              &kp B   &kp K   &kp M              &kp COMMA           &kp DOT          &kp FSLH          &trans
-        &trans  &trans            &trans           &trans              &trans             &trans  &trans  &trans             &trans              &trans
-        //
-        &trans  &trans            &trans           &trans              &trans
-            >;
-        };
-
         // 5
         mac_navi {
         bindings = <

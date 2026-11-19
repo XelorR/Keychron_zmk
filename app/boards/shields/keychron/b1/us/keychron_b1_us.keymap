@@ -79,11 +79,18 @@
             label = "DELETE_TO_ROW_START";
         };
 
-        lg_tog_colemak: lg_tog_colemak {
+        enable_alt_layout: enable_alt_layout {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 2 &kp LC(SPACE)>;
-            label = "LG_TOG_COLEMAK";
+            bindings = <&tog 2 &kp LC(LS(N8))>;
+            label = "ENABLE_ALT_LAYOUT";
+        };
+
+        disable_alt_layout: disable_alt_layout {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 2 &kp LC(LS(N7))>;
+            label = "DISABLE_ALT_LAYOUT";
         };
 
     };
@@ -91,26 +98,26 @@
     combos1 {
         compatible = "zmk,combos";
 
-        combo_en_keep {
-            bindings = <&kp LC(SPACE)>;
+        keep_alt_layout {
+            bindings = <&kp LC(LS(N8))>;
             key-positions = <5 6>;
             layers = <2>;
         };
 
-        combo_ru_keep {
-            bindings = <&kp LC(SPACE)>;
+        keep_base_layout {
+            bindings = <&kp LC(LS(N7))>;
             key-positions = <6 7>;
             layers = <0 1>;
         };
 
-        combo_en_switch {
-            bindings = <&lg_tog_colemak>;
+        switch_to_alt_layout {
+            bindings = <&enable_alt_layout>;
             key-positions = <5 6>;
             layers = <0 1>;
         };
 
-        combo_ru_switch {
-            bindings = <&lg_tog_colemak>;
+        switch_to_base_layout {
+            bindings = <&disable_alt_layout>;
             key-positions = <6 7>;
             layers = <2>;
         };
@@ -320,9 +327,9 @@
         bindings = <
         &trans  &trans            &trans           &trans              &trans             &trans  &trans  &trans             &trans              &trans           &trans            &trans    &trans    &trans
         &trans  &trans            &trans           &trans              &trans             &trans  &trans  &trans             &trans              &trans           &trans            &trans    &trans    &trans
-        &trans  &kp Q             &kp W            &kp F               &kp P              &kp G   &kp J   &kp L              &kp U               &kp Y            &kp SEMI          &kp LBKT  &kp RBKT  &kp BSLH
-        &trans  &mt_pinky LGUI A  &mt_ring LALT R  &mt_middle LCTRL S  &mt_index LSHFT T  &kp D   &kp H   &mt_index LSHFT N  &mt_middle LCTRL E  &mt_ring LALT I  &mt_pinky LGUI O  &kp SQT   &trans
-        &trans  &kp Z             &kp X            &kp C               &kp V              &kp B   &kp K   &kp M              &kp COMMA           &kp DOT          &kp FSLH          &trans
+        &trans  &trans            &trans           &trans              &trans             &trans  &trans  &trans             &trans              &trans           &trans            &trans    &trans    &trans
+        &trans  &trans            &trans           &trans              &trans             &trans  &trans  &trans             &trans              &trans           &trans            &trans    &trans
+        &trans  &trans            &trans           &trans              &trans             &trans  &trans  &trans             &trans              &trans           &trans            &trans
         &trans  &trans            &trans           &trans              &trans             &trans  &trans  &trans             &trans              &trans
         //
         &trans  &trans            &trans           &trans              &trans
